@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VoiceNote — Turn messy voice into clear text with AI</title>
+  <meta name="description" content="AI-powered voice notes app. Record, transcribe, and polish your thoughts into clear, structured text.">
+  <meta property="og:title" content="VoiceNote — AI Voice to Clear Text">
+  <meta property="og:description" content="Record, transcribe, and polish your thoughts into clear, structured text.">
+  <meta property="og:type" content="website">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { 50:'#eef4ff',100:'#d9e5ff',200:'#bcd2ff',300:'#8eb5ff',400:'#598dff',500:'#3b6eff',600:'#1e4af5',700:'#1737e1',800:'#192eb6',900:'#1b2c8f',950:'#151d57' }
+          },
+          fontFamily: { sans: ['Inter','system-ui','sans-serif'] },
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+    .gradient-text { background: linear-gradient(135deg, #3b6eff 0%, #8b5cf6 50%, #ec4899 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .glass { background: rgba(255,255,255,0.8); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+    .hero-bg { background: linear-gradient(135deg, #eef4ff 0%, #f5f0ff 25%, #fff0f5 50%, #f0f9ff 75%, #eef4ff 100%); background-size: 400% 400%; animation: gradientShift 15s ease infinite; }
+    @keyframes gradientShift { 0%,100% { background-position: 0% 50%; } 25% { background-position: 100% 0%; } 50% { background-position: 100% 100%; } 75% { background-position: 0% 100%; } }
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .wave-bar { width: 3px; height: 40px; border-radius: 999px; background: #8eb5ff; animation: wave 1.2s ease-in-out infinite; transform-origin: center; }
+    @keyframes wave { 0%,100% { transform: scaleY(0.2); } 50% { transform: scaleY(1); } }
+  </style>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+
+<!-- NAVBAR -->
+<nav id="navbar" class="fixed top-0 z-50 w-full transition-all duration-300 py-5 bg-transparent">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-4 sm:px-6">
+    <a href="index.html" class="flex items-center gap-2 text-xl font-bold">
+      <div class="flex h-9 w-9 items-center justify-center rounded-lg bg-brand-500 text-white">
+        <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+      </div>
+      <span class="tracking-tight">VoiceNote</span>
+    </a>
+    <div class="hidden items-center gap-8 md:flex">
+      <a href="index.html" class="text-sm font-medium text-brand-600 transition-colors">Home</a>
+      <a href="pricing.html" class="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Pricing</a>
+      <a href="download.html" class="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Download</a>
+      <a href="contact.html" class="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors">Contact</a>
+    </div>
+    <button id="menuToggle" class="rounded-lg p-2 text-gray-600 hover:bg-gray-100 md:hidden" aria-label="Menu">
+      <svg id="menuIcon" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+  <div id="mobileMenu" class="max-h-0 overflow-hidden transition-all duration-300 md:hidden">
+    <div class="mx-4 flex flex-col gap-1 border-t border-gray-100 pb-4 pt-3">
+      <a href="index.html" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-50">Home</a>
+      <a href="pricing.html" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-50">Pricing</a>
+      <a href="download.html" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-50">Download</a>
+      <a href="contact.html" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-50">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero-bg relative flex min-h-screen items-center overflow-hidden pt-20">
+  <div class="absolute inset-0 pointer-events-none">
+    <div class="absolute top-20 -left-40 w-[500px] h-[500px] rounded-full bg-brand-400/10 blur-3xl"></div>
+    <div class="absolute bottom-20 -right-40 w-[500px] h-[500px] rounded-full bg-purple-400/10 blur-3xl"></div>
+  </div>
+  <div class="relative z-10 mx-auto max-w-6xl px-4 py-20 text-center sm:px-6">
+    <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-brand-200 bg-brand-50 px-4 py-1.5 text-sm font-medium text-brand-600 reveal">
+      <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l2.4 7.2h7.6l-6 4.8 2.4 7.2-6-4.8-6 4.8 2.4-7.2-6-4.8h7.6z"/></svg>
+      AI-Powered Voice Notes
+    </div>
+    <h1 class="mx-auto max-w-4xl text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl reveal">
+      Turn messy voice<br><span class="gradient-text">into clear text</span>
+    </h1>
+    <p class="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-gray-500 sm:text-xl reveal">
+      Speak naturally. VoiceNote polishes every word with AI.
+    </p>
+
+    <div class="mx-auto mt-16 max-w-5xl reveal">
+      <div class="grid gap-8 md:grid-cols-5 items-center">
+        <div class="md:col-span-3">
+          <div class="relative overflow-hidden rounded-2xl border border-gray-200 bg-white p-6 shadow-xl shadow-gray-200/50 sm:p-8">
+            <div class="mb-6 flex items-center justify-center gap-[2px]">
+              <div class="wave-bar" style="animation-delay:0s"></div><div class="wave-bar" style="animation-delay:0.05s"></div><div class="wave-bar" style="animation-delay:0.1s"></div><div class="wave-bar" style="animation-delay:0.15s"></div><div class="wave-bar" style="animation-delay:0.2s"></div><div class="wave-bar" style="animation-delay:0.25s"></div><div class="wave-bar" style="animation-delay:0.3s"></div><div class="wave-bar" style="animation-delay:0.35s"></div><div class="wave-bar" style="animation-delay:0.4s"></div><div class="wave-bar" style="animation-delay:0.45s"></div><div class="wave-bar" style="animation-delay:0.5s"></div><div class="wave-bar" style="animation-delay:0.55s"></div><div class="wave-bar" style="animation-delay:0.6s"></div><div class="wave-bar" style="animation-delay:0.65s"></div><div class="wave-bar" style="animation-delay:0.7s"></div><div class="wave-bar" style="animation-delay:0.75s"></div><div class="wave-bar" style="animation-delay:0.8s"></div><div class="wave-bar" style="animation-delay:0.85s"></div><div class="wave-bar" style="animation-delay:0.9s"></div><div class="wave-bar" style="animation-delay:0.95s"></div>
+            </div>
+            <div class="rounded-xl bg-gray-50 p-5 text-left">
+              <div class="mb-3 flex items-center gap-2 text-xs font-medium text-gray-400">
+                <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/></svg> Voice input
+              </div>
+              <p class="text-sm leading-relaxed text-gray-400 line-through decoration-gray-300">Um... so I think this product idea is really good because... like, it helps people just talk and get text...</p>
+              <div class="my-4 flex items-center gap-2">
+                <div class="h-px flex-1 bg-gray-200"></div>
+                <svg class="h-4 w-4 text-brand-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l2.4 7.2h7.6l-6 4.8 2.4 7.2-6-4.8-6 4.8 2.4-7.2-6-4.8h7.6z"/></svg>
+                <div class="h-px flex-1 bg-gray-200"></div>
+              </div>
+              <div class="mb-3 flex items-center gap-2 text-xs font-medium text-brand-500">
+                <svg class="h-3.5 w-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l2.4 7.2h7.6l-6 4.8 2.4 7.2-6-4.8-6 4.8 2.4-7.2-6-4.8h7.6z"/></svg> AI polished
+              </div>
+              <p class="text-sm leading-relaxed text-gray-700">This product converts voice into text in real time, using AI to remove filler words, fix grammar, and restructure sentences for clarity.</p>
+            </div>
+          </div>
+        </div>
+        <div class="md:col-span-2 flex flex-col items-center justify-center gap-6">
+          <div class="mx-auto rounded-2xl border border-gray-200 bg-white p-3 shadow-lg">
+            <svg class="h-36 w-36" viewBox="0 0 37 37">
+              <!-- Position markers (large squares) -->
+              <rect x="1" y="1" width="11" height="11" rx="2" fill="#111"/><rect x="2" y="2" width="9" height="9" rx="1" fill="#fff"/><rect x="4" y="4" width="5" height="5" rx="0.5" fill="#111"/>
+              <rect x="25" y="1" width="11" height="11" rx="2" fill="#111"/><rect x="26" y="2" width="9" height="9" rx="1" fill="#fff"/><rect x="28" y="4" width="5" height="5" rx="0.5" fill="#111"/>
+              <rect x="1" y="25" width="11" height="11" rx="2" fill="#111"/><rect x="2" y="26" width="9" height="9" rx="1" fill="#fff"/><rect x="4" y="28" width="5" height="5" rx="0.5" fill="#111"/>
+              <!-- Data modules -->
+              <rect x="15" y="1" width="2" height="2" rx="0.3" fill="#111"/><rect x="19" y="1" width="2" height="2" rx="0.3" fill="#111"/><rect x="22" y="1" width="2" height="2" rx="0.3" fill="#111"/>
+              <rect x="17" y="4" width="2" height="2" rx="0.3" fill="#111"/><rect x="21" y="4" width="2" height="2" rx="0.3" fill="#111"/>
+              <rect x="15" y="7" width="2" height="2" rx="0.3" fill="#111"/><rect x="18" y="7" width="2" height="2" rx="0.3" fill="#111"/><rect x="21" y="7" width="2" height="2" rx="0.3" fill="#111"/>
+              <rect x="16" y="10" width="2" height="2" rx="0.3" fill="#111"/><rect x="19" y="10" width="2" height="2" rx="0.3" fill="#111"/><rect x="22" y="10" width="2" height="2" rx="0.3" fill="#111"/>
+              <rect x="1" y="15" width="2" height="2" rx="0.3" fill="#111"/><rect x="4" y="15" width="2" height="2" rx="0.3" fill="#111"/><rect x="7" y="15" width="2" height="2" rx="0.3" fill="#111"/><rect x="10" y="15" width="2" height="2" rx="0.3" fill="#111"/>
+              <rect x="1" y="18" width="2" height="2" rx="0.3" fill="#111"/><rect x="5" y="18" width="2" height="2" rx="0.3" fill="#111"/><rect x="9" y="18" width="2" height="2" rx="0.3" fill="#111"/>
+              <rect x="2" y="21" width="2" height="2" rx="0.3" fill="#111"/><rect x="6" y="21" width="2" height="2" rx="0.3" fill="#111"/><rect x="9" y="21" width="2" height="2" rx="0.3" fill="#111"/>
+              <rect x="15" y="13" width="2" height="2" rx="0.3" fill="#111"/><rect x="19" y="13" width="2" height="2" rx="0.3" fill="#111"/><rect x="22" y="15" width="2" height="2" rx="0.3" fill="#111"/>
+              <rect x="16" y="16" width="2" height="2" rx="0.3" fill="#111"/><rect x="20" y="16" width="2" height="2" rx="0.3" fill="#111"/>
+              <rect x="17" y="19" width="2" height="2" rx="0.3" fill="#111"/><rect x="21" y="19" width="2" height="2" rx="0.3" fill="#111"/>
+              <rect x="15" y="22" width="2" height="2" rx="0.3" fill="#111"/><rect x="18" y="22" width="2" height="2" rx="0.3" fill="#111"/><rect x="21" y="22" width="2" height="2" rx="0.3" fill="#111"/>
+              <rect x="25" y="15" width="2" height="2" rx="0.3" fill="#111"/><rect x="29" y="15" width="2" height="2" rx="0.3" fill="#111"/><rect x="33" y="15" width="2" height="2" rx="0.3" fill="#111"/>
+              <rect x="26" y="18" width="2" height="2" rx="0.3" fill="#111"/><rect x="30" y="18" width="2" height="2" rx="0.3" fill="#111"/>
+              <rect x="25" y="21" width="2" height="2" rx="0.3" fill="#111"/><rect x="28" y="21" width="2" height="2" rx="0.3" fill="#111"/><rect x="32" y="21" width="2" height="2" rx="0.3" fill="#111"/>
+              <rect x="14" y="25" width="2" height="2" rx="0.3" fill="#111"/><rect x="17" y="25" width="2" height="2" rx="0.3" fill="#111"/>
+              <rect x="14" y="28" width="2" height="2" rx="0.3" fill="#111"/><rect x="18" y="28" width="2" height="2" rx="0.3" fill="#111"/>
+              <rect x="15" y="31" width="2" height="2" rx="0.3" fill="#111"/><rect x="19" y="31" width="2" height="2" rx="0.3" fill="#111"/><rect x="22" y="31" width="2" height="2" rx="0.3" fill="#111"/>
+              <rect x="17" y="34" width="2" height="2" rx="0.3" fill="#111"/><rect x="21" y="34" width="2" height="2" rx="0.3" fill="#111"/>
+            </svg>
+            <p class="mt-2 text-center text-xs font-semibold text-gray-700">Scan to download</p>
+          </div>
+          <div class="flex flex-col gap-2 w-full max-w-[170px]">
+            <a href="#" class="flex items-center gap-2.5 rounded-xl bg-gray-900 px-3.5 py-2.5 text-white hover:bg-gray-800 transition-all">
+              <svg class="h-5 w-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 2.95 2.58 3.93 2.61 3.94-.03.07-.41 1.39-1.3 2.73M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+              <div class="text-left leading-tight"><div class="text-[10px] opacity-80">Download on the</div><div class="text-sm font-semibold -mt-0.5">App Store</div></div>
+            </a>
+            <a href="#" class="flex items-center gap-2.5 rounded-xl bg-gray-900 px-3.5 py-2.5 text-white hover:bg-gray-800 transition-all">
+              <svg class="h-5 w-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 0 1 0 1.732l-2.807 1.626L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>
+              <div class="text-left leading-tight"><div class="text-[10px] opacity-80">Get it on</div><div class="text-sm font-semibold -mt-0.5">Google Play</div></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== USE CASES (visual scenes) ===== -->
+<section class="bg-white py-24 sm:py-32">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6">
+    <div class="mx-auto max-w-2xl text-center reveal">
+      <span class="text-sm font-semibold uppercase tracking-widest text-brand-500">Use Cases</span>
+      <h2 class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">Built for how you <span class="gradient-text">think & work</span></h2>
+    </div>
+
+    <!-- Row 1: Journaling + Content Creation -->
+    <div class="mt-20 grid gap-12 lg:grid-cols-2 items-center">
+      <div class="reveal flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
+        <svg class="h-32 w-32 flex-shrink-0" viewBox="0 0 128 128">
+          <!-- Desk scene - journaling at night -->
+          <rect x="24" y="60" width="80" height="6" rx="3" fill="#e5e7eb"/>
+          <rect x="28" y="66" width="8" height="26" rx="2" fill="#d1d5db"/>
+          <rect x="92" y="66" width="8" height="26" rx="2" fill="#d1d5db"/>
+          <rect x="40" y="48" width="48" height="14" rx="3" fill="#f3f4f6" stroke="#e5e7eb" stroke-width="1.5"/>
+          <rect x="44" y="52" width="14" height="2" rx="1" fill="#d1d5db"/>
+          <rect x="44" y="56" width="22" height="2" rx="1" fill="#d1d5db"/>
+          <circle cx="52" cy="34" r="14" fill="#1e4af5" opacity="0.12"/>
+          <circle cx="52" cy="34" r="6" fill="#1e4af5"/>
+          <rect x="50" y="30" width="4" height="8" rx="2" fill="#1e4af5"/>
+          <rect x="50" y="20" width="4" height="6" rx="2" fill="#93c5fd"/>
+          <rect x="56" y="28" width="4" height="6" rx="2" fill="#93c5fd"/>
+          <rect x="44" y="28" width="4" height="6" rx="2" fill="#93c5fd"/>
+          <circle cx="116" cy="14" r="8" fill="#fbbf24" opacity="0.3"/>
+          <circle cx="116" cy="14" r="4" fill="#fbbf24"/>
+        </svg>
+        <div>
+          <h3 class="text-xl font-semibold">Journaling</h3>
+          <p class="mt-1 text-sm text-gray-500">Speak your day. VoiceNote turns reflections into clean journal entries.</p>
+        </div>
+      </div>
+      <div class="reveal flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
+        <svg class="h-32 w-32 flex-shrink-0" viewBox="0 0 128 128">
+          <!-- Content creation scene - phone with waves -->
+          <rect x="34" y="10" width="60" height="100" rx="8" fill="#f3f4f6" stroke="#e5e7eb" stroke-width="2"/>
+          <rect x="40" y="18" width="48" height="18" rx="2" fill="#dbeafe"/>
+          <rect x="44" y="22" width="14" height="2" rx="1" fill="#93c5fd"/>
+          <rect x="44" y="27" width="24" height="2" rx="1" fill="#93c5fd"/>
+          <rect x="44" y="32" width="10" height="2" rx="1" fill="#93c5fd"/>
+          <rect x="40" y="44" width="48" height="14" rx="2" fill="#fce7f3"/>
+          <rect x="44" y="48" width="20" height="2" rx="1" fill="#f9a8d4"/>
+          <rect x="44" y="52" width="28" height="2" rx="1" fill="#f9a8d4"/>
+          <rect x="40" y="66" width="48" height="14" rx="2" fill="#d1fae5"/>
+          <rect x="44" y="70" width="16" height="2" rx="1" fill="#6ee7b7"/>
+          <rect x="44" y="74" width="22" height="2" rx="1" fill="#6ee7b7"/>
+          <circle cx="100" cy="96" r="12" fill="#1e4af5" opacity="0.15"/>
+          <circle cx="100" cy="96" r="7" fill="#1e4af5"/>
+          <path d="M97 93l6 6-6 6" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div>
+          <h3 class="text-xl font-semibold">Content Creation</h3>
+          <p class="mt-1 text-sm text-gray-500">Dictate posts, scripts, and captions. AI structures them into publish-ready drafts.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row 2: Meeting Notes + Brainstorming -->
+    <div class="mt-12 grid gap-12 lg:grid-cols-2 items-center">
+      <div class="reveal flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
+        <svg class="h-32 w-32 flex-shrink-0" viewBox="0 0 128 128">
+          <!-- Meeting scene - people around table -->
+          <rect x="20" y="56" width="88" height="6" rx="3" fill="#e5e7eb"/>
+          <rect x="24" y="62" width="6" height="22" rx="2" fill="#d1d5db"/>
+          <rect x="98" y="62" width="6" height="22" rx="2" fill="#d1d5db"/>
+          <circle cx="40" cy="46" r="10" fill="#dbeafe" stroke="#93c5fd" stroke-width="2"/>
+          <circle cx="64" cy="40" r="10" fill="#ede9fe" stroke="#c4b5fd" stroke-width="2"/>
+          <circle cx="88" cy="46" r="10" fill="#d1fae5" stroke="#6ee7b7" stroke-width="2"/>
+          <rect x="50" y="78" width="28" height="18" rx="3" fill="#f3f4f6" stroke="#e5e7eb" stroke-width="1.5"/>
+          <rect x="54" y="82" width="20" height="2" rx="1" fill="#d1d5db"/>
+          <rect x="54" y="86" width="14" height="2" rx="1" fill="#d1d5db"/>
+          <rect x="54" y="90" width="8" height="2" rx="1" fill="#1e4af5"/>
+          <line x1="64" y1="56" x2="64" y2="78" stroke="#d1d5db" stroke-width="1.5" stroke-dasharray="3 2"/>
+        </svg>
+        <div>
+          <h3 class="text-xl font-semibold">Meeting Notes</h3>
+          <p class="mt-1 text-sm text-gray-500">Record quick recaps. VoiceNote extracts key points and action items.</p>
+        </div>
+      </div>
+      <div class="reveal flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
+        <svg class="h-32 w-32 flex-shrink-0" viewBox="0 0 128 128">
+          <!-- Brainstorming scene - lightbulb + ideas -->
+          <circle cx="36" cy="28" r="6" fill="#fef3c7" stroke="#fbbf24" stroke-width="2"/>
+          <circle cx="64" cy="18" r="6" fill="#dbeafe" stroke="#93c5fd" stroke-width="2"/>
+          <circle cx="92" cy="28" r="6" fill="#ede9fe" stroke="#c4b5fd" stroke-width="2"/>
+          <circle cx="50" cy="52" r="6" fill="#d1fae5" stroke="#6ee7b7" stroke-width="2"/>
+          <circle cx="78" cy="52" r="6" fill="#fce7f3" stroke="#f9a8d4" stroke-width="2"/>
+          <line x1="36" y1="34" x2="50" y2="46" stroke="#e5e7eb" stroke-width="1.5"/>
+          <line x1="64" y1="24" x2="50" y2="46" stroke="#e5e7eb" stroke-width="1.5"/>
+          <line x1="64" y1="24" x2="78" y2="46" stroke="#e5e7eb" stroke-width="1.5"/>
+          <line x1="92" y1="34" x2="78" y2="46" stroke="#e5e7eb" stroke-width="1.5"/>
+          <circle cx="64" cy="82" r="18" fill="#1e4af5" opacity="0.1"/>
+          <path d="M56 82l6 6 12-12" stroke="#1e4af5" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <div>
+          <h3 class="text-xl font-semibold">Brainstorming</h3>
+          <p class="mt-1 text-sm text-gray-500">Let ideas flow. VoiceNote organises scattered thoughts into coherent outlines.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Row 3: Studying + Quick Messages -->
+    <div class="mt-12 grid gap-12 lg:grid-cols-2 items-center">
+      <div class="reveal flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
+        <svg class="h-32 w-32 flex-shrink-0" viewBox="0 0 128 128">
+          <!-- Studying scene - book + headphones -->
+          <rect x="30" y="24" width="36" height="44" rx="4" fill="#f3f4f6" stroke="#e5e7eb" stroke-width="2"/>
+          <line x1="38" y1="36" x2="58" y2="36" stroke="#d1d5db" stroke-width="2"/>
+          <line x1="38" y1="44" x2="58" y2="44" stroke="#d1d5db" stroke-width="2"/>
+          <line x1="38" y1="52" x2="50" y2="52" stroke="#d1d5db" stroke-width="2"/>
+          <rect x="48" y="24" width="7" height="44" rx="1" fill="#1e4af5" opacity="0.2"/>
+          <path d="M78 36c0-6-4-12-10-12s-10 6-10 12v10c0 6 4 12 10 12s10-6 10-12V36z" fill="none" stroke="#d1d5db" stroke-width="3"/>
+          <path d="M78 72c0-6-4-12-10-12s-10 6-10 12v10c0 6 4 12 10 12s10-6 10-12V72z" fill="none" stroke="#d1d5db" stroke-width="3"/>
+          <path d="M68 36v46" stroke="#d1d5db" stroke-width="3"/>
+          <rect x="80" y="84" width="30" height="18" rx="3" fill="#fef3c7" stroke="#fbbf24" stroke-width="1.5"/>
+          <line x1="86" y1="92" x2="104" y2="92" stroke="#fbbf24" stroke-width="2"/>
+          <circle cx="95" cy="92" r="2" fill="#fbbf24"/>
+        </svg>
+        <div>
+          <h3 class="text-xl font-semibold">Studying</h3>
+          <p class="mt-1 text-sm text-gray-500">Summarise lectures aloud. VoiceNote turns explanations into study notes.</p>
+        </div>
+      </div>
+      <div class="reveal flex flex-col sm:flex-row items-center gap-6 text-center sm:text-left">
+        <svg class="h-32 w-32 flex-shrink-0" viewBox="0 0 128 128">
+          <!-- Quick messages scene - phone + bubbles -->
+          <rect x="34" y="10" width="60" height="100" rx="8" fill="#f3f4f6" stroke="#e5e7eb" stroke-width="2"/>
+          <rect x="44" y="20" width="24" height="8" rx="4" fill="#dbeafe"/>
+          <rect x="44" y="36" width="32" height="8" rx="4" fill="#dbeafe"/>
+          <rect x="54" y="58" width="18" height="8" rx="4" fill="#ede9fe"/>
+          <rect x="44" y="72" width="24" height="8" rx="4" fill="#fce7f3"/>
+          <circle cx="98" cy="96" r="12" fill="#1e4af5" opacity="0.15"/>
+          <path d="M94 96l8-8M94 96l8 8" stroke="#1e4af5" stroke-width="2" fill="none" stroke-linecap="round"/>
+        </svg>
+        <div>
+          <h3 class="text-xl font-semibold">Quick Messages</h3>
+          <p class="mt-1 text-sm text-gray-500">Dictate emails and replies hands-free. VoiceNote polishes before you hit send.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOW IT WORKS ===== -->
+<section class="bg-white py-24 sm:py-32">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6">
+    <div class="mx-auto max-w-2xl text-center reveal">
+      <span class="text-sm font-semibold uppercase tracking-widest text-brand-500">How It Works</span>
+      <h2 class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">Three steps from <span class="gradient-text">voice to text</span></h2>
+    </div>
+    <div class="mt-20 grid gap-8 md:grid-cols-3">
+      <div class="reveal relative flex flex-col items-center text-center">
+        <div class="flex h-20 w-20 items-center justify-center rounded-2xl bg-blue-50 shadow-lg">
+          <svg class="h-9 w-9 text-blue-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/></svg>
+        </div>
+        <div class="absolute -right-2 -top-2 flex h-7 w-7 items-center justify-center rounded-full bg-brand-500 text-xs font-bold text-white">1</div>
+        <h3 class="mt-6 text-xl font-semibold">Record</h3>
+        <p class="mt-2 text-sm text-gray-500">Tap the mic and speak naturally.</p>
+      </div>
+      <div class="reveal relative flex flex-col items-center text-center">
+        <div class="flex h-20 w-20 items-center justify-center rounded-2xl bg-purple-50 shadow-lg">
+          <svg class="h-9 w-9 text-purple-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+        </div>
+        <div class="absolute -right-2 -top-2 flex h-7 w-7 items-center justify-center rounded-full bg-brand-500 text-xs font-bold text-white">2</div>
+        <h3 class="mt-6 text-xl font-semibold">AI Processing</h3>
+        <p class="mt-2 text-sm text-gray-500">Deepgram + GPT transcribe and polish in seconds.</p>
+      </div>
+      <div class="reveal relative flex flex-col items-center text-center">
+        <div class="flex h-20 w-20 items-center justify-center rounded-2xl bg-green-50 shadow-lg">
+          <svg class="h-9 w-9 text-green-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+        </div>
+        <div class="absolute -right-2 -top-2 flex h-7 w-7 items-center justify-center rounded-full bg-brand-500 text-xs font-bold text-white">3</div>
+        <h3 class="mt-6 text-xl font-semibold">Get Clear Text</h3>
+        <p class="mt-2 text-sm text-gray-500">Copy, share, or export. Ready to use.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EVERYWHERE YOU GO (Marquee Carousel) ===== -->
+<section class="bg-gray-50 py-24 sm:py-32">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6">
+    <div class="mx-auto max-w-2xl text-center reveal">
+      <span class="text-sm font-semibold uppercase tracking-widest text-brand-500">Everywhere You Go</span>
+      <h2 class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">Capture ideas <span class="gradient-text">in every moment</span></h2>
+      <p class="mt-4 text-lg text-gray-500">Wherever inspiration strikes, VoiceNote is ready.</p>
+    </div>
+
+    <!-- Scene image grid -->
+    <div class="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 reveal">
+      <div class="group cursor-pointer">
+        <div class="relative overflow-hidden rounded-2xl shadow-sm">
+          <img src="https://images.pexels.com/photos/32963067/pexels-photo-32963067.jpeg?auto=compress&cs=tinysrgb&w=640&h=800&fit=crop" alt="Walking outdoors" class="w-full h-[320px] object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+            <span class="inline-block rounded-full bg-white/20 backdrop-blur px-2 py-0.5 text-[10px] font-medium mb-1">Outdoor</span>
+            <h3 class="text-base font-bold">Ideas on the move</h3>
+          </div>
+        </div>
+      </div>
+      <div class="group cursor-pointer">
+        <div class="relative overflow-hidden rounded-2xl shadow-sm">
+          <img src="https://images.pexels.com/photos/31969440/pexels-photo-31969440.jpeg?auto=compress&cs=tinysrgb&w=640&h=800&fit=crop" alt="Working at a cafe" class="w-full h-[320px] object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+            <span class="inline-block rounded-full bg-white/20 backdrop-blur px-2 py-0.5 text-[10px] font-medium mb-1">Cafe</span>
+            <h3 class="text-base font-bold">Deep work, hands-free</h3>
+          </div>
+        </div>
+      </div>
+      <div class="group cursor-pointer">
+        <div class="relative overflow-hidden rounded-2xl shadow-sm">
+          <img src="https://images.pexels.com/photos/31672800/pexels-photo-31672800.jpeg?auto=compress&cs=tinysrgb&w=640&h=800&fit=crop" alt="Commuting on train" class="w-full h-[320px] object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+            <span class="inline-block rounded-full bg-white/20 backdrop-blur px-2 py-0.5 text-[10px] font-medium mb-1">Commute</span>
+            <h3 class="text-base font-bold">Productive downtime</h3>
+          </div>
+        </div>
+      </div>
+      <div class="group cursor-pointer">
+        <div class="relative overflow-hidden rounded-2xl shadow-sm">
+          <img src="https://images.pexels.com/photos/7968270/pexels-photo-7968270.jpeg?auto=compress&cs=tinysrgb&w=640&h=800&fit=crop" alt="Relaxing at home" class="w-full h-[320px] object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+            <span class="inline-block rounded-full bg-white/20 backdrop-blur px-2 py-0.5 text-[10px] font-medium mb-1">Home</span>
+            <h3 class="text-base font-bold">Unwind & reflect</h3>
+          </div>
+        </div>
+      </div>
+      <div class="group cursor-pointer">
+        <div class="relative overflow-hidden rounded-2xl shadow-sm">
+          <img src="https://images.pexels.com/photos/31851154/pexels-photo-31851154.jpeg?auto=compress&cs=tinysrgb&w=640&h=800&fit=crop" alt="Creative workspace" class="w-full h-[320px] object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+            <span class="inline-block rounded-full bg-white/20 backdrop-blur px-2 py-0.5 text-[10px] font-medium mb-1">Studio</span>
+            <h3 class="text-base font-bold">Creative flow</h3>
+          </div>
+        </div>
+      </div>
+      <div class="group cursor-pointer">
+        <div class="relative overflow-hidden rounded-2xl shadow-sm">
+          <img src="https://images.pexels.com/photos/7052020/pexels-photo-7052020.jpeg?auto=compress&cs=tinysrgb&w=640&h=800&fit=crop" alt="Relaxing at home cozy" class="w-full h-[320px] object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
+            <span class="inline-block rounded-full bg-white/20 backdrop-blur px-2 py-0.5 text-[10px] font-medium mb-1">Home</span>
+            <h3 class="text-base font-bold">Evening reflections</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DOWNLOAD ===== -->
+<section class="bg-gray-50 py-24 sm:py-32">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6">
+    <div class="mx-auto max-w-2xl text-center reveal">
+      <span class="text-sm font-semibold uppercase tracking-widest text-brand-500">Get the App</span>
+      <h2 class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">Ready to <span class="gradient-text">get started</span>?</h2>
+    </div>
+    <div class="mt-16 grid gap-8 sm:grid-cols-2 max-w-2xl mx-auto reveal">
+      <div class="rounded-2xl border border-gray-200 bg-white p-8 text-center hover:shadow-lg transition-all">
+        <div class="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gray-900 text-white mb-5">
+          <svg class="h-7 w-7" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 2.95 2.58 3.93 2.61 3.94-.03.07-.41 1.39-1.3 2.73M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+        </div>
+        <h3 class="text-lg font-semibold">iOS</h3>
+        <p class="mt-1 text-sm text-gray-500">iPhone &amp; iPad &middot; iOS 15.0+</p>
+        <a href="#" class="mt-5 inline-flex items-center gap-2 rounded-full bg-gray-900 px-6 py-3 text-sm font-semibold text-white hover:bg-gray-800 transition-all whitespace-nowrap">
+          <svg class="h-4 w-4 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 2.95 2.58 3.93 2.61 3.94-.03.07-.41 1.39-1.3 2.73M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          <span class="whitespace-nowrap">Download on the App Store</span>
+        </a>
+      </div>
+      <div class="rounded-2xl border border-gray-200 bg-white p-8 text-center hover:shadow-lg transition-all">
+        <div class="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-green-600 text-white mb-5">
+          <svg class="h-7 w-7" fill="currentColor" viewBox="0 0 24 24"><path d="M6 18c0 .55.45 1 1 1h1v3.5a1.5 1.5 0 0 0 3 0V19h2v3.5a1.5 1.5 0 0 0 3 0V19h1c.55 0 1-.45 1-1V8H6v10zM3.5 8C2.67 8 2 8.67 2 9.5v7c0 .83.67 1.5 1.5 1.5S5 17.33 5 16.5v-7C5 8.67 4.33 8 3.5 8zm17 0c-.83 0-1.5.67-1.5 1.5v7c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5v-7c0-.83-.67-1.5-1.5-1.5zm-4.97-5.84l1.3-1.3c.2-.2.2-.51 0-.71-.2-.2-.51-.2-.71 0l-1.48 1.48A5.96 5.96 0 0 0 12 1c-.96 0-1.86.23-2.66.63L7.85.15c-.2-.2-.51-.2-.71 0-.2.2-.2.51 0 .71l1.31 1.31A5.983 5.983 0 0 0 6 7h12c0-1.99-.97-3.75-2.47-4.84zM10 5H9V4h1v1zm5 0h-1V4h1v1z"/></svg>
+        </div>
+        <h3 class="text-lg font-semibold">Android</h3>
+        <p class="mt-1 text-sm text-gray-500">Google Play &middot; Android 10.0+</p>
+        <a href="#" class="mt-5 inline-flex items-center gap-2 rounded-full bg-green-600 px-6 py-3 text-sm font-semibold text-white hover:bg-green-700 transition-all whitespace-nowrap">
+          <svg class="h-4 w-4 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 0 1 0 1.732l-2.807 1.626L15.206 12l2.492-2.492zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg>
+          <span class="whitespace-nowrap">Get it on Google Play</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t border-gray-100 bg-white">
+  <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+      <a href="index.html" class="flex items-center gap-2 text-xl font-bold">
+        <div class="flex h-8 w-8 items-center justify-center rounded-lg bg-brand-500 text-white">
+          <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+        </div>
+        <span class="tracking-tight">VoiceNote</span>
+      </a>
+      <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-gray-500">
+        <a href="pricing.html" class="hover:text-gray-900 transition-colors">Pricing</a>
+        <a href="download.html" class="hover:text-gray-900 transition-colors">Download</a>
+        <a href="contact.html" class="hover:text-gray-900 transition-colors">Contact</a>
+        <a href="privacy.html" class="hover:text-gray-900 transition-colors">Privacy Policy</a>
+        <a href="terms.html" class="hover:text-gray-900 transition-colors">Terms of Service</a>
+        <a href="cookies.html" class="hover:text-gray-900 transition-colors">Cookie Policy</a>
+      </div>
+    </div>
+    <p class="mt-8 text-center text-xs text-gray-400">&copy; 2026 VoiceNote. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 20) {
+      navbar.classList.add('glass', 'border-b', 'border-gray-200/50', 'py-3');
+      navbar.classList.remove('py-5', 'bg-transparent');
+    } else {
+      navbar.classList.remove('glass', 'border-b', 'border-gray-200/50', 'py-3');
+      navbar.classList.add('py-5', 'bg-transparent');
+    }
+  });
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const menuIcon = document.getElementById('menuIcon');
+  let menuOpen = false;
+  menuToggle.addEventListener('click', () => {
+    menuOpen = !menuOpen;
+    mobileMenu.style.maxHeight = menuOpen ? mobileMenu.scrollHeight + 'px' : '0';
+    menuIcon.innerHTML = menuOpen
+      ? '<line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>'
+      : '<line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>';
+  });
+  document.querySelectorAll('.mobile-link').forEach(l => l.addEventListener('click', () => {
+    menuOpen = false; mobileMenu.style.maxHeight = '0';
+    menuIcon.innerHTML = '<line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>';
+  }));
+  // ---- Scroll reveal ----
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  setTimeout(() => {
+    document.querySelectorAll('.reveal').forEach(el => {
+      if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add('visible');
+    });
+  }, 100);
+</script>
+</body>
+</html>
