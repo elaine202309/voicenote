@@ -1,0 +1,22 @@
+name: Deploy
+on:
+  push:
+    branches: [master]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploy to gh-pages
+        run: |
+          mkdir -p /tmp/deploy
+          cp *.html CNAME .nojekyll /tmp/deploy/ 2>/dev/null || true
+          git fetch origin gh-pages
+          git checkout gh-pages
+          rm -rf *
+          cp /tmp/deploy/* .
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add -A
+          git diff --staged --quiet || git commit -m "Deploy $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git push origin gh-pages
