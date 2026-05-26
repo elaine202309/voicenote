@@ -14,9 +14,11 @@
       theme: {
         extend: {
           colors: {
-            brand: { 50:'#eef4ff',100:'#d9e5ff',200:'#bcd2ff',300:'#8eb5ff',400:'#598dff',500:'#3b6eff',600:'#1e4af5',700:'#1737e1',800:'#192eb6',900:'#1b2c8f',950:'#151d57' }
+            brand: { 50:'#eff6ff',100:'#dbeafe',200:'#bfdbfe',300:'#93c5fd',400:'#60a5fa',500:'#4f8af7',600:'#3b6ef5',700:'#2d5de0',800:'#2449c4',900:'#1e3a8a',950:'#172554' },
+            warm: { 50:'#fffbf5',100:'#fef7ed',200:'#fdefd6',300:'#fce3b6',400:'#f9cf8a',500:'#f5b85c',600:'#f09e34',700:'#e08816',800:'#bc7012',900:'#995813' }
           },
           fontFamily: { sans: ['Inter','system-ui','sans-serif'] },
+          borderRadius: { '4xl': '2rem' }
         }
       }
     }
@@ -27,9 +29,10 @@
   <style>
     html { scroll-behavior: smooth; }
     body { font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
-    .gradient-text { background: linear-gradient(135deg, #3b6eff 0%, #8b5cf6 50%, #ec4899 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .glass { background: rgba(255,255,255,0.8); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
-    .hero-bg { background: linear-gradient(135deg, #eef4ff 0%, #f5f0ff 25%, #fff0f5 50%, #f0f9ff 75%, #eef4ff 100%); background-size: 400% 400%; animation: gradientShift 15s ease infinite; }
+    .gradient-text { background: linear-gradient(135deg, #4f8af7 0%, #8b5cf6 40%, #f09e34 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .glass { background: rgba(255,255,255,0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+    .hero-bg { background: linear-gradient(135deg, #eff6ff 0%, #fef7ed 25%, #fdf2f8 50%, #f0fdf4 75%, #eff6ff 100%); background-size: 400% 400%; animation: gradientShift 15s ease infinite; }
+    .warm-bg { background-color: #fffbf5; }
     @keyframes gradientShift { 0%,100% { background-position: 0% 50%; } 25% { background-position: 100% 0%; } 50% { background-position: 100% 100%; } 75% { background-position: 0% 100%; } }
     .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
@@ -60,10 +63,10 @@
   </div>
   <div id="mobileMenu" class="max-h-0 overflow-hidden transition-all duration-300 md:hidden">
     <div class="mx-4 flex flex-col gap-1 border-t border-gray-100 pb-4 pt-3">
-      <a href="index.html" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-50">Home</a>
-      <a href="pricing.html" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-50">Pricing</a>
-      <a href="download.html" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-50">Download</a>
-      <a href="contact.html" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-50">Contact</a>
+      <a href="index.html" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 hover:warm-bg">Home</a>
+      <a href="pricing.html" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 hover:warm-bg">Pricing</a>
+      <a href="download.html" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 hover:warm-bg">Download</a>
+      <a href="contact.html" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 hover:warm-bg">Contact</a>
     </div>
   </div>
 </nav>
@@ -77,7 +80,7 @@
   <div class="relative z-10 mx-auto max-w-6xl px-4 py-20 text-center sm:px-6">
     <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-brand-200 bg-brand-50 px-4 py-1.5 text-sm font-medium text-brand-600 reveal">
       <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l2.4 7.2h7.6l-6 4.8 2.4 7.2-6-4.8-6 4.8 2.4-7.2-6-4.8h7.6z"/></svg>
-      AI-Powered Voice Notes
+      Your pocket voice assistant
     </div>
     <h1 class="mx-auto max-w-4xl text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl reveal">
       Turn messy voice<br><span class="gradient-text">into clear text</span>
@@ -89,11 +92,11 @@
     <div class="mx-auto mt-16 max-w-5xl reveal">
       <div class="grid gap-8 md:grid-cols-5 items-center">
         <div class="md:col-span-3">
-          <div class="relative overflow-hidden rounded-2xl border border-gray-200 bg-white p-6 shadow-xl shadow-gray-200/50 sm:p-8">
+          <div class="relative overflow-hidden rounded-2xl border border-gray-100 bg-white p-6 shadow-xl shadow-gray-200/50 sm:p-8">
             <div class="mb-6 flex items-center justify-center gap-[2px]">
               <div class="wave-bar" style="animation-delay:0s"></div><div class="wave-bar" style="animation-delay:0.05s"></div><div class="wave-bar" style="animation-delay:0.1s"></div><div class="wave-bar" style="animation-delay:0.15s"></div><div class="wave-bar" style="animation-delay:0.2s"></div><div class="wave-bar" style="animation-delay:0.25s"></div><div class="wave-bar" style="animation-delay:0.3s"></div><div class="wave-bar" style="animation-delay:0.35s"></div><div class="wave-bar" style="animation-delay:0.4s"></div><div class="wave-bar" style="animation-delay:0.45s"></div><div class="wave-bar" style="animation-delay:0.5s"></div><div class="wave-bar" style="animation-delay:0.55s"></div><div class="wave-bar" style="animation-delay:0.6s"></div><div class="wave-bar" style="animation-delay:0.65s"></div><div class="wave-bar" style="animation-delay:0.7s"></div><div class="wave-bar" style="animation-delay:0.75s"></div><div class="wave-bar" style="animation-delay:0.8s"></div><div class="wave-bar" style="animation-delay:0.85s"></div><div class="wave-bar" style="animation-delay:0.9s"></div><div class="wave-bar" style="animation-delay:0.95s"></div>
             </div>
-            <div class="rounded-xl bg-gray-50 p-5 text-left">
+            <div class="rounded-xl warm-bg p-5 text-left">
               <div class="mb-3 flex items-center gap-2 text-xs font-medium text-gray-400">
                 <svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/></svg> Voice input
               </div>
@@ -111,7 +114,7 @@
           </div>
         </div>
         <div class="md:col-span-2 flex flex-col items-center justify-center gap-6">
-          <div class="mx-auto rounded-2xl border border-gray-200 bg-white p-3 shadow-lg">
+          <div class="mx-auto rounded-2xl border border-gray-100 bg-white p-3 shadow-lg">
             <svg class="h-36 w-36" viewBox="0 0 37 37">
               <!-- Position markers (large squares) -->
               <rect x="1" y="1" width="11" height="11" rx="2" fill="#111"/><rect x="2" y="2" width="9" height="9" rx="1" fill="#fff"/><rect x="4" y="4" width="5" height="5" rx="0.5" fill="#111"/>
@@ -336,7 +339,7 @@
 </section>
 
 <!-- ===== EVERYWHERE YOU GO (Marquee Carousel) ===== -->
-<section class="bg-gray-50 py-24 sm:py-32">
+<section class="warm-bg py-24 sm:py-32">
   <div class="mx-auto max-w-6xl px-4 sm:px-6">
     <div class="mx-auto max-w-2xl text-center reveal">
       <span class="text-sm font-semibold uppercase tracking-widest text-brand-500">Everywhere You Go</span>
@@ -411,14 +414,14 @@
 </section>
 
 <!-- ===== DOWNLOAD ===== -->
-<section class="bg-gray-50 py-24 sm:py-32">
+<section class="warm-bg py-24 sm:py-32">
   <div class="mx-auto max-w-6xl px-4 sm:px-6">
     <div class="mx-auto max-w-2xl text-center reveal">
       <span class="text-sm font-semibold uppercase tracking-widest text-brand-500">Get the App</span>
       <h2 class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">Ready to <span class="gradient-text">get started</span>?</h2>
     </div>
     <div class="mt-16 grid gap-8 sm:grid-cols-2 max-w-2xl mx-auto reveal">
-      <div class="rounded-2xl border border-gray-200 bg-white p-8 text-center hover:shadow-lg transition-all">
+      <div class="rounded-2xl border border-gray-100 bg-white p-8 text-center hover:shadow-lg transition-all">
         <div class="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-gray-900 text-white mb-5">
           <svg class="h-7 w-7" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 2.95 2.58 3.93 2.61 3.94-.03.07-.41 1.39-1.3 2.73M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
         </div>
@@ -429,7 +432,7 @@
           <span class="whitespace-nowrap">Download on the App Store</span>
         </a>
       </div>
-      <div class="rounded-2xl border border-gray-200 bg-white p-8 text-center hover:shadow-lg transition-all">
+      <div class="rounded-2xl border border-gray-100 bg-white p-8 text-center hover:shadow-lg transition-all">
         <div class="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-green-600 text-white mb-5">
           <svg class="h-7 w-7" fill="currentColor" viewBox="0 0 24 24"><path d="M6 18c0 .55.45 1 1 1h1v3.5a1.5 1.5 0 0 0 3 0V19h2v3.5a1.5 1.5 0 0 0 3 0V19h1c.55 0 1-.45 1-1V8H6v10zM3.5 8C2.67 8 2 8.67 2 9.5v7c0 .83.67 1.5 1.5 1.5S5 17.33 5 16.5v-7C5 8.67 4.33 8 3.5 8zm17 0c-.83 0-1.5.67-1.5 1.5v7c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5v-7c0-.83-.67-1.5-1.5-1.5zm-4.97-5.84l1.3-1.3c.2-.2.2-.51 0-.71-.2-.2-.51-.2-.71 0l-1.48 1.48A5.96 5.96 0 0 0 12 1c-.96 0-1.86.23-2.66.63L7.85.15c-.2-.2-.51-.2-.71 0-.2.2-.2.51 0 .71l1.31 1.31A5.983 5.983 0 0 0 6 7h12c0-1.99-.97-3.75-2.47-4.84zM10 5H9V4h1v1zm5 0h-1V4h1v1z"/></svg>
         </div>
@@ -471,10 +474,10 @@
   const navbar = document.getElementById('navbar');
   window.addEventListener('scroll', () => {
     if (window.scrollY > 20) {
-      navbar.classList.add('glass', 'border-b', 'border-gray-200/50', 'py-3');
+      navbar.classList.add('glass', 'border-b', 'border-gray-100/50', 'py-3');
       navbar.classList.remove('py-5', 'bg-transparent');
     } else {
-      navbar.classList.remove('glass', 'border-b', 'border-gray-200/50', 'py-3');
+      navbar.classList.remove('glass', 'border-b', 'border-gray-100/50', 'py-3');
       navbar.classList.add('py-5', 'bg-transparent');
     }
   });
