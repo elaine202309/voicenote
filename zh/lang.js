@@ -349,8 +349,6 @@ var T={
 'compare.title2':{fr:'Premium',de:'Prime',es:'Premium',it:'Premium',zh:'高级版'},
 'faq.title1':{fr:'Questions ',de:'Haufig ',es:'Preguntas ',it:'Domande ',zh:'常见'},
 'faq.title2':{fr:'frequentes',de:'gestellte Fragen',es:'frecuentes',it:'frequenti',zh:'问题解答'},
-},
-};
 'For questions about these Terms, contact us at':{fr:'Questions :',de:'Fragen:',es:'Preguntas:',it:'Domande:',zh:'问题联系：'},
 // Terms — remaining
 'By creating an account or using VoiceNote in any way, you agree to these Terms. If you do not agree, do not use our services.':{fr:'En creant un compte, vous acceptez ces conditions. Sinon, n\'utilisez pas nos services.',de:'Durch Kontoerstellung stimmen Sie zu. Andernfalls nicht nutzen.',es:'Al crear cuenta, aceptas. Si no, no uses nuestros servicios.',it:'Creando un account, accetti. Altrimenti non usare i nostri servizi.',zh:'创建账户即表示同意。如不同意，请勿使用。'},
