@@ -34,7 +34,7 @@ var T={
 'Key Takeaways':{fr:'Points Cles',de:'Kernpunkte',es:'Puntos Clave',it:'Punti Chiave',zh:'要点总结'},
 'Casual / Slack':{fr:'Decontracte',de:'Locker',es:'Informal',it:'Informale',zh:'随意聊天'},
 // Pricing
-'Free':{fr:'Gratuit',de:'Kostenlos',es:'Gratis',it:'Gratis',zh:'免费'},
+'Free':{fr:'Gratuit',de:'Kostenlos',es:'Gratis',it:'Gratuito',zh:'免费版'},
 'Prime':{fr:'Premium',de:'Prime',es:'Premium',it:'Premium',zh:'高级版'},
 'Start your free trial':{fr:'Essai gratuit',de:'Testversion',es:'Prueba gratuita',it:'Prova gratuita',zh:'开始免费试用'},
 'Try Free Now':{fr:'Essayer',de:'Jetzt testen',es:'Probar ahora',it:'Prova ora',zh:'立即试用'},
