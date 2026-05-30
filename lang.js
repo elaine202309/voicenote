@@ -429,7 +429,10 @@ var T={
 'VoiceNote Cookie Policy — understand how we use cookies and similar technologies.':{fr:'Politique de cookies VoiceNote — comprenez comment nous utilisons les cookies.',de:'VoiceNote Cookie-Richtlinie — wie wir Cookies verwenden.',es:'Politica de cookies de VoiceNote — como usamos las cookies.',it:'Politica sui cookie VoiceNote — come usiamo i cookie.',zh:'VoiceNote Cookie 政策 — 了解我们如何使用 Cookie 及类似技术。'},
 };
 function getLang(){var s=localStorage.getItem(LANG_KEY);return s&&LANGS.indexOf(s)>=0?s:(LANGS.indexOf(navigator.language.slice(0,2))>=0?navigator.language.slice(0,2):'en');}
-function setLang(l){if(LANGS.indexOf(l)<0)return;localStorage.setItem(LANG_KEY,l);if(l==='en'){location.reload();return;}applyLang();updateBadge();document.getElementById('langDropdown').classList.add('hidden');}
+var _enTexts=null;
+function cacheEN(){if(_enTexts)return;_enTexts=[];document.querySelectorAll('[data-t]').forEach(function(el){_enTexts.push({el:el,text:el.textContent});});}
+function restoreEN(){if(!_enTexts)return;_enTexts.forEach(function(item){item.el.textContent=item.text;});_enTexts=null;}
+function setLang(l){if(LANGS.indexOf(l)<0)return;localStorage.setItem(LANG_KEY,l);var url=l==='en'?'/':'/'+l+'/';history.pushState(null,'',url);if(l==='en'){restoreEN();}else{cacheEN();applyLang();}updateBadge();document.getElementById('langDropdown').classList.add('hidden');}
 function applyLang(){
   var lang=getLang();if(lang==='en')return;
   document.documentElement.lang=lang;
