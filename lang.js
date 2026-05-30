@@ -429,7 +429,7 @@ var T={
 'VoiceNote Cookie Policy — understand how we use cookies and similar technologies.':{fr:'Politique de cookies VoiceNote — comprenez comment nous utilisons les cookies.',de:'VoiceNote Cookie-Richtlinie — wie wir Cookies verwenden.',es:'Politica de cookies de VoiceNote — como usamos las cookies.',it:'Politica sui cookie VoiceNote — come usiamo i cookie.',zh:'VoiceNote Cookie 政策 — 了解我们如何使用 Cookie 及类似技术。'},
 };
 function getLang(){var s=localStorage.getItem(LANG_KEY);return s&&LANGS.indexOf(s)>=0?s:(LANGS.indexOf(navigator.language.slice(0,2))>=0?navigator.language.slice(0,2):'en');}
-function setLang(l){if(LANGS.indexOf(l)<0)return;localStorage.setItem(LANG_KEY,l);var p=location.pathname.replace(/^\/(en|fr|de|es|it|zh)\//,'/').replace(/^\//,'');location.href='/'+l+'/'+(p||'');}
+function setLang(l){if(LANGS.indexOf(l)<0)return;localStorage.setItem(LANG_KEY,l);if(l==='en'){location.reload();return;}applyLang();updateBadge();document.getElementById('langDropdown').classList.add('hidden');}
 function applyLang(){
   var lang=getLang();if(lang==='en')return;
   document.documentElement.lang=lang;
