@@ -333,5 +333,5 @@
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
   setTimeout(() => { document.querySelectorAll('.reveal').forEach(el => { if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add('visible'); }); }, 100);
 </script>
-</body>
+<script>localStorage.setItem('voicenote_lang','de');if(typeof applyLang==='function')applyLang();</script></body>
 </html>
