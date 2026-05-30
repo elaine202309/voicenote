@@ -79,7 +79,27 @@ var T={
 'Professionals & Executives':{fr:'Professionnels',de:'Profis',es:'Profesionales',it:'Professionisti',zh:'职场人士'},
 'Thinkers & Ideators':{fr:'Penseurs',de:'Denker',es:'Pensadores',it:'Pensatori',zh:'思考者'},
 'Entrepreneurs & Ideators':{fr:'Entrepreneurs',de:'Unternehmer',es:'Emprendedores',it:'Imprenditori',zh:'创业者'},
-'Journal Keepers & Thinkers':{fr:'Journaliers',de:'Journal',de:'Journal',es:'Diarios',it:'Diario',zh:'日记者'},
+'Journal Keepers & Thinkers':{fr:'Journaliers',de:'Journal Schreiber',es:'Diarios',it:'Diario',zh:'日记者'},
+// Who It\'s For descriptions
+'Dictate first drafts effortlessly. Never stare at a blank page again.':{fr:'Dictez vos brouillons sans effort.',de:'Diktieren Sie Entwurfe muhlos.',es:'Dicta borradores sin esfuerzo.',it:'Detta bozze senza sforzo.',zh:'轻松口述初稿，告别空白页。'},
+'Turn walking thoughts into polished messages, emails, and memos on the go.':{fr:'Transformez vos pensees en messages soignes.',de:'Gedanken in Nachrichten verwandeln.',es:'Convierte pensamientos en mensajes.',it:'Trasforma pensieri in messaggi.',zh:'把随想变成精致的消息和邮件。'},
+'Transcribe lectures, organise study notes, and brainstorm essays hands-free.':{fr:'Transcrivez les cours, organisez vos notes.',de:'Vorlesungen transkribieren, Notizen organisieren.',es:'Transcribe clases, organiza apuntes.',it:'Trascrivi lezioni, organizza appunti.',zh:'免提转录课程，整理笔记。'},
+'Capture chaotic brainstorming sessions and instantly structure them into action plans.':{fr:'Structurez vos brainstormings en plans daction.',de:'Brainstorming in Aktionsplane umwandeln.',es:'Estructura ideas en planes de accion.',it:'Struttura il brainstorming in piani d\'azione.',zh:'把头脑风暴变成行动计划。'},
+'Reflect out loud. Document your day with zero friction and clear insights.':{fr:'Reflechissez a voix haute. Documentez votre journee.',de:'Laut reflektieren. Dokumentieren Sie Ihren Tag.',es:'Reflexiona en voz alta. Documenta tu dia.',it:'Rifletti ad alta voce. Documenta la tua giornata.',zh:'大声回顾，零摩擦记录每一天。'},
+'Capture ideas while cooking, driving, or chasing the kids. Totally hands-free.':{fr:'Capturez des idees en cuisinant ou conduisant.',de:'Ideen beim Kochen oder Fahren festhalten.',es:'Captura ideas mientras cocinas o conduces.',it:'Cattura idee mentre cucini o guidi.',zh:'做饭开车带娃时捕捉灵感，完全免提。'},
+// Fragmented headings
+'One voice note,':{fr:'Une note vocale,',de:'Eine Notiz,',es:'Una nota,',it:'Una nota,',zh:'一条语音，'},
+'Speak your language,':{fr:'Parlez votre langue,',de:'Sprechen Sie Ihre Sprache,',es:'Habla tu idioma,',it:'Parla la tua lingua,',zh:'说你的语言，'},
+'For minds that move':{fr:'Pour les esprits',de:'Fur Kopfe die',es:'Mentes que van',it:'Menti che vanno',zh:'为思维速度'},
+'No matter your workflow, VoiceNote turns your spoken thoughts into action.':{fr:'VoiceNote transforme vos pensees en action.',de:'VoiceNote macht Gedanken zu Aktion.',es:'VoiceNote convierte pensamientos en accion.',it:'VoiceNote trasforma pensieri in azione.',zh:'VoiceNote 把你的想法变成行动。'},
+'VoiceNote transcribes and polishes in 46 languages, right out of the box.':{fr:'VoiceNote transcrit en 46 langues.',de:'VoiceNote in 46 Sprachen.',es:'VoiceNote en 46 idiomas.',it:'VoiceNote in 46 lingue.',zh:'VoiceNote 支持 46 种语言。'},
+// More fragments
+'Subject: ':{fr:'Objet : ',de:'Betreff: ',es:'Asunto: ',it:'Oggetto: ',zh:'主题：'},
+'Project Timeline Extension':{fr:'Prolongation du delai',de:'Fristverlangerung',es:'Extension del plazo',it:'Estensione scadenza',zh:'项目延长期限'},
+'Dear Team,':{fr:'Chere equipe,',de:'Liebes Team,',es:'Estimado equipo,',it:'Caro team,',zh:'各位团队成员，'},
+'Best regards':{fr:'Cordialement',de:'Mit freundlichen Grussen',es:'Saludos cordiales',it:'Cordiali saluti',zh:'此致敬礼'},
+'Action Item:':{fr:'Action : ',de:'Aufgabe: ',es:'Accion: ',it:'Azione: ',zh:'行动项：'},
+'Next Steps:':{fr:'Prochaines etapes : ',de:'Nachste Schritte: ',es:'Proximos pasos: ',it:'Prossimi passi: ',zh:'下一步：'},
 // FAQ
 'FAQ':{fr:'FAQ',de:'FAQ',es:'FAQ',it:'FAQ',zh:'常见问题'},
 'How does the free trial work?':{fr:'Comment fonctionne l\'essai?',de:'Wie funktioniert die Testversion?',es:'Como funciona la prueba?',it:'Come funziona la prova?',zh:'免费试用如何运作？'},
@@ -124,6 +144,34 @@ var T={
 '/yr':{fr:'/an',de:'/Jahr',es:'/ano',it:'/anno',zh:'/年'},
 'Save 28% with annual billing':{fr:'Economisez 28%/an',de:'28% sparen/Jahr',es:'Ahorra 28%/ano',it:'Risparmia 28%/anno',zh:'年付省 28%'},
 'Cancel anytime':{fr:'Annulez a tout moment',de:'Jederzeit kundbar',es:'Cancela cuando quieras',it:'Annulla quando vuoi',zh:'随时取消'},
+// Pricing FAQ
+'Frequently':{fr:'Questions',de:'Haufig',es:'Preguntas',it:'Domande',zh:'常见'},
+'asked questions':{fr:'frequentes',de:'gestellte Fragen',es:'frecuentes',it:'frequenti',zh:'问题解答'},
+'Can I switch or cancel my plan anytime?':{fr:'Puis-je changer ou annuler mon plan?',de:'Kann ich wechseln oder kundigen?',es:'Puedo cambiar o cancelar?',it:'Posso cambiare o annullare?',zh:'可以随时切换方案吗？'},
+'What happens to my notes if I cancel?':{fr:'Que deviennent mes notes si j\'annule?',de:'Was passiert mit meinen Notizen?',es:'Que pasa con mis notas si cancelo?',it:'Cosa succede alle mie note?',zh:'取消后我的笔记会怎样？'},
+'Tags & folders':{fr:'Tags et dossiers',de:'Tags & Ordner',es:'Etiquetas y carpetas',it:'Tag e cartelle',zh:'标签和文件夹'},
+// Download page
+'Capture your ideas':{fr:'Capturez vos idees',de:'Ideen festhalten',es:'Captura tus ideas',it:'Cattura le idee',zh:'捕捉灵感'},
+'anywhere, anytime':{fr:'partout, a tout moment',de:'uberall, jederzeit',es:'en cualquier lugar',it:'ovunque, in ogni momento',zh:'随时随地'},
+'Available for iPhone and iPad. Download now and start turning your voice into polished text.':{fr:'Pour iPhone et iPad. Telechargez et transformez votre voix.',de:'Fur iPhone und iPad. Jetzt downloaden.',es:'Para iPhone y iPad. Descarga ahora.',it:'Per iPhone e iPad. Scarica ora.',zh:'适用于 iPhone 和 iPad。立即下载。'},
+'Deepgram + GPT refine your words in seconds':{fr:'Deepgram + GPT peaufinent en secondes',de:'Deepgram + GPT verfeinern in Sekunden',es:'Deepgram + GPT refinan en segundos',it:'Deepgram + GPT perfezionano in secondi',zh:'Deepgram + GPT 秒速润色'},
+'Folders, tags & full-text search':{fr:'Dossiers, tags et recherche',de:'Ordner, Tags & Volltextsuche',es:'Carpetas, etiquetas y busqueda',it:'Cartelle, tag e ricerca',zh:'文件夹、标签和全文搜索'},
+'Get VoiceNote from the App Store. It\'s a free download.':{fr:'Depuis l\'App Store. Gratuit.',de:'Aus dem App Store. Kostenlos.',es:'Desde App Store. Gratis.',it:'Dall\'App Store. Gratis.',zh:'从 App Store 免费下载。'},
+'Hit the big record button and start talking. VoiceNote handles the rest.':{fr:'Appuyez et parlez. VoiceNote fait le reste.',de:'Aufnehmen und sprechen. VoiceNote erledigt den Rest.',es:'Pulsa y habla. VoiceNote hace el resto.',it:'Premi e parla. VoiceNote fa il resto.',zh:'点击录音开始说话，VoiceNote 处理剩下的。'},
+'Install in':{fr:'Installer en',de:'Installieren in',es:'Instalar en',it:'Installa in',zh:'安装只需'},
+'seconds':{fr:'secondes',de:'Sekunden',es:'segundos',it:'secondi',zh:'秒'},
+'Minimalist design,':{fr:'Design minimaliste,',de:'Minimalistisch,',es:'Diseno minimo,',it:'Design minimalista,',zh:'极简设计，'},
+'maximum productivity':{fr:'productivite maximale',de:'maximale Produktivitat',es:'maxima productividad',it:'massima produttivita',zh:'极致效率'},
+'Open your iPhone camera and scan the QR code to download instantly.':{fr:'Ouvrez lappareil photo et scannez.',de:'Kamera offnen und scannen.',es:'Abre la camara y escanea.',it:'Apri la fotocamera e scansiona.',zh:'打开相机扫码下载。'},
+'Press the big mic button and start talking':{fr:'Appuyez sur le micro et parlez',de:'Grossen Mikro-Button drucken',es:'Pulsa el microfono y habla',it:'Premi il microfono e parla',zh:'按下麦克风按钮开始说话'},
+'Sign up with email or Google. Takes less than 30 seconds.':{fr:'Inscrivez-vous en 30 secondes.',de:'In 30 Sekunden registriert.',es:'Registrate en 30 segundos.',it:'Registrati in 30 secondi.',zh:'邮箱注册，30 秒搞定。'},
+'What you':{fr:'Ce dont vous',de:'Was Sie',es:'Lo que',it:'Cosa ti',zh:'你'},
+'need':{fr:'avez besoin',de:'brauchen',es:'necesitas',it:'serve',zh:'所需要的'},
+'Your polished text is ready. Copy it anywhere, share it, or export it.':{fr:'Votre texte est pret. Copiez, partagez, exportez.',de:'Ihr Text ist fertig. Kopieren, teilen, exportieren.',es:'Tu texto esta listo. Copia, comparte, exporta.',it:'Il tuo testo e pronto. Copia, condividi, esporta.',zh:'文字已就绪。复制、分享或导出。'},
+// Contact
+'We\'d love to':{fr:'Nous aimerions',de:'Wir wurden gerne',es:'Nos encantaria',it:'Ci piacerebbe',zh:'我们期待'},
+'hear from you':{fr:'vous entendre',de:'von Ihnen horen',es:'saber de ti',it:'sentirti',zh:'收到你的消息'},
+'Drop us a line anytime. We\'ll get back to you within 24 hours.':{fr:'Ecrivez-nous. Reponse sous 24h.',de:'Schreiben Sie uns. Antwort in 24h.',es:'Escribenos. Respondemos en 24h.',it:'Scrivici. Rispondiamo entro 24h.',zh:'联系我们，24 小时内回复。'},
 };
 
 function getLang(){var s=localStorage.getItem(LANG_KEY);return s&&LANGS.indexOf(s)>=0?s:(LANGS.indexOf(navigator.language.slice(0,2))>=0?navigator.language.slice(0,2):'en');}
