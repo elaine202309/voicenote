@@ -334,6 +334,23 @@ var T={
 'All rights reserved.':{fr:'Tous droits reserves.',de:'Alle Rechte vorbehalten.',es:'Todos los derechos reservados.',it:'Tutti i diritti riservati.',zh:'版权所有。'},
 'Email':{fr:'E-mail',de:'E-Mail',es:'Email',it:'Email',zh:'邮件'},
 'Priority':{fr:'Prioritaire',de:'Prioritat',es:'Prioritario',it:'Prioritario',zh:'优先'},
+
+// data-t attribute keys (used by pricing page)
+'pricing.free':{fr:'Gratuit',de:'Kostenlos',es:'Gratis',it:'Gratuito',zh:'免费版'},
+'pricing.free.desc':{fr:'Commencez votre essai gratuit',de:'Kostenlose Testversion',es:'Comienza tu prueba gratuita',it:'Inizia la prova gratuita',zh:'开始免费试用'},
+'pricing.prime':{fr:'Premium',de:'Prime',es:'Premium',it:'Premium',zh:'高级版'},
+'pricing.prime.desc':{fr:'Tout Gratuit en illimite',de:'Alles Kostenlos unbegrenzt',es:'Todo Gratis ilimitado',it:'Tutto Gratuito illimitato',zh:'免费版全部功能 + 无限使用'},
+'pricing.tag':{fr:'Tarifs',de:'Preise',es:'Precios',it:'Prezzi',zh:'定价方案'},
+'compare.tag':{fr:'Comparer',de:'Vergleichen',es:'Comparar',it:'Confronta',zh:'方案对比'},
+'faq.tag':{fr:'FAQ',de:'FAQ',es:'FAQ',it:'FAQ',zh:'常见问题'},
+'pricing.title1':{fr:'Essayez ',de:'Testen Sie ',es:'Pruebalo ',it:'Provalo ',zh:'免费'},
+'pricing.title2':{fr:'gratuitement.',de:'kostenlos.',es:'gratis.',it:'gratis.',zh:'试用。'},
+'compare.title1':{fr:'Gratuit vs ',de:'Kostenlos vs ',es:'Gratis vs ',it:'Gratuito vs ',zh:'免费版 vs '},
+'compare.title2':{fr:'Premium',de:'Prime',es:'Premium',it:'Premium',zh:'高级版'},
+'faq.title1':{fr:'Questions ',de:'Haufig ',es:'Preguntas ',it:'Domande ',zh:'常见'},
+'faq.title2':{fr:'frequentes',de:'gestellte Fragen',es:'frecuentes',it:'frequenti',zh:'问题解答'},
+},
+};
 'For questions about these Terms, contact us at':{fr:'Questions :',de:'Fragen:',es:'Preguntas:',it:'Domande:',zh:'问题联系：'},
 // Terms — remaining
 'By creating an account or using VoiceNote in any way, you agree to these Terms. If you do not agree, do not use our services.':{fr:'En creant un compte, vous acceptez ces conditions. Sinon, n\'utilisez pas nos services.',de:'Durch Kontoerstellung stimmen Sie zu. Andernfalls nicht nutzen.',es:'Al crear cuenta, aceptas. Si no, no uses nuestros servicios.',it:'Creando un account, accetti. Altrimenti non usare i nostri servizi.',zh:'创建账户即表示同意。如不同意，请勿使用。'},
@@ -382,6 +399,9 @@ function applyLang(){
   var walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,null,false);
   var nodes=[];while(walker.nextNode())nodes.push(walker.currentNode);
   for(i=0;i<nodes.length;i++){var node=nodes[i];var p=node.parentElement;if(!p||p.tagName==='SCRIPT'||p.tagName==='STYLE'||p.tagName==='NOSCRIPT')continue;if(p.closest&&p.closest('#langSwitcher'))continue;t=node.textContent.trim();if(!t||t.length<2)continue;if(T[t]&&T[t][lang])node.textContent=T[t][lang];}
+  // Step 3: data-t attributes (leaf elements only, preserves gradient spans)
+  var dts=document.querySelectorAll('[data-t]');
+  for(i=0;i<dts.length;i++){var dt=dts[i];if(dt.children.length>0)continue;if(dt.closest&&dt.closest('#langSwitcher'))continue;var key=dt.getAttribute('data-t');if(T[key]&&T[key][lang])dt.textContent=T[key][lang];}
 }
 
 document.addEventListener('DOMContentLoaded',function(){
