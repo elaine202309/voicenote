@@ -35,7 +35,7 @@ var T={
 'Casual / Slack':{fr:'Decontracte',de:'Locker',es:'Informal',it:'Informale',zh:'随意聊天'},
 // Pricing
 'Free':{fr:'Gratuit',de:'Kostenlos',es:'Gratis',it:'Gratis',zh:'免费'},
-'Prime':{fr:'Prime',de:'Prime',es:'Prime',it:'Prime',zh:'Prime'},
+'Prime':{fr:'Premium',de:'Prime',es:'Premium',it:'Premium',zh:'高级版'},
 'Start your free trial':{fr:'Essai gratuit',de:'Testversion',es:'Prueba gratuita',it:'Prova gratuita',zh:'开始免费试用'},
 'Try Free Now':{fr:'Essayer',de:'Jetzt testen',es:'Probar ahora',it:'Prova ora',zh:'立即试用'},
 '10 free notes':{fr:'10 notes gratuites',de:'10 Notizen',es:'10 notas gratis',it:'10 note gratis',zh:'10 条免费笔记'},
