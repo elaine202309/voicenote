@@ -5,6 +5,12 @@ var T={
 'Download':{fr:'Telecharger',de:'Download',es:'Descargar',it:'Scarica',zh:'下载'},
 'Contact':{fr:'Contact',de:'Kontakt',es:'Contacto',it:'Contatto',zh:'联系'},
 'Try Free':{fr:'Essai Gratuit',de:'Testen',es:'Probar',it:'Prova',zh:'免费试用'},
+'Your AI Voice Alchemist':{fr:'Votre Alchimiste Vocal IA',de:'Ihr KI-Sprachalchemist',es:'Tu Alquimista de Voz IA',it:'Il Tuo Alchimiste Vocale IA',zh:'你的 AI 语音炼金师'},
+'From voice to perfect text ':{fr:'De la voix au texte parfait ',de:'Von Sprache zu perfektem Text ',es:'De voz a texto perfecto ',it:'Dalla voce al testo perfetto ',zh:'从语音到完美文字 '},
+'in 3 steps':{fr:'en 3 etapes',de:'in 3 Schritten',es:'en 3 pasos',it:'in 3 passi',zh:'只需三步'},
+'Ready to ':{fr:'Pret a ',de:'Bereit zum ',es:'Listo para ',it:'Pronto per ',zh:'准备好'},
+'Speak your language, ':{fr:'Parlez votre langue, ',de:'Sprechen Sie Ihre Sprache, ',es:'Habla tu idioma, ',it:'Parla la tua lingua, ',zh:'用你的语言说，'},
+'write in any language':{fr:'ecrivez dans toute langue',de:'schreiben Sie in jeder Sprache',es:'escribe en cualquier idioma',it:'scrivi in qualsiasi lingua',zh:'用任何语言写'},
 // Hero
 'Turn messy thoughts':{fr:'Pensees brouillonnes',de:'Chaotische Gedanken',es:'Pensamientos',it:'Pensieri confusi',zh:'将混乱的想法'},
 'into structured text':{fr:'en texte structure',de:'in Text',es:'en texto',it:'in testo',zh:'变成清晰的文字'},
