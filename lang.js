@@ -137,27 +137,22 @@ const T={
 function getLang(){const s=localStorage.getItem(LANG_KEY);return s&&LANGS.includes(s)?s:(LANGS.includes(navigator.language.slice(0,2))?navigator.language.slice(0,2):'en');}
 function setLang(l){if(!LANGS.includes(l))return;localStorage.setItem(LANG_KEY,l);applyLang();updateBadge();}
 function applyLang(){
-  const lang=getLang();if(lang==='en')return restoreEN();
+  const lang=getLang();if(lang==='en')return;
   document.documentElement.lang=lang;
-  // Walk all text nodes and translate
-  const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,null,false);
-  const nodes=[];
-  while(walker.nextNode())nodes.push(walker.currentNode);
-  nodes.forEach(node=>{
-    const text=node.textContent.trim();
+  // Strategy: translate elements whose full textContent matches a dict key
+  const all=document.querySelectorAll('p,span,h1,h2,h3,h4,h5,h6,li,a,button,td,th,label,div');
+  all.forEach(el=>{
+    // Skip elements with children (only translate leaf text containers)
+    if(el.children.length>0)return;
+    if(el.closest('#langSwitcher'))return;
+    if(['SCRIPT','STYLE','NOSCRIPT','INPUT','TEXTAREA'].includes(el.tagName))return;
+    const text=el.textContent.trim();
     if(!text||text.length<2)return;
-    // Skip script/style/noscript
-    const parent=node.parentElement;
-    if(!parent||['SCRIPT','STYLE','NOSCRIPT'].includes(parent.tagName))return;
-    // Skip lang switcher and inputs
-    if(parent.closest('#langSwitcher'))return;
-    if(parent.tagName==='INPUT'||parent.tagName==='TEXTAREA')return;
-    // Look up translation
     if(T[text]&&T[text][lang]){
-      node.textContent=T[text][lang];
+      el.textContent=T[text][lang];
     }
   });
-  // Also handle data-t elements
+  // Handle data-t elements
   document.querySelectorAll('[data-t]').forEach(el=>{
     const k=el.getAttribute('data-t');
     if(T[k]&&T[k][lang])el.textContent=T[k][lang];
