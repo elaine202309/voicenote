@@ -109,17 +109,45 @@ function updateSwitcherUI(lang) {
 document.addEventListener('DOMContentLoaded', () => {
   applyLang();
   // Create language switcher
-  const langLabels = {en:'EN',fr:'FR',de:'DE',es:'ES',it:'IT',zh:'中文'};
+  const langLabels = {en:'English',fr:'Français',de:'Deutsch',es:'Español',it:'Italiano',zh:'中文'};
+  const langShort = {en:'EN',fr:'FR',de:'DE',es:'ES',it:'IT',zh:'中文'};
   const currentLang = getLang();
   const switcher = document.getElementById('langSwitcher');
   if (switcher) {
+    // Current language display
+    const current = document.createElement('span');
+    current.id = 'langCurrent';
+    current.className = 'text-xs font-medium text-gray-500 cursor-pointer hover:text-gray-700 flex items-center gap-1';
+    current.innerHTML = langShort[currentLang] + ' <svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>';
+    switcher.appendChild(current);
+
+    // Dropdown
+    const dropdown = document.createElement('div');
+    dropdown.id = 'langDropdown';
+    dropdown.className = 'absolute top-full right-0 mt-1 bg-white border border-gray-100 rounded-xl shadow-lg py-1 hidden z-50';
     SUPPORTED_LANGS.forEach(l => {
-      const btn = document.createElement('button');
-      btn.textContent = langLabels[l];
-      btn.className = 'lang-option text-xs font-medium ' + (l === currentLang ? 'text-brand-600 font-semibold' : 'text-gray-500 hover:text-gray-900');
-      btn.setAttribute('data-lang', l);
-      btn.onclick = () => setLang(l);
-      switcher.appendChild(btn);
+      const opt = document.createElement('button');
+      opt.textContent = langLabels[l];
+      opt.className = 'lang-option block w-full text-left px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-gray-900 ' + (l === currentLang ? 'font-semibold text-brand-600' : '');
+      opt.setAttribute('data-lang', l);
+      opt.onclick = () => { setLang(l); dropdown.classList.add('hidden'); };
+      dropdown.appendChild(opt);
     });
+    switcher.appendChild(dropdown);
+
+    // Toggle dropdown
+    current.addEventListener('click', (e) => {
+      e.stopPropagation();
+      dropdown.classList.toggle('hidden');
+    });
+    document.addEventListener('click', () => dropdown.classList.add('hidden'));
   }
+
+  // Update UI after lang change
+  const origSetLang = setLang;
+  setLang = function(lang) {
+    origSetLang(lang);
+    const cur = document.getElementById('langCurrent');
+    if (cur) cur.innerHTML = langShort[lang] + ' <svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>';
+  };
 });
