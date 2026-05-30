@@ -25,7 +25,8 @@ var T={
 // Hero demo card
 'Voice input':{fr:'Entree vocale',de:'Spracheingabe',es:'Entrada de voz',it:'Ingresso vocale',zh:'语音输入'},
 'AI polished':{fr:'Peaufine par IA',de:'KI-verfeinert',es:'Pulido por IA',it:'Perfezionato dall\'IA',zh:'AI 润色后'},
-'Download on the':{fr:'Telecharger sur l\'',de:'Laden im',es:'Descargar en',it:'Scarica su',zh:'在以下载'},
+'Download on the':{fr:'Telecharger sur l\'',de:'Laden im',es:'Descargar en',it:'Scarica su',zh:'在 '},
+'dl.btn':{fr:'Telecharger sur l\'App Store',de:'Im App Store laden',es:'Descargar en App Store',it:'Scarica su App Store',zh:'在 App Store 下载'},
 'App Store':{fr:'App Store',de:'App Store',es:'App Store',it:'App Store',zh:'App Store'},
 // Smart Styles
 'VOICE INPUT':{fr:'ENTREE VOCALE',de:'SPRACHEINGABE',es:'ENTRADA DE VOZ',it:'INGRESSO VOCALE',zh:'语音输入'},
