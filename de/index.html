@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VoiceNote — Speak Naturally, Get Polished Text Instantly</title>
+  <meta name="google-site-verification" content="4M5Rdx7KvghF95temOQbyXo5t10Ww5ekbLxuhgxX-to" />
+  <meta name="description" content="Transform your messy voice notes into clear, structured, and professional text. Perfect for meetings, ideas, emails, and content creation.">
+  <meta property="og:title" content="VoiceNote — AI Voice to Clear Text">
+  <meta property="og:description" content="Record, transcribe, and polish your thoughts into clear, structured text.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta property="og:type" content="website">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { 50:'#eff6ff',100:'#dbeafe',200:'#bfdbfe',300:'#93c5fd',400:'#60a5fa',500:'#4f8af7',600:'#3b6ef5',700:'#2d5de0',800:'#2449c4',900:'#1e3a8a',950:'#172554' },
+            warm: { 50:'#fffbf5',100:'#fef7ed',200:'#fdefd6',300:'#fce3b6',400:'#f9cf8a',500:'#f5b85c',600:'#f09e34',700:'#e08816',800:'#bc7012',900:'#995813' }
+          },
+          fontFamily: { sans: ['Inter','system-ui','sans-serif'] },
+          borderRadius: { '4xl': '2rem' }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+    .gradient-text { background: linear-gradient(135deg, #4f8af7 0%, #8b5cf6 40%, #f09e34 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .glass { background: rgba(255,255,255,0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
+    .hero-bg { background: linear-gradient(135deg, #eff6ff 0%, #fef7ed 25%, #fdf2f8 50%, #f0fdf4 75%, #eff6ff 100%); background-size: 400% 400%; animation: gradientShift 15s ease infinite; }
+    .warm-bg { background-color: #fffbf5; }
+    .logo-gradient { background: linear-gradient(135deg, #4f8af7, #8b5cf6); }
+    .btn-gradient { background: linear-gradient(135deg, #4f8af7, #8b5cf6); }
+    .btn-gradient:hover { background: linear-gradient(135deg, #3b6ef5, #7c3aed); }
+    @keyframes gradientShift { 0%,100% { background-position: 0% 50%; } 25% { background-position: 100% 0%; } 50% { background-position: 100% 100%; } 75% { background-position: 0% 100%; } }
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .wave-bar { width: 3px; height: 40px; border-radius: 999px; background: #8eb5ff; animation: wave 1.2s ease-in-out infinite; transform-origin: center; }
+    @keyframes wave { 0%,100% { transform: scaleY(0.2); } 50% { transform: scaleY(1); } }
+  </style>
+<!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QNKGT9R5FB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-QNKGT9R5FB');
+  </script>
+<link rel="canonical" href="https://voicenote.uk/">
+  <link rel="alternate" hreflang="en" href="https://voicenote.uk/">
+  <link rel="alternate" hreflang="fr" href="https://voicenote.uk/">
+  <link rel="alternate" hreflang="de" href="https://voicenote.uk/">
+  <link rel="alternate" hreflang="es" href="https://voicenote.uk/">
+  <link rel="alternate" hreflang="it" href="https://voicenote.uk/">
+  <link rel="alternate" hreflang="zh" href="https://voicenote.uk/">
+  <link rel="alternate" hreflang="x-default" href="https://voicenote.uk/">
+  <script src="lang.js"></script>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+
+<!-- NAVBAR -->
+<nav id="navbar" class="fixed top-0 z-50 w-full transition-all duration-300 py-5 bg-transparent">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-4 sm:px-6">
+    <a href="./" class="flex items-center gap-2 text-xl font-bold">
+      <div class="flex h-9 w-9 items-center justify-center rounded-lg logo-gradient text-white"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></div>
+      <span class="tracking-tight">VoiceNote</span>
+    </a>
+    <div class="hidden items-center gap-8 md:flex">
+      <a href="./" class="text-sm font-medium text-brand-600 transition-colors" data-t="nav.home">Home</a>
+      <a href="pricing.html" class="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors" data-t="nav.pricing">Pricing</a>
+      <a href="download.html" class="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors" data-t="nav.download">Download</a>
+      <a href="contact.html" class="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors" data-t="nav.contact">Contact</a>
+      <a href="download.html" class="rounded-full btn-gradient px-5 py-2.5 text-sm font-semibold text-white shadow-sm" data-t="nav.cta">Try Free</a>
+      <div id="langSwitcher" class="hidden md:flex items-center gap-2 border-l border-gray-200 pl-4 ml-2 relative"></div>
+    </div>
+    <button id="menuToggle" class="rounded-lg p-2 text-gray-600 hover:bg-gray-100 md:hidden" aria-label="Menu">
+      <svg id="menuIcon" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+  <div id="mobileMenu" class="max-h-0 overflow-hidden transition-all duration-300 md:hidden">
+    <div class="mx-4 flex flex-col gap-1 border-t border-gray-100 pb-4 pt-3">
+      <a href="./" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 hover:warm-bg">Home</a>
+      <a href="pricing.html" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 hover:warm-bg">Pricing</a>
+      <a href="download.html" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 hover:warm-bg">Download</a>
+      <a href="contact.html" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 hover:warm-bg">Contact</a>
+      <a href="download.html" class="mobile-link mt-2 rounded-full btn-gradient px-5 py-2.5 text-center text-sm font-semibold text-white">Try Free</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero-bg relative flex min-h-screen items-center overflow-hidden pt-20">
+  <div class="absolute inset-0 pointer-events-none">
+    <div class="absolute top-20 -left-40 w-[500px] h-[500px] rounded-full bg-brand-400/10 blur-3xl"></div>
+    <div class="absolute bottom-20 -right-40 w-[500px] h-[500px] rounded-full bg-purple-400/10 blur-3xl"></div>
+  </div>
+  <div class="relative z-10 mx-auto max-w-6xl px-4 py-20 text-center sm:px-6">
+    <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-brand-200 bg-brand-50 px-4 py-1.5 text-sm font-medium text-brand-600 reveal">
+      <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l2.4 7.2h7.6l-6 4.8 2.4 7.2-6-4.8-6 4.8 2.4-7.2-6-4.8h7.6z"/></svg>
+      Your AI Voice Alchemist
+    </div>
+    <h1 class="mx-auto max-w-4xl text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl reveal">
+      Turn messy thoughts<br><span class="gradient-text">into structured text</span>
+    </h1>
+    <p class="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-gray-500 sm:text-xl reveal">
+      Stop worrying about filler words, pauses, or grammar. Just speak naturally — VoiceNote's AI instantly rewrites your voice for any context.
+    </p>
+    <div class="mx-auto mt-16 max-w-5xl reveal">
+      <div class="grid gap-8 md:grid-cols-5 items-center">
+        <div class="md:col-span-3">
+          <div class="relative overflow-hidden rounded-2xl border border-gray-100 bg-white p-6 shadow-xl shadow-gray-200/50 sm:p-8">
+            <div class="mb-6 flex items-center justify-center gap-[2px]">
+              <div class="wave-bar" style="animation-delay:0s"></div><div class="wave-bar" style="animation-delay:0.05s"></div><div class="wave-bar" style="animation-delay:0.1s"></div><div class="wave-bar" style="animation-delay:0.15s"></div><div class="wave-bar" style="animation-delay:0.2s"></div><div class="wave-bar" style="animation-delay:0.25s"></div><div class="wave-bar" style="animation-delay:0.3s"></div><div class="wave-bar" style="animation-delay:0.35s"></div><div class="wave-bar" style="animation-delay:0.4s"></div><div class="wave-bar" style="animation-delay:0.45s"></div><div class="wave-bar" style="animation-delay:0.5s"></div><div class="wave-bar" style="animation-delay:0.55s"></div><div class="wave-bar" style="animation-delay:0.6s"></div><div class="wave-bar" style="animation-delay:0.65s"></div><div class="wave-bar" style="animation-delay:0.7s"></div><div class="wave-bar" style="animation-delay:0.75s"></div><div class="wave-bar" style="animation-delay:0.8s"></div><div class="wave-bar" style="animation-delay:0.85s"></div><div class="wave-bar" style="animation-delay:0.9s"></div><div class="wave-bar" style="animation-delay:0.95s"></div>
+            </div>
+            <div class="rounded-xl bg-gray-50 p-5 text-left">
+              <div class="mb-3 flex items-center gap-2 text-xs font-medium text-gray-400"><svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/></svg> Voice input</div>
+              <p class="text-sm leading-relaxed text-gray-400 line-through decoration-gray-300">Um... so I think this product idea is really good because... like, it helps people just talk and get text...</p>
+              <div class="my-4 flex items-center gap-2"><div class="h-px flex-1 bg-gray-200"></div><svg class="h-4 w-4 text-brand-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l2.4 7.2h7.6l-6 4.8 2.4 7.2-6-4.8-6 4.8 2.4-7.2-6-4.8h7.6z"/></svg><div class="h-px flex-1 bg-gray-200"></div></div>
+              <div class="mb-3 flex items-center gap-2 text-xs font-medium text-brand-500"><svg class="h-3.5 w-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l2.4 7.2h7.6l-6 4.8 2.4 7.2-6-4.8-6 4.8 2.4-7.2-6-4.8h7.6z"/></svg> AI polished</div>
+              <p class="text-sm leading-relaxed text-gray-700">This product converts voice into text in real time, using AI to remove filler words, fix grammar, and restructure sentences for clarity.</p>
+            </div>
+          </div>
+        </div>
+        <div class="md:col-span-2 flex flex-col items-center justify-center gap-6">
+          <div class="mx-auto rounded-2xl border border-gray-100 bg-white p-3 shadow-lg">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https://apps.apple.com/us/app/voicenote-ai-voice-to-text/id6774268799" alt="QR Code" class="h-36 w-36" />
+            <p class="mt-2 text-center text-xs font-semibold text-gray-700">Scan to download</p>
+          </div>
+          <div class="flex flex-col gap-2 w-full max-w-[170px]">
+            <a href="https://apps.apple.com/us/app/voicenote-ai-voice-to-text/id6774268799" class="flex items-center gap-2.5 rounded-xl btn-gradient px-3.5 py-2.5 text-white"><svg class="h-5 w-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.46-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 2.95 2.58 3.93 2.61 3.94-.03.07-.41 1.39-1.3 2.73M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg><div class="text-left leading-tight"><div class="text-[10px] opacity-80">Download on the</div><div class="text-sm font-semibold -mt-0.5">App Store</div></div></a>
+                      </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="warm-bg py-24 sm:py-32">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6">
+    <div class="mx-auto max-w-2xl text-center reveal">
+      <span class="text-sm font-semibold uppercase tracking-widest text-brand-500" data-t="how.tag">Simple & Fast</span>
+      <h2 class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">From voice to perfect text <span class="gradient-text">in 3 steps</span></h2>
+    </div>
+    <div class="mt-20 grid gap-8 md:grid-cols-3">
+      <div class="reveal relative flex flex-col items-center text-center"><div class="relative"><div class="flex h-20 w-20 items-center justify-center rounded-2xl bg-blue-50 shadow-lg"><svg class="h-9 w-9 text-blue-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/></svg></div><div class="absolute -right-2 -top-2 flex h-7 w-7 items-center justify-center rounded-full logo-gradient text-xs font-bold text-white">1</div></div><h3 class="mt-6 text-xl font-semibold">Speak Freely</h3><p class="mt-2 text-sm text-gray-500">Tap the mic and talk without filtering. Um's, ah's, and pauses? Our AI ignores them.</p></div>
+      <div class="reveal relative flex flex-col items-center text-center"><div class="relative"><div class="flex h-20 w-20 items-center justify-center rounded-2xl bg-purple-50 shadow-lg"><svg class="h-9 w-9 text-purple-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.346-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg></div><div class="absolute -right-2 -top-2 flex h-7 w-7 items-center justify-center rounded-full logo-gradient text-xs font-bold text-white">2</div></div><h3 class="mt-6 text-xl font-semibold">Choose Your Style</h3><p class="mt-2 text-sm text-gray-500">Select your context. Need an email, a tweet, or a structured summary?</p></div>
+      <div class="reveal relative flex flex-col items-center text-center"><div class="relative"><div class="flex h-20 w-20 items-center justify-center rounded-2xl bg-green-50 shadow-lg"><svg class="h-9 w-9 text-green-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg></div><div class="absolute -right-2 -top-2 flex h-7 w-7 items-center justify-center rounded-full logo-gradient text-xs font-bold text-white">3</div></div><h3 class="mt-6 text-xl font-semibold">Ready to Use</h3><p class="mt-2 text-sm text-gray-500">Get beautifully polished, ready-to-share text in seconds.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- SMART STYLES -->
+<section class="warm-bg py-24 sm:py-32">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6">
+    <div class="mx-auto max-w-2xl text-center reveal">
+      <span class="text-sm font-semibold uppercase tracking-widest text-brand-500" data-t="styles.tag">AI Smart Styles</span>
+      <h2 class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">One voice note, <span class="gradient-text">endless possibilities</span></h2>
+      <p class="mt-4 text-lg text-gray-500">Dictate once, rewrite for any platform. Watch how VoiceNote transforms the same voice input into different formats:</p>
+    </div>
+    <div class="mt-12 max-w-3xl mx-auto reveal">
+      <div class="rounded-2xl border border-gray-100 bg-white p-5 flex items-start gap-3">
+        <div class="flex-shrink-0 mt-0.5 flex h-8 w-8 items-center justify-center rounded-lg bg-red-50 text-red-500"><svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/></svg></div>
+        <div><p class="text-xs font-medium text-red-500 mb-1">VOICE INPUT</p><p class="text-sm leading-relaxed text-gray-500 line-through decoration-gray-300">Um, so basically I think we should consider maybe extending the deadline for the project because, you know, like, we're still waiting on some feedback from the client and the design team hasn't finished their revisions yet and honestly we need more time to make it, like, actually good instead of rushing it out...</p></div>
+      </div>
+    </div>
+    <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 reveal">
+      <div class="rounded-2xl border border-gray-100 bg-white p-5 hover:shadow-md transition-all"><div class="flex items-center gap-2 mb-3"><div class="flex h-7 w-7 items-center justify-center rounded-lg bg-blue-50 text-blue-600"><svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><span class="text-xs font-semibold text-gray-700">Plain & Direct</span></div><p class="text-sm leading-relaxed text-gray-600">We need to extend the project deadline by one week due to delayed client feedback and required design revisions.</p></div>
+      <div class="rounded-2xl border border-gray-100 bg-white p-5 hover:shadow-md transition-all"><div class="flex items-center gap-2 mb-3"><div class="flex h-7 w-7 items-center justify-center rounded-lg bg-purple-50 text-purple-600"><svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div><span class="text-xs font-semibold text-gray-700">Professional Email</span></div><div class="text-sm leading-relaxed text-gray-600"><p class="text-xs text-gray-400 mb-1">Subject: <span class="text-gray-600">Project Timeline Extension</span></p><p class="mb-1">Dear Team,</p><p class="mb-1">I propose extending the project deadline due to outstanding client feedback and ongoing design revisions. Additional time will ensure we deliver work that meets our quality standards.</p><p class="text-xs text-gray-400">Best regards</p></div></div>
+      <div class="rounded-2xl border border-gray-100 bg-white p-5 hover:shadow-md transition-all"><div class="flex items-center gap-2 mb-3"><div class="flex h-7 w-7 items-center justify-center rounded-lg bg-amber-50 text-amber-600"><svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg></div><span class="text-xs font-semibold text-gray-700">Key Takeaways</span></div><ul class="text-sm leading-relaxed text-gray-600 space-y-1 list-disc pl-4"><li><strong>Action Item:</strong> Extend project deadline by 7 days</li><li><strong>Blocker:</strong> Awaiting final client feedback</li><li><strong>Next Steps:</strong> Conduct design revisions upon receipt</li></ul></div>
+      <div class="rounded-2xl border border-gray-100 bg-white p-5 hover:shadow-md transition-all"><div class="flex items-center gap-2 mb-3"><div class="flex h-7 w-7 items-center justify-center rounded-lg bg-green-50 text-green-600"><svg class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2l2.4 7.2h7.6l-6 4.8 2.4 7.2-6-4.8-6 4.8 2.4-7.2-6-4.8h7.6z"/></svg></div><span class="text-xs font-semibold text-gray-700">Casual / Slack</span></div><p class="text-sm leading-relaxed text-gray-600">Hey team! Let's push the deadline back a week. Still waiting on the client, plus it gives us some breathing room for design tweaks. 🙌</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- MULTILINGUAL -->
+<section class="bg-white py-24 sm:py-32">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6">
+    <div class="mx-auto max-w-2xl text-center reveal">
+      <span class="text-sm font-semibold uppercase tracking-widest text-brand-500" data-t="lang.tag">46 Languages</span>
+      <h2 class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">Speak your language, <span class="gradient-text">write in any language</span></h2>
+      <p class="mt-4 text-lg text-gray-500">VoiceNote transcribes and polishes in 46 languages, right out of the box.</p>
+    </div>
+    <div class="mt-12 flex flex-wrap justify-center gap-3 max-w-3xl mx-auto reveal">
+      <span class="rounded-full bg-blue-50 text-blue-700 px-4 py-2 text-sm font-medium">English</span>
+      <span class="rounded-full bg-purple-50 text-purple-700 px-4 py-2 text-sm font-medium">中文</span>
+      <span class="rounded-full bg-green-50 text-green-700 px-4 py-2 text-sm font-medium">Español</span>
+      <span class="rounded-full bg-amber-50 text-amber-700 px-4 py-2 text-sm font-medium">Français</span>
+      <span class="rounded-full bg-rose-50 text-rose-700 px-4 py-2 text-sm font-medium">Deutsch</span>
+      <span class="rounded-full bg-cyan-50 text-cyan-700 px-4 py-2 text-sm font-medium">日本語</span>
+      <span class="rounded-full bg-indigo-50 text-indigo-700 px-4 py-2 text-sm font-medium">한국어</span>
+      <span class="rounded-full bg-teal-50 text-teal-700 px-4 py-2 text-sm font-medium">Português</span>
+      <span class="rounded-full bg-orange-50 text-orange-700 px-4 py-2 text-sm font-medium">Italiano</span>
+      <span class="rounded-full bg-pink-50 text-pink-700 px-4 py-2 text-sm font-medium">العربية</span>
+      <span class="rounded-full bg-lime-50 text-lime-700 px-4 py-2 text-sm font-medium">Русский</span>
+      <span class="rounded-full bg-sky-50 text-sky-700 px-4 py-2 text-sm font-medium">Nederlands</span>
+      <span class="rounded-full bg-violet-50 text-violet-700 px-4 py-2 text-sm font-medium">Svenska</span>
+      <span class="rounded-full bg-stone-100 text-stone-700 px-4 py-2 text-sm font-medium">Polski</span>
+      <span class="rounded-full bg-red-50 text-red-700 px-4 py-2 text-sm font-medium">Türkçe</span>
+      <span class="rounded-full bg-emerald-50 text-emerald-700 px-4 py-2 text-sm font-medium">+ 31 more</span>
+    </div>
+  </div>
+</section>
+
+<!-- WHO IT'S FOR -->
+<section class="warm-bg py-24 sm:py-32">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6">
+    <div class="mx-auto max-w-2xl text-center reveal">
+      <span class="text-sm font-semibold uppercase tracking-widest text-brand-500" data-t="who.tag">Built for Thinkers</span>
+      <h2 class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">For minds that move <span class="gradient-text">faster than fingers</span></h2>
+      <p class="mt-4 text-lg text-gray-500">No matter your workflow, VoiceNote turns your spoken thoughts into action.</p>
+    </div>
+    <div class="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 reveal">
+      <div class="group rounded-2xl border border-gray-100 bg-white p-6 hover:shadow-md hover:border-brand-100 transition-all text-center">
+        <div class="mx-auto mb-5 flex h-24 w-24 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-50 to-indigo-100">
+          <svg class="h-12 w-12 text-blue-500" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <rect x="8" y="6" width="32" height="36" rx="4" stroke="#93c5fd"/><line x1="16" y1="16" x2="32" y2="16" stroke="#60a5fa"/><line x1="16" y1="22" x2="28" y2="22" stroke="#93c5fd"/><line x1="16" y1="28" x2="30" y2="28" stroke="#93c5fd"/><path d="M28 36l3-4h-6l3-4" stroke="#60a5fa"/>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-gray-900">Writers & Creators</h3>
+        <p class="mt-2 text-sm text-gray-500">Dictate first drafts effortlessly. Never stare at a blank page again.</p>
+      </div>
+      <div class="group rounded-2xl border border-gray-100 bg-white p-6 hover:shadow-md hover:border-brand-100 transition-all text-center">
+        <div class="mx-auto mb-5 flex h-24 w-24 items-center justify-center rounded-2xl bg-gradient-to-br from-purple-50 to-pink-100">
+          <svg class="h-12 w-12 text-purple-500" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <rect x="6" y="10" width="36" height="28" rx="4" stroke="#c4b5fd"/><rect x="10" y="14" width="28" height="16" rx="2" stroke="#a78bfa"/><line x1="20" y1="38" x2="28" y2="38" stroke="#c4b5fd"/><line x1="24" y1="34" x2="24" y2="38" stroke="#c4b5fd"/><circle cx="24" cy="22" r="3" fill="#a78bfa" stroke="none"/>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-gray-900">Professionals & Executives</h3>
+        <p class="mt-2 text-sm text-gray-500">Turn walking thoughts into polished messages, emails, and memos on the go.</p>
+      </div>
+      <div class="group rounded-2xl border border-gray-100 bg-white p-6 hover:shadow-md hover:border-brand-100 transition-all text-center">
+        <div class="mx-auto mb-5 flex h-24 w-24 items-center justify-center rounded-2xl bg-gradient-to-br from-green-50 to-emerald-100">
+          <svg class="h-12 w-12 text-green-500" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M8 8l9 4v24l-9-4V8z" stroke="#6ee7b7"/><path d="M40 8l-9 4v24l9-4V8z" stroke="#6ee7b7"/><path d="M17 12v24" stroke="#34d399"/><path d="M31 12v24" stroke="#34d399"/><line x1="17" y1="24" x2="31" y2="24" stroke="#6ee7b7"/><line x1="17" y1="18" x2="31" y2="18" stroke="#6ee7b7"/><line x1="17" y1="30" x2="31" y2="30" stroke="#6ee7b7"/>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-gray-900">Students</h3>
+        <p class="mt-2 text-sm text-gray-500">Transcribe lectures, organise study notes, and brainstorm essays hands-free.</p>
+      </div>
+      <div class="group rounded-2xl border border-gray-100 bg-white p-6 hover:shadow-md hover:border-brand-100 transition-all text-center">
+        <div class="mx-auto mb-5 flex h-24 w-24 items-center justify-center rounded-2xl bg-gradient-to-br from-amber-50 to-orange-100">
+          <svg class="h-12 w-12 text-amber-500" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <circle cx="24" cy="18" r="10" stroke="#fcd34d"/><circle cx="24" cy="16" r="4" fill="#fbbf24" stroke="none"/><path d="M10 34c0-8 6-14 14-14s14 6 14 14" stroke="#fcd34d"/><line x1="16" y1="38" x2="32" y2="38" stroke="#fcd34d"/><circle cx="32" cy="10" r="3" fill="#fbbf24" stroke="none"/><circle cx="14" cy="12" r="2" fill="#fcd34d" stroke="none"/>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-gray-900">Entrepreneurs & Ideators</h3>
+        <p class="mt-2 text-sm text-gray-500">Capture chaotic brainstorming sessions and instantly structure them into action plans.</p>
+      </div>
+      <div class="group rounded-2xl border border-gray-100 bg-white p-6 hover:shadow-md hover:border-brand-100 transition-all text-center">
+        <div class="mx-auto mb-5 flex h-24 w-24 items-center justify-center rounded-2xl bg-gradient-to-br from-rose-50 to-pink-100">
+          <svg class="h-12 w-12 text-rose-500" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M24 4v6" stroke="#fda4af"/><path d="M24 10c-6 0-10 3-10 8s4 8 10 8 10-3 10-8-4-8-10-8z" stroke="#fb7185"/><circle cx="18" cy="18" r="3" fill="#fda4af" stroke="none"/><circle cx="30" cy="18" r="3" fill="#fda4af" stroke="none"/><path d="M14 28c0 4 4 8 10 8s10-4 10-8" stroke="#fb7185"/><circle cx="20" cy="32" r="1.5" fill="#fda4af" stroke="none"/><circle cx="28" cy="32" r="1.5" fill="#fda4af" stroke="none"/>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-gray-900">Journal Keepers & Thinkers</h3>
+        <p class="mt-2 text-sm text-gray-500">Reflect out loud. Document your day with zero friction and clear insights.</p>
+      </div>
+      <div class="group rounded-2xl border border-gray-100 bg-white p-6 hover:shadow-md hover:border-brand-100 transition-all text-center">
+        <div class="mx-auto mb-5 flex h-24 w-24 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-50 to-teal-100">
+          <svg class="h-12 w-12 text-cyan-500" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <rect x="10" y="6" width="28" height="36" rx="3" stroke="#67e8f9"/><line x1="16" y1="14" x2="32" y2="14" stroke="#22d3ee"/><line x1="16" y1="20" x2="28" y2="20" stroke="#67e8f9"/><line x1="16" y1="26" x2="30" y2="26" stroke="#67e8f9"/><line x1="16" y1="32" x2="24" y2="32" stroke="#67e8f9"/><path d="M32 36l-3-4h6l-3-4" stroke="#06b6d4"/>
+          </svg>
+        </div>
+        <h3 class="font-semibold text-gray-900">Busy Parents</h3>
+        <p class="mt-2 text-sm text-gray-500">Capture ideas while cooking, driving, or chasing the kids. Totally hands-free.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DOWNLOAD -->
+<section class="warm-bg py-24 sm:py-32">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6">
+    <div class="mx-auto max-w-2xl text-center reveal">
+      <span class="text-sm font-semibold uppercase tracking-widest text-brand-500" data-t="dl.tag">Try Free</span>
+      <h2 class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">Ready to <span class="gradient-text">upgrade your workflow</span>?</h2>
+    </div>
+    <div class="mt-16 grid gap-8 max-w-md mx-auto reveal">
+      <div class="rounded-2xl border border-gray-100 bg-white p-8 text-center hover:shadow-lg transition-all">
+        <div class="inline-flex h-14 w-14 items-center justify-center rounded-2xl logo-gradient text-white mb-5"><svg class="h-7 w-7" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.46-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 2.95 2.58 3.93 2.61 3.94-.03.07-.41 1.39-1.3 2.73M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg></div>
+        <h3 class="text-lg font-semibold">iOS</h3><p class="mt-1 text-sm text-gray-500">iPhone &amp; iPad &middot; iOS 16.0+</p>
+        <a href="https://apps.apple.com/us/app/voicenote-ai-voice-to-text/id6774268799" class="mt-5 inline-flex items-center gap-2 rounded-full btn-gradient px-6 py-3 text-sm font-semibold text-white whitespace-nowrap"><span>Download on the App Store</span></a>
+      </div>
+          </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="border-t border-gray-100 bg-white">
+  <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+      <a href="./" class="flex items-center gap-2 text-xl font-bold"><div class="flex h-8 w-8 items-center justify-center rounded-lg logo-gradient text-white"><svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></div><span class="tracking-tight">VoiceNote</span></a>
+      <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-gray-500">
+        <a href="pricing.html" class="hover:text-gray-900 transition-colors">Pricing</a>
+        <a href="download.html" class="hover:text-gray-900 transition-colors">Download</a>
+        <a href="contact.html" class="hover:text-gray-900 transition-colors">Contact</a>
+        <a href="privacy.html" class="hover:text-gray-900 transition-colors">Privacy Policy</a>
+        <a href="terms.html" class="hover:text-gray-900 transition-colors">Terms of Service</a>
+        <a href="cookies.html" class="hover:text-gray-900 transition-colors">Cookie Policy</a>
+      </div>
+    </div>
+    <p class="mt-8 text-center text-xs text-gray-400">&copy; 2026 VoiceNote. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 20) { navbar.classList.add('glass','border-b','border-gray-200/50','py-3'); navbar.classList.remove('py-5','bg-transparent'); }
+    else { navbar.classList.remove('glass','border-b','border-gray-200/50','py-3'); navbar.classList.add('py-5','bg-transparent'); }
+  });
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const menuIcon = document.getElementById('menuIcon');
+  let menuOpen = false;
+  menuToggle.addEventListener('click', () => {
+    menuOpen = !menuOpen;
+    mobileMenu.style.maxHeight = menuOpen ? mobileMenu.scrollHeight + 'px' : '0';
+    menuIcon.innerHTML = menuOpen ? '<line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>' : '<line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>';
+  });
+  document.querySelectorAll('.mobile-link').forEach(l => l.addEventListener('click', () => {
+    menuOpen = false; mobileMenu.style.maxHeight = '0';
+    menuIcon.innerHTML = '<line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>';
+  }));
+  const observer = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }); }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  setTimeout(() => { document.querySelectorAll('.reveal').forEach(el => { if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add('visible'); }); }, 100);
+</script>
+<script>localStorage.setItem('voicenote_lang','de');if(typeof applyLang==='function')applyLang();</script></body>
+</html>
