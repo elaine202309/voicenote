@@ -6,8 +6,8 @@ var T={
 'Contact':{fr:'Contact',de:'Kontakt',es:'Contacto',it:'Contatto',zh:'联系'},
 'Try Free':{fr:'Essai Gratuit',de:'Testen',es:'Probar',it:'Prova',zh:'免费试用'},
 // Hero
-'Turn messy thoughts':{fr:'Pensees brouillonnes',de:'Chaotische Gedanken',es:'Pensamientos',it:'Pensieri confusi',zh:'混乱的想法'},
-'into structured text':{fr:'en texte structure',de:'in Text',es:'en texto',it:'in testo',zh:'变成清晰文字'},
+'Turn messy thoughts':{fr:'Pensees brouillonnes',de:'Chaotische Gedanken',es:'Pensamientos',it:'Pensieri confusi',zh:'将混乱的想法'},
+'into structured text':{fr:'en texte structure',de:'in Text',es:'en texto',it:'in testo',zh:'变成清晰的文字'},
 'Stop worrying about filler words, pauses, or grammar. Just speak naturally — VoiceNote\'s AI instantly rewrites your voice for any context.':{fr:'Arretez de vous soucier. Parlez, VoiceNote reecrit.',de:'Sorgen um Pausen? Sprechen Sie, VoiceNote schreibt um.',es:'No te preocupes. Habla, VoiceNote reescribe.',it:'Non preoccuparti. Parla, VoiceNote riscrive.',zh:'别再担心语气词。自然说，VoiceNote 即刻重写。'},
 // Sections
 'Simple & Fast':{fr:'Simple et Rapide',de:'Einfach & Schnell',es:'Simple y Rapido',it:'Semplice e Veloce',zh:'简单快速'},
