@@ -18,6 +18,11 @@ var T={
 'Speak Freely':{fr:'Parlez Librement',de:'Frei Sprechen',es:'Habla Libremente',it:'Parla Liberamente',zh:'自由说'},
 'Choose Your Style':{fr:'Choisissez',de:'Stil wahlen',es:'Elige Estilo',it:'Scegli Stile',zh:'选择风格'},
 'Ready to Use':{fr:'Pret a lemploi',de:'Einsatzbereit',es:'Listo para Usar',it:'Pronto allUso',zh:'立即可用'},
+// Hero demo card
+'Voice input':{fr:'Entree vocale',de:'Spracheingabe',es:'Entrada de voz',it:'Ingresso vocale',zh:'语音输入'},
+'AI polished':{fr:'Peaufine par IA',de:'KI-verfeinert',es:'Pulido por IA',it:'Perfezionato dall\'IA',zh:'AI 润色后'},
+'Download on the':{fr:'Telecharger sur l\'',de:'Laden im',es:'Descargar en',it:'Scarica su',zh:'在以下载'},
+'App Store':{fr:'App Store',de:'App Store',es:'App Store',it:'App Store',zh:'App Store'},
 // Smart Styles
 'VOICE INPUT':{fr:'ENTREE VOCALE',de:'SPRACHEINGABE',es:'ENTRADA DE VOZ',it:'INGRESSO VOCALE',zh:'语音输入'},
 'Plain & Direct':{fr:'Clair & Direct',de:'Klar & Direkt',es:'Claro & Directo',it:'Chiaro & Diretto',zh:'简洁直接'},
@@ -41,6 +46,8 @@ var T={
 'Advanced AI + all styles':{fr:'IA avancee + styles',de:'KI + alle Stile',es:'IA avanzada + estilos',it:'IA avanzata + stili',zh:'高级 AI + 全风格'},
 'Download on the App Store':{fr:'Telecharger',de:'Laden',es:'Descargar',it:'Scarica',zh:'在 App Store 下载'},
 'Scan to download':{fr:'Scanner',de:'Scannen',es:'Escanear',it:'Scansiona',zh:'扫码下载'},
+'Um... so I think this product idea is really good because... like, it helps people just talk and get text...':{fr:'Euh... donc je pense que ce produit est vraiment bien parce que... genre, il aide les gens a parler et obtenir du texte...',de:'Ah... also ich denke diese Produktidee ist wirklich gut weil... es hilft Leuten einfach zu reden und Text zu bekommen...',es:'Eh... creo que esta idea de producto es muy buena porque... ayuda a la gente a hablar y obtener texto...',it:'Um... quindi penso che questa idea di prodotto sia davvero buona perche... aiuta le persone a parlare e ottenere testo...',zh:'呃...我觉得这个产品想法很好因为...可以帮助大家说话直接变成文字...'},
+'This product converts voice into text in real time, using AI to remove filler words, fix grammar, and restructure sentences for clarity.':{fr:'Ce produit convertit la voix en texte en temps reel, en utilisant l\'IA pour supprimer les hesitations, corriger la grammaire et restructurer les phrases.',de:'Dieses Produkt wandelt Sprache in Echtzeit in Text um und nutzt KI, um Fullworter zu entfernen, Grammatik zu korrigieren und Satze zu strukturieren.',es:'Este producto convierte voz en texto en tiempo real, usando IA para eliminar muletillas, corregir gramatica y reestructurar oraciones.',it:'Questo prodotto converte la voce in testo in tempo reale, usando l\'IA per rimuovere parole di riempimento, correggere la grammatica e ristrutturare le frasi.',zh:'这个产品将语音实时转换为文字，用 AI 去除冗余词汇，修正语法，优化句子结构。'},
 // Comparison
 'Compare':{fr:'Comparer',de:'Vergleichen',es:'Comparar',it:'Confronta',zh:'对比'},
 'Feature':{fr:'Fonction',de:'Funktion',es:'Funcion',it:'Funzione',zh:'功能'},
