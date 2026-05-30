@@ -15,9 +15,13 @@ var T={
 '46 Languages':{fr:'46 Langues',de:'46 Sprachen',es:'46 Idiomas',it:'46 Lingue',zh:'46 种语言'},
 'Built for Thinkers':{fr:'Pour les Penseurs',de:'Fur Denker',es:'Para Pensadores',it:'Per Pensatori',zh:'为思考者而生'},
 // How it works
+'From voice to perfect text in 3 steps':{fr:'De la voix au texte parfait en 3 etapes',de:'Von Sprache zu perfektem Text in 3 Schritten',es:'De voz a texto perfecto en 3 pasos',it:'Dalla voce al testo perfetto in 3 passi',zh:'从语音到完美文字只需三步'},
 'Speak Freely':{fr:'Parlez Librement',de:'Frei Sprechen',es:'Habla Libremente',it:'Parla Liberamente',zh:'自由说'},
-'Choose Your Style':{fr:'Choisissez',de:'Stil wahlen',es:'Elige Estilo',it:'Scegli Stile',zh:'选择风格'},
-'Ready to Use':{fr:'Pret a lemploi',de:'Einsatzbereit',es:'Listo para Usar',it:'Pronto allUso',zh:'立即可用'},
+'Tap the mic and talk without filtering. Um\'s, ah\'s, and pauses? Our AI ignores them.':{fr:'Appuyez et parlez sans filtre. Les hesitations? Notre IA les ignore.',de:'Tippen Sie und sprechen Sie. Unsere KI ignoriert Pausen.',es:'Toca y habla sin filtrar. Nuestra IA ignora las pausas.',it:'Tocca e parla senza filtri. La nostra IA ignora le pause.',zh:'点击麦克风自由说。语气词和停顿？AI 会忽略。'},
+'Choose Your Style':{fr:'Choisissez votre style',de:'Stil wahlen',es:'Elige tu estilo',it:'Scegli lo stile',zh:'选择风格'},
+'Select your context. Need an email, a tweet, or a structured summary?':{fr:'Choisissez votre contexte. Un email, un tweet ou un resume structure?',de:'Kontext wahlen. E-Mail, Tweet oder Zusammenfassung?',es:'Elige contexto. Email, tweet o resumen?',it:'Scegli il contesto. Email, tweet o riassunto?',zh:'选择场景。邮件、推文还是摘要？'},
+'Ready to Use':{fr:'Pret a l\'emploi',de:'Einsatzbereit',es:'Listo para usar',it:'Pronto all\'uso',zh:'立即可用'},
+'Get beautifully polished, ready-to-share text in seconds.':{fr:'Obtenez un texte parfait, pret a partager en quelques secondes.',de:'Erhalten Sie perfekt formatierten Text in Sekunden.',es:'Obten texto pulido listo para compartir en segundos.',it:'Ottieni testo perfetto, pronto da condividere in pochi secondi.',zh:'秒速获得润色精美的文字，立即可分享。'},
 // Hero demo card
 'Voice input':{fr:'Entree vocale',de:'Spracheingabe',es:'Entrada de voz',it:'Ingresso vocale',zh:'语音输入'},
 'AI polished':{fr:'Peaufine par IA',de:'KI-verfeinert',es:'Pulido por IA',it:'Perfezionato dall\'IA',zh:'AI 润色后'},
