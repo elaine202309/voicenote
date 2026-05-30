@@ -1,192 +1,77 @@
-// VoiceNote i18n — Auto-generated from page text
-const LANG_KEY='voicenote_lang',LANGS=['en','fr','de','es','it','zh'];
-// Shortcut: t(en_text, lang_key) returns dict entry
-const _e=(en,fr,de,es,it,zh)=>({fr,de,es,it,zh});
-const T={
-// Nav
-Home: _e('Accueil','Start','Inicio','Home','首页'),
-Pricing: _e('Tarifs','Preise','Precios','Prezzi','定价'),
-Download: _e('Télécharger','Download','Descargar','Scarica','下载'),
-Contact: _e('Contact','Kontakt','Contacto','Contatto','联系'),
-'Try Free': _e('Essai Gratuit','Testen','Probar','Prova','免费试用'),
-'Your AI Voice Alchemist': _e('Votre Alchimiste Vocal IA','Ihr KI-Sprachalchemist','Tu Alquimista de Voz IA','Il Tuo Alchimista Vocale IA','你的 AI 语音炼金师'),
-'Turn messy thoughts': _e('Des pensées brouillonnes','Chaotische Gedanken','Pensamientos confusos','Pensieri confusi','混乱的想法'),
-'into structured text': _e('en texte structuré','in strukturierten Text','en texto estructurado','in testo strutturato','变成清晰文字'),
-// Pricing
-Free: _e('Gratuit','Kostenlos','Gratis','Gratis','免费'),
-Prime: _e('Prime','Prime','Prime','Prime','Prime'),
-'Try it ': _e('Essayez ','Testen Sie ','Pruébalo ','Provalo ','试用'),
-'free.': _e('gratuitement.','kostenlos.','gratis.','gratis.','免费。'),
-'Start your free trial': _e('Essai gratuit','Testversion','Prueba gratuita','Prova gratuita','开始免费试用'),
-'Try Free Now': _e('Essayer','Jetzt testen','Probar ahora','Prova ora','立即试用'),
-'10 free notes': _e('10 notes gratuites','10 kostenlose Notizen','10 notas gratis','10 note gratis','10 条免费笔记'),
-'2 min per recording': _e('2 min/enreg.','2 Min/Aufn.','2 min/grab.','2 min/reg.','2 分钟/条'),
-'Standard AI polish': _e('Polissage IA standard','KI-Politur Standard','Pulido IA estándar','Perfezionamento standard','标准 AI 润色'),
-'46 languages': _e('46 langues','46 Sprachen','46 idiomas','46 lingue','46 种语言'),
-'No credit card needed': _e('Sans CB','Keine Kreditkarte','Sin tarjeta','Nessuna carta','无需信用卡'),
-'Everything in Free, plus unlimited': _e('Tout Free en illimité','Alles von Free, unbegrenzt','Todo Free, ilimitado','Tutto Free, illimitato','Free 全部 + 无限使用'),
-'Download & Try Free': _e('Télécharger et essayer','Download & testen','Descargar y probar','Scarica e prova','下载试用'),
-'Unlimited notes': _e('Notes illimitées','Unbegrenzt','Ilimitadas','Illimitate','无限笔记'),
-'15 min per recording': _e('15 min/enreg.','15 Min/Aufn.','15 min/grab.','15 min/reg.','15 分钟/条'),
-'Advanced AI + all styles': _e('IA avancée + tous styles','KI erweitert + alle Stile','IA avanzada + estilos','IA avanzata + stili','高级 AI + 全风格'),
-'All AI styles + 46 languages': _e('Tous styles + 46 langues','Alle Stile + 46 Sprachen','Todos estilos + 46 idiomas','Tutti stili + 46 lingue','全风格 + 46 语言'),
-'Cancel anytime': _e('Annulez à tout moment','Jederzeit kündbar','Cancela cuando quieras','Annulla quando vuoi','随时取消'),
-'$9.99': _e('9,99$','9,99$','$9.99','9,99$','$9.99'),
-'$25': _e('25$','25$','$25','25$','$25'),
-'$69': _e('69$','69$','$69','69$','$69'),
-'/mo': _e('/mois','/Monat','/mes','/mese','/月'),
-'/qtr': _e('/trim','/Quartal','/trim','/trim','/季'),
-'/yr': _e('/an','/Jahr','/año','/anno','/年'),
-'Save 28% with annual billing': _e('Économisez 28%/an','28% sparen/Jahr','Ahorra 28%/año','Risparmia 28%/anno','年付省 28%'),
-// Compare
-Compare: _e('Comparer','Vergleichen','Comparar','Confronta','对比'),
-'Free vs ': _e('Gratuit vs ','Kostenlos vs ','Gratis vs ','Gratis vs ','免费 vs '),
-Feature: _e('Fonctionnalité','Funktion','Función','Funzione','功能'),
-Notes: _e('Notes','Notizen','Notas','Note','笔记数'),
-'Recording length': _e('Durée','Aufnahmelänge','Duración','Durata','录音时长'),
-'AI polish quality': _e('Qualité IA','KI-Qualität','Calidad IA','Qualità IA','AI 润色'),
-'AI writing styles': _e('Styles IA','KI-Stile','Estilos IA','Stili IA','AI 风格'),
-History: _e('Historique','Verlauf','Historial','Cronologia','历史'),
-Support: _e('Support','Support','Soporte','Supporto','支持'),
-'Standard': _e('Standard','Standard','Estándar','Standard','标准'),
-'Advanced': _e('Avancé','Erweitert','Avanzado','Avanzato','高级'),
-'All styles': _e('Tous','Alle','Todos','Tutti','全部'),
-'3 styles': _e('3 styles','3 Stile','3 estilos','3 stili','3 种'),
-'15 min': _e('15 min','15 Min','15 min','15 min','15 分钟'),
-'2 min': _e('2 min','2 Min','2 min','2 min','2 分钟'),
-'First 10': _e('10 premières','Erste 10','Primeras 10','Prime 10','前 10 条'),
-'Unlimited': _e('Illimité','Unbegrenzt','Ilimitado','Illimitato','无限'),
-'Forever': _e('Pour toujours','Für immer','Para siempre','Per sempre','永久'),
-'7 days': _e('7 jours','7 Tage','7 días','7 giorni','7 天'),
-'1 year': _e('1 an','1 Jahr','1 año','1 anno','1 年'),
-// Homepage sections
-'Simple & Fast': _e('Simple et Rapide','Einfach & Schnell','Simple y Rápido','Semplice e Veloce','简单快速'),
-'From voice to perfect text ': _e('De la voix au texte parfait ','Von Sprache zu perfektem Text ','De voz a texto perfecto ','Dalla voce al testo perfetto ','从语音到完美文字 '),
-'in 3 steps': _e('en 3 étapes','in 3 Schritten','en 3 pasos','in 3 passi','只需三步'),
-'Speak Freely': _e('Parlez librement','Frei sprechen','Habla libremente','Parla liberamente','自由说'),
-'Tap the mic and talk without filtering. Um\'s, ah\'s, and pauses? Our AI ignores them.': _e('Parlez sans filtre. Notre IA ignore les hésitations.','Sprechen Sie. Unsere KI ignoriert Pausen.','Habla sin filtro. Nuestra IA ignora pausas.','Parla senza filtri. La IA ignora le pause.','自由说，不用顾虑。AI 会忽略停顿和语气词。'),
-'Choose Your Style': _e('Choisissez le style','Stil wählen','Elige el estilo','Scegli lo stile','选择风格'),
-'Select your context. Need an email, a tweet, or a structured summary?': _e('Email, tweet ou résumé ?','E-Mail, Tweet, Zusammenfassung?','¿Email, tweet o resumen?','Email, tweet o riassunto?','邮件、推文还是摘要？任选。'),
-'Ready to Use': _e('Prêt à l\'emploi','Einsatzbereit','Listo para usar','Pronto all\'uso','立即可用'),
-'Get beautifully polished, ready-to-share text in seconds.': _e('Texte parfait en secondes.','Perfekter Text in Sekunden.','Texto perfecto en segundos.','Testo perfetto in secondi.','秒速获得可分享的精美文字。'),
-'AI Smart Styles': _e('Styles IA','KI-Stile','Estilos IA','Stili IA','AI 智能风格'),
-'One voice note, ': _e('Une note vocale, ','Eine Notiz, ','Una nota, ','Una nota, ','一条语音，'),
-'endless possibilities': _e('possibilités infinies','endlose Formate','infinitas posibilidades','infinite possibilità','无限可能'),
-'Speak once. VoiceNote rewrites your words for any context.': _e('Dictez une fois. VoiceNote réécrit.','Einmal sprechen. VoiceNote schreibt um.','Dicta una vez. VoiceNote reescribe.','Detta una volta. VoiceNote riscrive.','说一次，VoiceNote 为任何场景重写。'),
-'46 Languages': _e('46 Langues','46 Sprachen','46 Idiomas','46 Lingue','46 种语言'),
-'Speak your language, ': _e('Parlez votre langue, ','Sprechen Sie Ihre Sprache, ','Habla tu idioma, ','Parla la tua lingua, ','说你的语言，'),
-'write in any language': _e('écrivez dans toutes','schreiben Sie in jeder','escribe en cualquiera','scrivi in qualsiasi','写任何语言'),
-'VoiceNote transcribes and polishes in 46 languages, right out of the box.': _e('VoiceNote transcrit en 46 langues.','VoiceNote in 46 Sprachen.','VoiceNote en 46 idiomas.','VoiceNote in 46 lingue.','VoiceNote 支持 46 种语言。'),
-'Built for Thinkers': _e('Pour les Penseurs','Für Denker','Para Pensadores','Per Pensatori','为思考者而生'),
-'For minds that move ': _e('Pour les esprits ','Für Köpfe, die ','Mentes que van ','Menti che vanno ','为思考速度 '),
-'faster than fingers': _e('plus rapides que les doigts','schneller als Finger sind','más rápido que los dedos','più veloci delle dita','快过手指的人'),
-'No matter your workflow, VoiceNote turns your spoken thoughts into action.': _e('VoiceNote transforme vos pensées en action.','VoiceNote macht Gedanken zu Aktion.','VoiceNote convierte pensamientos en acción.','VoiceNote trasforma pensieri in azione.','VoiceNote 把你的想法变成行动。'),
-'Writers & Creators': _e('Écrivains & Créateurs','Autoren & Kreative','Escritores & Creadores','Scrittori & Creativi','作家与创作者'),
-'Dictate first drafts effortlessly. Never stare at a blank page again.': _e('Dictez vos brouillons.','Diktieren Sie Entwürfe.','Dicta borradores sin esfuerzo.','Detta bozze senza sforzo.','轻松口述初稿，告别空白页。'),
-'Professionals & Executives': _e('Professionnels & Cadres','Profis & Führungskräfte','Profesionales & Ejecutivos','Professionisti & Dirigenti','职场人士与管理层'),
-'Turn walking thoughts into polished messages, emails, and memos on the go.': _e('Transformez vos pensées en messages.','Gedanken in Nachrichten verwandeln.','Convierte pensamientos en mensajes.','Trasforma pensieri in messaggi.','随时随地口述消息、邮件和备忘。'),
-Students: _e('Étudiants','Studenten','Estudiantes','Studenti','学生'),
-'Transcribe lectures, organise study notes, and brainstorm essays hands-free.': _e('Transcrivez les cours.','Vorlesungen transkribieren.','Transcribe clases sin manos.','Trascrivi lezioni.','免提转录课程、整理笔记。'),
-'Entrepreneurs & Ideators': _e('Entrepreneurs & Idéateurs','Unternehmer & Denker','Emprendedores & Ideadores','Imprenditori & Ideatori','创业者与创意人'),
-'Capture chaotic brainstorming sessions and instantly structure them into action plans.': _e('Structurez vos brainstormings.','Brainstorming strukturieren.','Estructura tus ideas al instante.','Struttura il brainstorming.','把混乱的头脑风暴变成行动计划。'),
-'Journal Keepers & Thinkers': _e('Journaliers & Penseurs','Journal-Schreiber & Denker','Diarios & Pensadores','Diario & Pensatori','日记与思考者'),
-'Reflect out loud. Document your day with zero friction and clear insights.': _e('Réfléchissez à voix haute.','Laut reflektieren.','Reflexiona en voz alta.','Rifletti ad alta voce.','大声回顾，零摩擦记录每一天。'),
-'Busy Parents': _e('Parents Occupés','Beschäftigte Eltern','Padres Ocupados','Genitori Impegnati','忙碌的父母'),
-'Capture ideas while cooking, driving, or chasing the kids. Totally hands-free.': _e('Capturez des idées en cuisinant.','Ideen beim Kochen oder Fahren.','Captura ideas mientras cocinas.','Cattura idee mentre cucini.','做饭开车带娃时捕捉灵感。'),
-// Download CTA
-'Ready to ': _e('Prêt à ','Bereit zum ','Listo para ','Pronto per ','准备好'),
-'upgrade your workflow': _e('améliorer votre flux','Upgrade Ihres Workflows','mejorar tu flujo','migliorare il flusso','升级工作流'),
-'iOS': _e('iOS','iOS','iOS','iOS','iOS'),
-'Download on the App Store': _e('Télécharger sur l\'App Store','Im App Store laden','Descargar en App Store','Scarica su App Store','在 App Store 下载'),
-'Download on the': _e('Télécharger sur l\'','Laden im','Descargar en','Scarica su','在以下载'),
-'App Store': _e('App Store','App Store','App Store','App Store','App Store'),
-'Scan to download': _e('Scannez pour télécharger','Scannen zum Download','Escanear para descargar','Scansiona per scaricare','扫码下载'),
-'Coming soon': _e('Bientôt disponible','Demnächst','Próximamente','Prossimamente','即将上线'),
-// FAQ
-FAQ: _e('FAQ','FAQ','FAQ','FAQ','常见问题'),
-'Frequently ': _e('Questions ','Häufig ','Preguntas ','Domande ','常见'),
-'asked questions': _e('fréquentes','gestellte Fragen','frecuentes','frequenti','问题解答'),
-'How does the free trial work?': _e('Comment fonctionne l\'essai ?','Wie funktioniert die Testversion?','¿Cómo funciona la prueba?','Come funziona la prova?','免费试用如何运作？'),
-'Your first 10 notes are completely free (up to 2 minutes each). No credit card required. After that, choose a Prime plan to keep recording.': _e('10 notes gratuites (2 min). Sans CB. Ensuite Prime.','10 kostenlose Notizen. Keine Karte. Dann Prime.','10 notas gratis. Sin tarjeta. Luego Prime.','10 note gratis. Nessuna carta. Poi Prime.','前 10 条免费（2 分钟/条）。无需信用卡。之后选 Prime。'),
-'Can I switch or cancel my plan anytime?': _e('Puis-je changer de plan ?','Kann ich wechseln?','¿Puedo cambiar de plan?','Posso cambiare piano?','可以随时切换方案吗？'),
-'Absolutely. You can upgrade, downgrade, or cancel your subscription at any time directly through the app store.': _e('Oui. Changez ou annulez via l\'App Store.','Ja. Ändern Sie über den App Store.','Sí. Cambia o cancela desde App Store.','Sì. Cambia o annulla dall\'App Store.','可以。直接通过 App Store 升级、降级或取消。'),
-'What happens to my notes if I cancel?': _e('Que deviennent mes notes ?','Was passiert mit Notizen?','¿Qué pasa con mis notas?','Cosa succede alle note?','取消后笔记怎么办？'),
-'Your notes belong to you forever. If you cancel, you will still be able to access, read, and export all your existing notes on the Free plan.': _e('Vos notes sont à vous. Accès lecture seule.','Ihre Notizen bleiben. Lesezugriff.','Tus notas son tuyas. Acceso lectura.','Le note sono tue. Accesso lettura.','笔记永远属于你。取消后仍可访问和导出。'),
-'Do you offer a refund guarantee?': _e('Offrez-vous une garantie ?','Gibt es Rückerstattung?','¿Hay garantía de reembolso?','C\'è garanzia di rimborso?','有退款保证吗？'),
-'Yes, we back our paid plans with a 7-day money-back guarantee. If you\'re not satisfied, just contact our support.': _e('Oui, garantie 7 jours. Contactez le support.','Ja, 7-Tage-Garantie. Support kontaktieren.','Sí, 7 días de garantía. Contacta soporte.','Sì, 7 giorni di garanzia. Contatta supporto.','是的，7 天退款保证。联系支持即可。'),
-'What languages does VoiceNote support?': _e('Quelles langues ?','Welche Sprachen?','¿Qué idiomas?','Quali lingue?','支持哪些语言？'),
-'VoiceNote supports 46 languages for both transcription and AI polishing, covering major languages across Europe, Asia, the Middle East, and the Americas.': _e('46 langues en Europe, Asie, Moyen-Orient, Amériques.','46 Sprachen weltweit.','46 idiomas globalmente.','46 lingue globalmente.','覆盖欧亚中东美洲的 46 种语言。'),
-'How long can each recording be?': _e('Durée max par enregistrement ?','Max. Aufnahmedauer?','¿Duración máxima?','Durata massima?','每条录音可以多长？'),
-'Up to 15 minutes per recording on Prime. That\'s more than enough for meeting recaps, journal entries, brain dumps, and detailed briefs.': _e('15 min sur Prime.','15 Min auf Prime.','15 min en Prime.','15 min su Prime.','Prime 最长 15 分钟。'),
-// Download page
-'iOS App': _e('App iOS','iOS App','App iOS','App iOS','iOS 应用'),
-'Capture your ideas ': _e('Capturez vos idées ','Ideen festhalten ','Captura tus ideas ','Cattura le tue idee ','捕捉你的灵感'),
-'anywhere, anytime': _e('partout, à tout moment','überall, jederzeit','en cualquier lugar','ovunque, in ogni momento','随时随地'),
-'Available for iPhone and iPad. Download now and start turning your voice into polished text.': _e('Pour iPhone et iPad.','Für iPhone und iPad.','Para iPhone y iPad.','Per iPhone e iPad.','适用于 iPhone 和 iPad。立即下载。'),
-'Scan to ': _e('Scannez pour ','Scannen für ','Escanea para ','Scansiona per ','扫码'),
-'get VoiceNote': _e('VoiceNote','VoiceNote','VoiceNote','VoiceNote','获取 VoiceNote'),
-'Open your iPhone camera and scan the QR code to download instantly.': _e('Ouvrez l\'appareil photo et scannez.','Kamera öffnen und scannen.','Abre la cámara y escanea.','Apri la fotocamera e scansiona.','打开相机扫码下载。'),
-'Inside the App': _e('Dans l\'App','In der App','Dentro de la App','Dentro l\'App','应用预览'),
-'Minimalist design, ': _e('Design minimaliste, ','Minimalistisch, ','Diseño mínimo, ','Design minimalista, ','极简设计，'),
-'maximum productivity': _e('productivité maximale','maximale Produktivität','máxima productividad','massima produttività','极致效率'),
-'Record in one tap': _e('Enregistrer en un clic','Ein-Tipp-Aufnahme','Grabar en un toque','Registra in un tocco','一键录音'),
-'Press the big mic button and start talking': _e('Appuyez sur le micro','Großen Mikro-Button drücken','Pulsa el micrófono','Premi il microfono','按下大麦克风按钮'),
-'AI-polished text': _e('Texte peaufiné IA','KI-verfeinerter Text','Texto pulido IA','Testo perfezionato IA','AI 润色文字'),
-'Deepgram + GPT refine your words in seconds': _e('Deepgram + GPT en secondes','Deepgram + GPT in Sekunden','Deepgram + GPT en segundos','Deepgram + GPT in secondi','Deepgram + GPT 秒速润色'),
-'Organise with tags': _e('Organisez avec tags','Mit Tags organisieren','Organiza con etiquetas','Organizza con tag','标签整理'),
-'Folders, tags & full-text search': _e('Dossiers, tags, recherche','Ordner, Tags, Volltextsuche','Carpetas, etiquetas, búsqueda','Cartelle, tag, ricerca','文件夹、标签、全文搜索'),
-'Get Started': _e('Commencer','Loslegen','Empezar','Inizia','开始'),
-'Install in ': _e('Installer en ','Installieren in ','Instalar en ','Installa in ','安装只需'),
-seconds: _e('secondes','Sekunden','segundos','secondi','秒'),
-'Download the app': _e('Télécharger l\'app','App herunterladen','Descargar la app','Scarica l\'app','下载 App'),
-'Get VoiceNote from the App Store. It\'s a free download.': _e('Depuis l\'App Store. Gratuit.','Aus dem App Store. Kostenlos.','Desde App Store. Gratis.','Dall\'App Store. Gratis.','从 App Store 免费下载。'),
-'Create your account': _e('Créez votre compte','Konto erstellen','Crea tu cuenta','Crea account','创建账户'),
-'Sign up with email or Google. Takes less than 30 seconds.': _e('Inscrivez-vous en 30s.','In 30 Sekunden registriert.','Regístrate en 30s.','Registrati in 30s.','邮箱注册，30 秒搞定。'),
-'Tap record & speak': _e('Enregistrer et parler','Aufnehmen & sprechen','Grabar y hablar','Registra e parla','点击录音说话'),
-'Hit the big record button and start talking. VoiceNote handles the rest.': _e('Appuyez et parlez. VoiceNote fait le reste.','Aufnehmen, sprechen, VoiceNote erledigt den Rest.','Pulsa y habla. VoiceNote hace el resto.','Premi e parla. VoiceNote fa il resto.','点击录音，VoiceNote 处理剩下的。'),
-'Read, copy, share': _e('Lire, copier, partager','Lesen, Kopieren, Teilen','Leer, copiar, compartir','Leggi, copia, condividi','阅读、复制、分享'),
-'Your polished text is ready. Copy it anywhere, share it, or export it.': _e('Votre texte est prêt.','Ihr Text ist fertig.','Tu texto está listo.','Il testo è pronto.','文字已就绪，复制分享导出即可。'),
-Requirements: _e('Prérequis','Anforderungen','Requisitos','Requisiti','系统要求'),
-'What you ': _e('Ce dont vous ','Was Sie ','Lo que ','Cosa ti ','你'),
-need: _e('avez besoin','brauchen','necesitas','serve','所需要的'),
-'iPhone or iPad running iOS 16.0 or later': _e('iPhone/iPad iOS 16.0+','iPhone/iPad iOS 16.0+','iPhone/iPad iOS 16.0+','iPhone/iPad iOS 16.0+','iPhone 或 iPad，iOS 16.0+'),
-// Contact
-'We\'d love to ': _e('Nous aimerions ','Wir freuen uns, ','Nos encantaría ','Ci piacerebbe ','我们期待'),
-'hear from you': _e('vous entendre','von Ihnen zu hören','saber de ti','sentirti','收到你的消息'),
-'Drop us a line anytime. We\'ll get back to you within 24 hours.': _e('Écrivez-nous. Réponse sous 24h.','Schreiben Sie uns. Antwort in 24h.','Escríbenos. Respondemos en 24h.','Scrivici. Rispondiamo in 24h.','联系我们，24 小时内回复。'),
-'Get the App': _e('Obtenir l\'App','App holen','Obtener la App','Ottieni l\'App','获取应用'),
-// Voice Input demo
-'VOICE INPUT': _e('ENTRÉE VOCALE','SPRACHEINGABE','ENTRADA DE VOZ','INGRESSO VOCALE','语音输入'),
-'Plain & Direct': _e('Clair & Direct','Klar & Direkt','Claro & Directo','Chiaro & Diretto','简洁直接'),
-'Professional Email': _e('Email Professionnel','Professionelle E-Mail','Email Profesional','Email Professionale','正式邮件'),
-'Key Takeaways': _e('Points Clés','Kernpunkte','Puntos Clave','Punti Chiave','要点总结'),
-'Casual / Slack': _e('Décontracté','Locker','Informal','Informale','随意聊天'),
-'Subject: ': _e('Objet : ','Betreff: ','Asunto: ','Oggetto: ','主题：'),
-''Stop worrying about filler words, pauses, or grammar. Just speak naturally — VoiceNote\'s AI instantly rewrites your voice for any context.': _e('Arrêtez de vous soucier des hésitations. Parlez, VoiceNote réécrit.','Machen Sie sich keine Sorgen um Pausen. Sprechen Sie, VoiceNote schreibt um.','No te preocupes por las pausas. Habla, VoiceNote reescribe.','Non preoccuparti delle pause. Parla, VoiceNote riscrive.','别再担心语气词和停顿。自然地说，VoiceNote 即刻重写。'),
-'Project Timeline Extension': _e('Extension du délai','Fristverlängerung','Extensión del plazo','Estensione scadenza','项目延长期限'),
-'Dear Team,': _e('Chère équipe,','Liebes Team,','Estimado equipo,','Caro team,','各位团队成员，'),
-'Best regards': _e('Cordialement','Mit freundlichen Grüßen','Saludos cordiales','Cordiali saluti','此致敬礼'),
-'Action Item:': _e('Action : ','Aufgabe: ','Acción: ','Azione: ','行动项：'),
-'Blocker:': _e('Blocage : ','Blockade: ','Bloqueo: ','Blocco: ','阻塞项：'),
-'Next Steps:': _e('Prochaines étapes : ','Nächste Schritte: ','Próximos pasos: ','Prossimi passi: ','下一步：'),
-'Extend project deadline by 7 days': _e('Prolonger le délai de 7 jours','Frist um 7 Tage verlängern','Extender plazo 7 días','Estendere scadenza 7 giorni','项目延期 7 天'),
-'Awaiting final client feedback': _e('En attente du feedback client','Warten auf Kundenfeedback','Esperando feedback del cliente','In attesa feedback cliente','等待客户最终反馈'),
-'Conduct design revisions upon receipt': _e('Révisions design à réception','Design-Überarbeitung nach Erhalt','Revisiones de diseño al recibir','Revisioni design alla ricezione','收到反馈后进行设计修改'),
-// Footer
-'Privacy Policy': _e('Confidentialité','Datenschutz','Privacidad','Privacy','隐私政策'),
-'Terms of Service': _e('Conditions','Nutzungsbedingungen','Términos','Termini','服务条款'),
-'Cookie Policy': _e('Cookies','Cookies','Cookies','Cookie','Cookie 政策'),
-// Language names
-'English': _e('English','English','English','English','English'),
-'Français': _e('Français','Français','Français','Français','Français'),
-'Deutsch': _e('Deutsch','Deutsch','Deutsch','Deutsch','Deutsch'),
-'Español': _e('Español','Español','Español','Español','Español'),
-'Italiano': _e('Italiano','Italiano','Italiano','Italiano','Italiano'),
-'中文': _e('中文','中文','中文','中文','中文'),
+var LANG_KEY='voicenote_lang',LANGS=['en','fr','de','es','it','zh'];
+var T={
+'Home':{fr:'Accueil',de:'Start',es:'Inicio',it:'Home',zh:'首页'},
+'Pricing':{fr:'Tarifs',de:'Preise',es:'Precios',it:'Prezzi',zh:'定价'},
+'Download':{fr:'Telecharger',de:'Download',es:'Descargar',it:'Scarica',zh:'下载'},
+'Contact':{fr:'Contact',de:'Kontakt',es:'Contacto',it:'Contatto',zh:'联系'},
+'Try Free':{fr:'Essai Gratuit',de:'Testen',es:'Probar',it:'Prova',zh:'免费试用'},
+'Simple & Fast':{fr:'Simple et Rapide',de:'Einfach & Schnell',es:'Simple y Rapido',it:'Semplice e Veloce',zh:'简单快速'},
+'AI Smart Styles':{fr:'Styles IA',de:'KI Stile',es:'Estilos IA',it:'Stili IA',zh:'AI 智能风格'},
+'46 Languages':{fr:'46 Langues',de:'46 Sprachen',es:'46 Idiomas',it:'46 Lingue',zh:'46 种语言'},
+'Built for Thinkers':{fr:'Pour les Penseurs',de:'Fur Denker',es:'Para Pensadores',it:'Per Pensatori',zh:'为思考者而生'},
+'Speak Freely':{fr:'Parlez Librement',de:'Frei Sprechen',es:'Habla Libremente',it:'Parla Liberamente',zh:'自由说'},
+'Choose Your Style':{fr:'Choisissez',de:'Stil wahlen',es:'Elige Estilo',it:'Scegli Stile',zh:'选择风格'},
+'Ready to Use':{fr:'Pret a lemploi',de:'Einsatzbereit',es:'Listo para Usar',it:'Pronto allUso',zh:'立即可用'},
+'VOICE INPUT':{fr:'ENTREE VOCALE',de:'SPRACHEINGABE',es:'ENTRADA DE VOZ',it:'INGRESSO VOCALE',zh:'语音输入'},
+'Plain & Direct':{fr:'Clair & Direct',de:'Klar & Direkt',es:'Claro & Directo',it:'Chiaro & Diretto',zh:'简洁直接'},
+'Professional Email':{fr:'Email Professionnel',de:'E-Mail',es:'Email Profesional',it:'Email Professionale',zh:'正式邮件'},
+'Key Takeaways':{fr:'Points Cles',de:'Kernpunkte',es:'Puntos Clave',it:'Punti Chiave',zh:'要点总结'},
+'Casual / Slack':{fr:'Decontracte',de:'Locker',es:'Informal',it:'Informale',zh:'随意聊天'},
+'Free':{fr:'Gratuit',de:'Kostenlos',es:'Gratis',it:'Gratis',zh:'免费'},
+'Prime':{fr:'Prime',de:'Prime',es:'Prime',it:'Prime',zh:'Prime'},
+'Start your free trial':{fr:'Essai gratuit',de:'Testversion',es:'Prueba gratuita',it:'Prova gratuita',zh:'开始免费试用'},
+'Try Free Now':{fr:'Essayer',de:'Jetzt testen',es:'Probar ahora',it:'Prova ora',zh:'立即试用'},
+'10 free notes':{fr:'10 notes gratuites',de:'10 Notizen',es:'10 notas gratis',it:'10 note gratis',zh:'10 条免费笔记'},
+'Download on the App Store':{fr:'Telecharger',de:'Laden',es:'Descargar',it:'Scarica',zh:'在 App Store 下载'},
+'Scan to download':{fr:'Scanner',de:'Scannen',es:'Escanear',it:'Scansiona',zh:'扫码下载'},
+'FAQ':{fr:'FAQ',de:'FAQ',es:'FAQ',it:'FAQ',zh:'常见问题'},
+'Compare':{fr:'Comparer',de:'Vergleichen',es:'Comparar',it:'Confronta',zh:'对比'},
+'Students':{fr:'Etudiants',de:'Studenten',es:'Estudiantes',it:'Studenti',zh:'学生'},
+'Busy Parents':{fr:'Parents Occupes',de:'Eltern',es:'Padres Ocupados',it:'Genitori',zh:'忙碌的父母'},
+'Writers & Creators':{fr:'Ecrivains',de:'Autoren',es:'Escritores',it:'Scrittori',zh:'作家与创作者'},
+'Professionals & Executives':{fr:'Professionnels',de:'Profis',es:'Profesionales',it:'Professionisti',zh:'职场人士'},
+'Thinkers & Ideators':{fr:'Penseurs',de:'Denker',es:'Pensadores',it:'Pensatori',zh:'思考者'},
+'Entrepreneurs & Ideators':{fr:'Entrepreneurs',de:'Unternehmer',es:'Emprendedores',it:'Imprenditori',zh:'创业者'},
+'Journal Keepers & Thinkers':{fr:'Journaliers',de:'Journal',es:'Diarios',it:'Diario',zh:'日记者'},
+'iPhone or iPad running iOS 16.0 or later':{fr:'iPhone/iPad iOS 16+',de:'iPhone/iPad iOS 16+',es:'iPhone/iPad iOS 16+',it:'iPhone/iPad iOS 16+',zh:'iPhone/iPad iOS 16+'},
+'Privacy Policy':{fr:'Confidentialite',de:'Datenschutz',es:'Privacidad',it:'Privacy',zh:'隐私政策'},
+'Terms of Service':{fr:'Conditions',de:'Nutzungsbedingungen',es:'Terminos',it:'Termini',zh:'服务条款'},
+'Cookie Policy':{fr:'Cookies',de:'Cookies',es:'Cookies',it:'Cookie',zh:'Cookie 政策'},
+'English':{fr:'English',de:'English',es:'English',it:'English',zh:'English'},
+'Francais':{fr:'Francais',de:'Francais',es:'Francais',it:'Francais',zh:'Francais'},
+'Deutsch':{fr:'Deutsch',de:'Deutsch',es:'Deutsch',it:'Deutsch',zh:'Deutsch'},
+'Espanol':{fr:'Espanol',de:'Espanol',es:'Espanol',it:'Espanol',zh:'Espanol'},
+'Italiano':{fr:'Italiano',de:'Italiano',es:'Italiano',it:'Italiano',zh:'Italiano'}
 };
-// ---- Engine ----
-function getLang(){const s=localStorage.getItem(LANG_KEY);return s&&LANGS.includes(s)?s:(LANGS.includes(navigator.language.slice(0,2))?navigator.language.slice(0,2):'en');}
-function setLang(l){if(!LANGS.includes(l))return;localStorage.setItem(LANG_KEY,l);const path=location.pathname.replace(/^\/(en|fr|de|es|it|zh)\//,'/').replace(/^\//,'');location.href='/'+l+'/'+(path||'');}
-function applyLang(){const lang=getLang();if(lang==='en')return;document.documentElement.lang=lang;// Step 1: Translate leaf elements (no children)const all=document.querySelectorAll('p,span,h1,h2,h3,h4,h5,h6,li,a,button,td,th,label,div');all.forEach(el=>{if(el.children.length>0)return;if(el.closest('#langSwitcher'))return;if(['SCRIPT','STYLE','NOSCRIPT','INPUT','TEXTAREA'].includes(el.tagName))return;const t=el.textContent.trim();if(!t||t.length<2)return;if(T[t]&&T[t][lang])el.textContent=T[t][lang];});// Step 2: Translate text nodes (for fragmented text with <br>/<span> inside)const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,null,false);const nodes=[];while(walker.nextNode())nodes.push(walker.currentNode);nodes.forEach(node=>{const p=node.parentElement;if(!p||['SCRIPT','STYLE','NOSCRIPT'].includes(p.tagName))return;if(p.closest('#langSwitcher'))return;const t=node.textContent.trim();if(!t||t.length<2)return;if(T[t]&&T[t][lang])node.textContent=T[t][lang];});// Step 3: data-t attributesdocument.querySelectorAll('[data-t]').forEach(el=>{const k=el.getAttribute('data-t');if(T[k]&&T[k][lang])el.textContent=T[k][lang];});}
-function updateBadge(){const l=getLang();const m={en:'EN',fr:'FR',de:'DE',es:'ES',it:'IT',zh:'中文'};const b=document.getElementById('langCurrent');if(b)b.innerHTML=m[l]+' <svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>';}
-document.addEventListener('DOMContentLoaded',()=>{const m={en:'English',fr:'Français',de:'Deutsch',es:'Español',it:'Italiano',zh:'中文'};const s={en:'EN',fr:'FR',de:'DE',es:'ES',it:'IT',zh:'中文'};const l=getLang();const w=document.getElementById('langSwitcher');if(!w)return;w.innerHTML='';const c=document.createElement('span');c.id='langCurrent';c.className='text-xs font-medium text-gray-500 cursor-pointer hover:text-gray-700 flex items-center gap-1';c.innerHTML=s[l]+' <svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>';w.appendChild(c);const d=document.createElement('div');d.id='langDropdown';d.className='absolute top-full right-0 mt-1 bg-white border border-gray-100 rounded-xl shadow-lg py-1 hidden z-50 min-w-[140px]';LANGS.forEach(x=>{const o=document.createElement('button');o.textContent=m[x];o.className='lang-option block w-full text-left px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 '+(x===l?'font-semibold text-brand-600':'');o.onclick=()=>{setLang(x);d.classList.add('hidden');};d.appendChild(o);});w.appendChild(d);c.addEventListener('click',e=>{e.stopPropagation();d.classList.toggle('hidden');});document.addEventListener('click',()=>d.classList.add('hidden'));if(l!=='en')applyLang();});
+
+function getLang(){var s=localStorage.getItem(LANG_KEY);return s&&LANGS.indexOf(s)>=0?s:(LANGS.indexOf(navigator.language.slice(0,2))>=0?navigator.language.slice(0,2):'en');}
+function setLang(l){if(LANGS.indexOf(l)<0)return;localStorage.setItem(LANG_KEY,l);var p=location.pathname.replace(/^\/(en|fr|de|es|it|zh)\//,'/').replace(/^\//,'');location.href='/'+l+'/'+(p||'');}
+function applyLang(){var lang=getLang();if(lang==='en')return;document.documentElement.lang=lang;var all=document.querySelectorAll('p,span,h1,h2,h3,h4,h5,h6,li,a,button,td,th,label,div');for(var i=0;i<all.length;i++){var el=all[i];if(el.children.length>0)continue;if(el.closest&&el.closest('#langSwitcher'))continue;var tag=el.tagName;if(tag==='SCRIPT'||tag==='STYLE'||tag==='NOSCRIPT'||tag==='INPUT'||tag==='TEXTAREA')continue;var t=el.textContent.trim();if(!t||t.length<2)continue;if(T[t]&&T[t][lang])el.textContent=T[t][lang];}}
+
+document.addEventListener('DOMContentLoaded',function(){
+  var names={en:'English',fr:'Francais',de:'Deutsch',es:'Espanol',it:'Italiano',zh:'中文'};
+  var shorts={en:'EN',fr:'FR',de:'DE',es:'ES',it:'IT',zh:'中文'};
+  var l=getLang();
+  var w=document.getElementById('langSwitcher');
+  if(!w)return;
+  w.innerHTML='';
+  var c=document.createElement('span');
+  c.id='langCurrent';
+  c.className='text-xs font-medium text-gray-500 cursor-pointer hover:text-gray-700 flex items-center gap-1';
+  c.innerHTML=shorts[l]+' <svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>';
+  w.appendChild(c);
+  var d=document.createElement('div');
+  d.id='langDropdown';
+  d.className='absolute top-full right-0 mt-1 bg-white border border-gray-100 rounded-xl shadow-lg py-1 hidden z-50 min-w-[140px]';
+  for(var i=0;i<LANGS.length;i++){(function(x){
+    var o=document.createElement('button');
+    o.textContent=names[x];
+    o.className='lang-option block w-full text-left px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 '+(x===l?'font-semibold text-brand-600':'');
+    o.onclick=function(){setLang(x);d.classList.add('hidden');};
+    d.appendChild(o);
+  })(LANGS[i]);}
+  w.appendChild(d);
+  c.addEventListener('click',function(e){e.stopPropagation();d.classList.toggle('hidden');});
+  document.addEventListener('click',function(){d.classList.add('hidden');});
+  if(l!=='en')applyLang();
+});
