@@ -427,6 +427,8 @@ var T={
 'VoiceNote Terms of Service — the rules and guidelines for using our application.':{fr:'Conditions d\'utilisation VoiceNote — regles et directives pour l\'utilisation de notre application.',de:'VoiceNote Nutzungsbedingungen — Regeln fur die Nutzung unserer App.',es:'Terminos de servicio de VoiceNote — reglas para usar nuestra aplicacion.',it:'Termini di servizio VoiceNote — regole per l\'uso della nostra app.',zh:'VoiceNote 服务条款 — 使用我们应用的规则和指南。'},
 'Cookie Policy — VoiceNote':{fr:'Politique de cookies — VoiceNote',de:'Cookie-Richtlinie — VoiceNote',es:'Politica de cookies — VoiceNote',it:'Politica sui cookie — VoiceNote',zh:'Cookie 政策 — VoiceNote'},
 'VoiceNote Cookie Policy — understand how we use cookies and similar technologies.':{fr:'Politique de cookies VoiceNote — comprenez comment nous utilisons les cookies.',de:'VoiceNote Cookie-Richtlinie — wie wir Cookies verwenden.',es:'Politica de cookies de VoiceNote — como usamos las cookies.',it:'Politica sui cookie VoiceNote — come usiamo i cookie.',zh:'VoiceNote Cookie 政策 — 了解我们如何使用 Cookie 及类似技术。'},
+// Blog
+'Blog':{fr:'Blog',de:'Blog',es:'Blog',it:'Blog',zh:'博客'},
 };
 function getLang(){var s=localStorage.getItem(LANG_KEY);return s&&LANGS.indexOf(s)>=0?s:(LANGS.indexOf(navigator.language.slice(0,2))>=0?navigator.language.slice(0,2):'en');}
 var _enTexts=null;
