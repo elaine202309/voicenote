@@ -322,6 +322,12 @@ body { font-family: 'Inter', system-ui, sans-serif; -webkit-font-smoothing: anti
   background: linear-gradient(135deg, #f7faff, #fbf8ff);
   text-align: center;
 }
+/* Prose link styles are more specific than Tailwind's text-white; restore the button. */
+.prose-article .article-cta a {
+  color: #fff;
+  text-decoration: none;
+}
+.prose-article .article-cta a:hover { color: #fff; }
 
 @media (max-width: 640px) {
   .article-header { padding-top: 120px; }
