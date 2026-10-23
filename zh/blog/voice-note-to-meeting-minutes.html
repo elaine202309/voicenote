@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>如何把语音笔记变成会议纪要（附示例）— VoiceNote 博客</title>
+  <meta name="description" content="把一段会议口述整理成一页会议纪要：决议、带负责人和截止日的待办、待定问题。五个部分的结构和一组完整示例。">
+  <meta name="author" content="Elaine">
+  <meta name="robots" content="index,follow">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="canonical" href="https://voicenote.uk/zh/blog/voice-note-to-meeting-minutes.html">
+  <link rel="alternate" hreflang="en" href="https://voicenote.uk/blog/voice-note-to-meeting-minutes.html">
+  <link rel="alternate" hreflang="fr" href="https://voicenote.uk/fr/blog/voice-note-to-meeting-minutes.html">
+  <link rel="alternate" hreflang="de" href="https://voicenote.uk/de/blog/voice-note-to-meeting-minutes.html">
+  <link rel="alternate" hreflang="es" href="https://voicenote.uk/es/blog/voice-note-to-meeting-minutes.html">
+  <link rel="alternate" hreflang="it" href="https://voicenote.uk/it/blog/voice-note-to-meeting-minutes.html">
+  <link rel="alternate" hreflang="zh" href="https://voicenote.uk/zh/blog/voice-note-to-meeting-minutes.html">
+  <link rel="alternate" hreflang="x-default" href="https://voicenote.uk/blog/voice-note-to-meeting-minutes.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="如何把语音笔记变成会议纪要">
+  <meta property="og:description" content="把一段会议口述整理成一页会议纪要：决议、带负责人和截止日的待办、待定问题。五个部分的结构和一组完整示例。">
+  <meta property="og:url" content="https://voicenote.uk/zh/blog/voice-note-to-meeting-minutes.html">
+  <meta property="og:image" content="https://voicenote.uk/blog/assets/og/voice-note-meeting-minutes-zh.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="如何把语音笔记变成会议纪要">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="article:published_time" content="2026-10-23">
+  <meta property="article:modified_time" content="2026-10-23">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="如何把语音笔记变成会议纪要">
+  <meta name="twitter:description" content="把一段会议口述整理成一页会议纪要：决议、带负责人和截止日的待办、待定问题。五个部分的结构和一组完整示例。">
+  <meta name="twitter:image" content="https://voicenote.uk/blog/assets/og/voice-note-meeting-minutes-zh.png">
+  <meta name="twitter:image:alt" content="如何把语音笔记变成会议纪要">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QNKGT9R5FB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-QNKGT9R5FB');
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { 50:'#eff6ff',100:'#dbeafe',200:'#bfdbfe',300:'#93c5fd',400:'#60a5fa',500:'#4f8af7',600:'#3b6ef5',700:'#2d5de0',800:'#2449c4',900:'#1e3a8a',950:'#172554' },
+            warm: { 50:'#fffbf5',100:'#fef7ed',200:'#fdefd6',300:'#fce3b6',400:'#f9cf8a',500:'#f5b85c',600:'#f09e34',700:'#e08816',800:'#bc7012',900:'#995813' }
+          },
+          fontFamily: { sans: ['Inter','system-ui','sans-serif'] },
+          borderRadius: { '4xl': '2rem' }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/blog/blog.css?v=6">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "如何把语音笔记变成会议纪要",
+  "description": "把一段会议口述整理成一页会议纪要：决议、带负责人和截止日的待办、待定问题。五个部分的结构和一组完整示例。",
+  "datePublished": "2026-10-23",
+  "dateModified": "2026-10-23",
+  "mainEntityOfPage": "https://voicenote.uk/zh/blog/voice-note-to-meeting-minutes.html",
+  "inLanguage": "zh",
+  "image": [
+    "https://voicenote.uk/blog/assets/og/voice-note-meeting-minutes-zh.png",
+    "https://voicenote.uk/blog/assets/recording-voice-note.png",
+    "https://voicenote.uk/blog/assets/meeting-minutes-style.png"
+  ],
+  "author": {
+    "@type": "Person",
+    "name": "Elaine",
+    "url": "https://x.com/elaine20230910",
+    "sameAs": [
+      "https://x.com/elaine20230910"
+    ],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "VoiceNote",
+      "url": "https://voicenote.uk/"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "VoiceNote",
+    "url": "https://voicenote.uk/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://voicenote.uk/logo.png"
+    }
+  }
+}
+  </script>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+
+<!-- NAVBAR -->
+<nav id="navbar" class="blog-nav fixed top-0 z-50 w-full border-b border-gray-100/80 transition-shadow duration-300">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
+    <a href="../" class="flex items-center gap-2 text-xl font-bold">
+      <div class="flex h-9 w-9 items-center justify-center rounded-lg logo-gradient text-white"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></div>
+      <span class="tracking-tight">VoiceNote</span>
+    </a>
+    <div class="hidden items-center gap-7 md:flex">
+      <a href="../" class="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900">首页</a>
+      <a href="../pricing.html" class="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900">定价</a>
+      <a href="./" class="text-sm font-semibold text-brand-600 transition-colors">博客</a>
+      <a href="../download.html" class="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900">下载</a>
+      <a href="../contact.html" class="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900">联系</a>
+      <a href="../download.html" class="rounded-full btn-gradient px-5 py-2.5 text-sm font-semibold text-white shadow-sm">免费试用</a>
+      <div class="relative ml-1 border-l border-gray-200 pl-4">
+        <button id="blogLangBtn" type="button" aria-haspopup="true" aria-controls="blogLangMenu" class="flex items-center gap-1 text-xs font-medium text-gray-500 transition-colors hover:text-gray-700">
+          中文 <svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div id="blogLangMenu" class="lang-menu">
+          <a data-lang="en" href="/blog/">English</a>
+          <a data-lang="fr" href="/fr/blog/">Français</a>
+          <a data-lang="de" href="/de/blog/">Deutsch</a>
+          <a data-lang="es" href="/es/blog/">Español</a>
+          <a data-lang="it" href="/it/blog/">Italiano</a>
+          <a data-lang="zh" href="/zh/blog/">中文</a>
+        </div>
+      </div>
+    </div>
+    <button id="menuToggle" class="rounded-lg p-2 text-gray-600 hover:bg-gray-100 md:hidden" aria-label="菜单">
+      <svg id="menuIcon" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+  <div id="mobileMenu" class="max-h-0 overflow-hidden transition-all duration-300 md:hidden">
+    <div class="mx-4 flex flex-col gap-1 border-t border-gray-100 pb-4 pt-3">
+      <a href="../" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-50">首页</a>
+      <a href="../pricing.html" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-50">定价</a>
+      <a href="./" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-semibold text-brand-600 hover:bg-gray-50">博客</a>
+      <a href="../download.html" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-50">下载</a>
+      <a href="../contact.html" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-50">联系</a>
+      <a href="../download.html" class="mobile-link mt-2 rounded-full btn-gradient px-5 py-2.5 text-center text-sm font-semibold text-white">免费试用</a>
+      <div class="mt-3 flex flex-wrap gap-x-4 gap-y-2 border-t border-gray-100 px-3 pt-3 text-xs font-medium text-gray-500">
+        <a href="/blog/" class="hover:text-gray-900">English</a>
+        <a href="/fr/blog/" class="hover:text-gray-900">Français</a>
+        <a href="/de/blog/" class="hover:text-gray-900">Deutsch</a>
+        <a href="/es/blog/" class="hover:text-gray-900">Español</a>
+        <a href="/it/blog/" class="hover:text-gray-900">Italiano</a>
+        <a href="/zh/blog/" class="text-brand-600">中文</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main class="pb-20">
+  <header class="article-header">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6">
+      <nav class="mb-6 flex items-center gap-2 text-xs font-medium text-gray-400" aria-label="Breadcrumb">
+        <a href="./" class="transition-colors hover:text-gray-700">博客</a>
+        <span>/</span>
+        <span class="text-gray-500">会议</span>
+      </nav>
+      <span class="article-badge">语音转文字</span>
+      <h1 class="mt-5 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl lg:text-[2.75rem] lg:leading-[1.15]">如何把语音笔记变成会议纪要</h1>
+      <p class="lead mt-5 text-lg leading-relaxed text-gray-500">聊了四十分钟，散会后却没有人知道该做什么。会议纪要不是复述讨论，而是记录「什么变了」。从一条语音笔记出发，大约十分钟就能写完。</p>
+      <div class="article-meta mt-7 border-b border-gray-100 pb-7">
+        <span><time datetime="2026-10-23">2026 年 10 月 23 日</time></span>
+        <span class="h-1 w-1 rounded-full bg-gray-300"></span>
+        <span>9 分钟阅读</span>
+        <span class="h-1 w-1 rounded-full bg-gray-300"></span>
+        <span><a href="https://x.com/elaine20230910" target="_blank" rel="me noopener">Elaine</a></span>
+      </div>
+    </div>
+  </header>
+
+  <article class="mx-auto mt-10 max-w-3xl px-4 sm:px-6">
+    <div class="prose-article">
+      <div class="takeaways">
+        <p class="takeaways-label">要点</p>
+        <ul>
+          <li>纪要不是逐字稿：记下决定了什么、谁负责、什么时候完成。</li>
+          <li>录音前先征求同意，并把人名说出来——转写分不清谁在说话。</li>
+          <li>五个部分：参会人、决议、待办（负责人 + 日期）、待定问题、下次会议。</li>
+          <li>没有负责人和日期的待办只是愿望。纪要在当天发出去。</li>
+        </ul>
+      </div>
+
+      <p>大多数会议都是这样结束的：说了很多，也达成了几件事，但什么都没写下来。负责记录的人手里只有一段素材很好的语音，却没有时间把它变成任何东西。</p>
+      <p>解决办法不是更精确的转写，而是一份更短的文件。一场四十分钟的会，通常只产出三个决议、五项待办和两个待定问题——大概一页纸。从录音走到这一页，是一套十分钟就能重复的流程。</p>
+
+      <h2>为什么转写稿不是会议纪要</h2>
+      <p>转写稿是证据，不是文件。它保留了对话的顺序，于是聊办公室搬迁的那段插话，正好夹在两个关于上线的决议中间；每句话的分量都一样，包括没人当真说出口的那些；而且它不做归属——没有说话人标签，你分不清是谁答应了什么。</p>
+      <p>纪要正好相反。它把几乎全部内容扔掉，只留下下周会有人来找的四件事：决定了什么、谁要做什么、什么时候做完、还有什么没定。</p>
+      <p>这跟用口述写邮件是同一个落差——<a href="voice-note-to-professional-email.html">原始文字是素材，不是成品</a>。区别在于，纪要的结构是固定的，这让工作更简单，而不是更难。</p>
+
+      <h2>录音之前：征求同意和做准备</h2>
+      <p>在按下录音之前，有两件事要先做。</p>
+      <ol>
+        <li><strong>先问。</strong>明确说明你在录一段语音笔记用来写纪要，音频只留在你的手机上。如果有人不同意，就改用纸笔记录。很多地方规定录音需要所有参与者同意，所以先问既是礼貌，通常也是法律要求；同时遵守公司的相关规定。</li>
+        <li><strong>先定结构。</strong>会议短，一条录音就够；如果超过单条录音上限，就按议程每个议题各录一条。议题之间的停顿是天然的切分点，短录音事后也更容易核对。</li>
+      </ol>
+      <p>还有一个很值得养成的习惯：总结时把人名说出来。「Alex 会发价格表」能扛过转写；「他会发」不行。</p>
+
+      <h2>能用的纪要只有五个部分</h2>
+      <p>顺序很重要。决议放最前面，因为大多数人只读这一段。</p>
+      <ol>
+        <li><strong>参会人。</strong>姓名；如果名单要发给团队以外的人，再加上角色。缺席只在有影响时才写。</li>
+        <li><strong>决议。</strong>每项一行，用过去式，不写讨论过程：「上线改到 11 月 21 日」。如果还只是提议，就归到待定问题里。</li>
+        <li><strong>待办。</strong>任务、负责人、日期。「Alex 在 10 月 24 日周五前发出修改后的价格表」。没有负责人，就不是待办，只是愿望。</li>
+        <li><strong>待定问题。</strong>还没定的事，以及由谁来定。正是这一节，让同一个讨论不会在下周重新开一遍。</li>
+        <li><strong>下次会议。</strong>写上日期，或者写「日期未定」。两者都有用，留空没有。</li>
+      </ol>
+
+      <h2>在 VoiceNote 里怎么做</h2>
+      <ol>
+        <li><strong>趁记忆新鲜录下复盘。</strong>打开 VoiceNote（第一次用？<a href="../download.html">先下载</a>），点麦克风，把事情讲一遍——最好在会后五分钟内。不要复述整场对话，说你会对一个没参会的同事怎么说。</li>
+        <li><strong>注意长度。</strong>免费版包含<a href="../pricing.html">10 条笔记，每条最长 2 分钟</a>；Prime 不限条数，单条延长到 15 分钟。一场 45 分钟的会可以拆成三到四条，每个议题一条——这样事后也更好查。</li>
+        <li><strong>选择 Meeting Minutes 风格。</strong><a href="../">VoiceNote</a> 会抽出决议、待办和关键讨论点，其余部分丢掉。</li>
+        <li><strong>改三类它不可能知道的东西。</strong>人名，对照参会名单逐一核对；日期，最好在录音时就念出来；还有某件事到底是「已决定」还是「只是提议」。</li>
+        <li><strong>当天就发出去。</strong>发在项目频道里，附上一句：「今天下班前可以提修改，否则以此为准。」正是这句话让文件生效。</li>
+      </ol>
+
+      <figure class="article-figure article-figure--phone">
+        <img src="/blog/assets/recording-voice-note.png" alt="VoiceNote 录音界面，显示 7 秒计时和实时波形。" width="1242" height="2688" loading="lazy">
+        <figcaption>会后马上录复盘。计时器会提醒你别把整场讨论重讲一遍。</figcaption>
+      </figure>
+
+      <figure class="article-figure">
+        <img src="/blog/assets/meeting-minutes-style.png" alt="VoiceNote 的 AI Style Conversion 列表，Meeting Minutes 已选中，下方是 Course Notes。" width="1080" height="505" loading="lazy">
+        <figcaption>VoiceNote 里的 Meeting Minutes：从笔记中抽出决议、待办和关键讨论点。</figcaption>
+      </figure>
+
+      <h2>一个完整示例</h2>
+      <p>下面是口述的复盘——故意保留了口语的凌乱，就像会后二十分钟真实说出来的样子。</p>
+
+      <div class="example">
+        <p class="example-label"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/></svg> 口述复盘</p>
+        <blockquote class="spoken"><p>「好，上线同步会，Priya、Alex、Marco，周二 21 号，大概三十分钟。呃——上线从 14 号挪到 21 号，前提是法务那边通过，Priya 在周三 22 号前确认。引导邮件跟着上线一起发，不是上线之后。Alex 在周五 24 号前把修改后的价格表发出来。Marco 在周一 20 号前把引导邮件最后通读一遍。找代理公司对接这件事还没定，先挂着。下次会议周二 28 号十点。」</p></blockquote>
+        <p class="example-label"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M8 13h8"/><path d="M8 17h5"/></svg> 应用风格后的会议纪要</p>
+        <div class="minutes-card">
+          <p class="minutes-title">上线同步会 — 会议纪要</p>
+          <p class="minutes-meta">2026 年 10 月 21 日 周二 · 30 分钟 · Priya、Alex、Marco</p>
+          <p class="minutes-label">决议</p>
+          <ul>
+            <li>上线从 11 月 14 日改到 11 月 21 日，待法务确认。</li>
+            <li>引导邮件随上线一起发出，不延后。</li>
+          </ul>
+          <p class="minutes-label">待办</p>
+          <ul>
+            <li class="is-action"><span class="minutes-owner">Alex</span> — 发出修改后的价格表 <span class="minutes-due">10 月 24 日周五前</span></li>
+            <li class="is-action"><span class="minutes-owner">Marco</span> — 最后通读引导邮件 <span class="minutes-due">10 月 20 日周一前</span></li>
+            <li class="is-action"><span class="minutes-owner">Priya</span> — 确认法务通过 <span class="minutes-due">10 月 22 日周三前</span></li>
+          </ul>
+          <p class="minutes-label">待定问题</p>
+          <ul>
+            <li>由谁对接代理公司？尚未指派。</li>
+          </ul>
+          <p class="minutes-label">下次会议</p>
+          <ul>
+            <li>2026 年 10 月 28 日周二，10:00。</li>
+          </ul>
+        </div>
+        <p class="example-note">改了什么：一段口语变成五行能照着做的事——每项待办都有名字和日期，没定下来的问题被写下来，而不是被忘掉。</p>
+      </div>
+
+      <h2>怎么控制在一页以内</h2>
+      <ul>
+        <li><strong>删掉讨论。</strong>如果一个点需要一整段才能说清，那它是一场争论，不是一个结果。争论值得发生，但不值得写进纪要。</li>
+        <li><strong>写人，不写团队。</strong>「设计团队」是个能藏人的地方，具体的人才负责。</li>
+        <li><strong>写日期，不写区间。</strong>「10 月 24 日前」过一周还能用，「下周」不能。</li>
+        <li><strong>每个决议留一行背景。</strong>够让没参会的人看懂就行，多一个字都算多余。</li>
+        <li><strong>尽快发出。</strong>纪要的价值在于会议大家还记得的时候。拖到下周，没人会来更正，也不会有人照着做。</li>
+      </ul>
+
+      <h2>要避免的错误</h2>
+      <ul>
+        <li><strong>不打招呼就录音。</strong>这既不专业，在很多地方也不合法。每次都要先问。</li>
+        <li><strong>记录会议，而不是结果。</strong>加了小标题的逐字稿，仍然是逐字稿。</li>
+        <li><strong>待办没有日期。</strong>没有截止时间的任务，只是一个建议。</li>
+        <li><strong>完全相信人名和数字。</strong>转写不认识你的同事。「Priya」被写成「Pria」的次数，比你想象的多。</li>
+        <li><strong>替全场做决定。</strong>不确定某件事是否已经通过，就写到待定问题里。纪要不是用来裁决的地方。</li>
+      </ul>
+
+      <h2>常见问题</h2>
+      <h3>录音合法吗？</h3>
+      <p>取决于所在地区和通话参与者。很多地方需要所有参与者同意，也有一些地方只要一方同意即可。先问，说明录音的用途，并遵守公司政策。会议开始时问一句，也是最礼貌的做法。</p>
+      <h3>VoiceNote 能区分是谁在说话吗？</h3>
+      <p>不能，没有说话人标签，而纪要大都不需要。你记录的是结果，不是逐字稿。复盘时把人名说出来（「Alex 会发……」），并在每条待办里重申负责人。</p>
+      <h3>我的会要开 45–60 分钟，能行吗？</h3>
+      <p>不能录成一条。免费版提供 10 条笔记，每条最长 2 分钟；Prime 不限条数，单条最长 15 分钟。会议较长时，按议程每个议题录一条——三四段短复盘，本来也比一整段长录音更好核对。</p>
+      <h3>VoiceNote 支持哪些语言？</h3>
+      <p>转写和润色都支持 46 种语言，可以用会议当时使用的语言做复盘。</p>
+      <h3>可以用在客户会议上吗？</h3>
+      <p>可以，前提是取得同意，并且多过一遍。把草稿当成同事写的来读，在发出去之前删掉所有内部信息、推测内容和商业敏感细节。</p>
+
+      <aside id="author" class="author-card">
+        <div class="author-avatar" aria-hidden="true">E</div>
+        <div class="author-body">
+          <p class="author-name">Elaine</p>
+          <p class="author-role">@elaine20230910 · VoiceNote</p>
+          <p class="author-bio">Elaine 是 VoiceNote 的开发者。这是一款 iPhone 语音转文字 App，这个博客记录真正省时间的口述工作流。</p>
+          <a class="author-link" href="https://x.com/elaine20230910" target="_blank" rel="me noopener">在 X 上关注</a>
+        </div>
+      </aside>
+      <div class="article-cta">
+        <p class="text-base font-semibold text-gray-900">下一场会，带着纪要离场</p>
+        <p class="mt-1 text-sm text-gray-500">下载 VoiceNote，录一段五分钟的复盘，趁会议还新鲜把纪要发出去。</p>
+        <a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/voicenote-ai-voice-to-text/id6774268799" class="btn-gradient mt-5 inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold text-white shadow-sm">在 App Store 下载</a>
+      </div>
+
+    </div>
+  </article>
+</main>
+
+<!-- FOOTER -->
+<footer class="border-t border-gray-100 bg-white">
+  <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+    <div class="flex flex-col items-center justify-between gap-6 sm:flex-row">
+      <a href="../" class="flex items-center gap-2 text-xl font-bold">
+        <div class="flex h-8 w-8 items-center justify-center rounded-lg logo-gradient text-white"><svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></div>
+        <span class="tracking-tight">VoiceNote</span>
+      </a>
+      <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-gray-500">
+        <a href="../pricing.html" class="transition-colors hover:text-gray-900">定价</a>
+        <a href="../download.html" class="transition-colors hover:text-gray-900">下载</a>
+        <a href="../contact.html" class="transition-colors hover:text-gray-900">联系</a>
+        <a href="./" class="transition-colors hover:text-gray-900">博客</a>
+        <a href="../privacy.html" class="transition-colors hover:text-gray-900">隐私政策</a>
+        <a href="../terms.html" class="transition-colors hover:text-gray-900">服务条款</a>
+        <a href="../cookies.html" class="transition-colors hover:text-gray-900">Cookie 政策</a>
+      </div>
+    </div>
+    <p class="mt-8 text-center text-xs text-gray-400">&copy; 2026 VoiceNote. 保留所有权利。</p>
+  </div>
+</footer>
+
+<script>
+  window.BLOG_TRANSLATIONS = {
+    en: '/blog/voice-note-to-meeting-minutes.html',
+    fr: '/fr/blog/voice-note-to-meeting-minutes.html',
+    de: '/de/blog/voice-note-to-meeting-minutes.html',
+    es: '/es/blog/voice-note-to-meeting-minutes.html',
+    it: '/it/blog/voice-note-to-meeting-minutes.html',
+    zh: '/zh/blog/voice-note-to-meeting-minutes.html'
+  };
+</script>
+<script src="/blog/blog.js"></script>
+</body>
+</html>
