@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>如何把语音笔记变成学习笔记（附示例）— VoiceNote 博客</title>
+  <meta name="description" content="把一节课变成结构化学习笔记：核心概念、定义、例子，以及能自测的问题。分四遍整理的方法和一组完整示例。">
+  <meta name="author" content="Elaine">
+  <meta name="robots" content="index,follow">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="canonical" href="https://voicenote.uk/zh/blog/voice-note-to-study-notes.html">
+  <link rel="alternate" hreflang="en" href="https://voicenote.uk/blog/voice-note-to-study-notes.html">
+  <link rel="alternate" hreflang="fr" href="https://voicenote.uk/fr/blog/voice-note-to-study-notes.html">
+  <link rel="alternate" hreflang="de" href="https://voicenote.uk/de/blog/voice-note-to-study-notes.html">
+  <link rel="alternate" hreflang="es" href="https://voicenote.uk/es/blog/voice-note-to-study-notes.html">
+  <link rel="alternate" hreflang="it" href="https://voicenote.uk/it/blog/voice-note-to-study-notes.html">
+  <link rel="alternate" hreflang="zh" href="https://voicenote.uk/zh/blog/voice-note-to-study-notes.html">
+  <link rel="alternate" hreflang="x-default" href="https://voicenote.uk/blog/voice-note-to-study-notes.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="如何把语音笔记变成学习笔记">
+  <meta property="og:description" content="把一节课变成结构化学习笔记：核心概念、定义、例子，以及能自测的问题。分四遍整理的方法和一组完整示例。">
+  <meta property="og:url" content="https://voicenote.uk/zh/blog/voice-note-to-study-notes.html">
+  <meta property="og:image" content="https://voicenote.uk/blog/assets/og/voice-note-study-notes-zh.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="如何把语音笔记变成学习笔记">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="article:published_time" content="2026-10-27">
+  <meta property="article:modified_time" content="2026-10-27">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="如何把语音笔记变成学习笔记">
+  <meta name="twitter:description" content="把一节课变成结构化学习笔记：核心概念、定义、例子，以及能自测的问题。分四遍整理的方法和一组完整示例。">
+  <meta name="twitter:image" content="https://voicenote.uk/blog/assets/og/voice-note-study-notes-zh.png">
+  <meta name="twitter:image:alt" content="如何把语音笔记变成学习笔记">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QNKGT9R5FB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-QNKGT9R5FB');
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { 50:'#eff6ff',100:'#dbeafe',200:'#bfdbfe',300:'#93c5fd',400:'#60a5fa',500:'#4f8af7',600:'#3b6ef5',700:'#2d5de0',800:'#2449c4',900:'#1e3a8a',950:'#172554' },
+            warm: { 50:'#fffbf5',100:'#fef7ed',200:'#fdefd6',300:'#fce3b6',400:'#f9cf8a',500:'#f5b85c',600:'#f09e34',700:'#e08816',800:'#bc7012',900:'#995813' }
+          },
+          fontFamily: { sans: ['Inter','system-ui','sans-serif'] },
+          borderRadius: { '4xl': '2rem' }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/blog/blog.css?v=6">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "如何把语音笔记变成学习笔记",
+  "description": "把一节课变成结构化学习笔记：核心概念、定义、例子，以及能自测的问题。分四遍整理的方法和一组完整示例。",
+  "datePublished": "2026-10-27",
+  "dateModified": "2026-10-27",
+  "mainEntityOfPage": "https://voicenote.uk/zh/blog/voice-note-to-study-notes.html",
+  "inLanguage": "zh",
+  "image": [
+    "https://voicenote.uk/blog/assets/og/voice-note-study-notes-zh.png",
+    "https://voicenote.uk/blog/assets/recording-voice-note.png",
+    "https://voicenote.uk/blog/assets/course-notes-style.png"
+  ],
+  "author": {
+    "@type": "Person",
+    "name": "Elaine",
+    "url": "https://x.com/elaine20230910",
+    "sameAs": [
+      "https://x.com/elaine20230910"
+    ],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "VoiceNote",
+      "url": "https://voicenote.uk/"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "VoiceNote",
+    "url": "https://voicenote.uk/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://voicenote.uk/logo.png"
+    }
+  }
+}
+  </script>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+
+<!-- NAVBAR -->
+<nav id="navbar" class="blog-nav fixed top-0 z-50 w-full border-b border-gray-100/80 transition-shadow duration-300">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
+    <a href="../" class="flex items-center gap-2 text-xl font-bold">
+      <div class="flex h-9 w-9 items-center justify-center rounded-lg logo-gradient text-white"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></div>
+      <span class="tracking-tight">VoiceNote</span>
+    </a>
+    <div class="hidden items-center gap-7 md:flex">
+      <a href="../" class="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900">首页</a>
+      <a href="../pricing.html" class="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900">定价</a>
+      <a href="./" class="text-sm font-semibold text-brand-600 transition-colors">博客</a>
+      <a href="../download.html" class="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900">下载</a>
+      <a href="../contact.html" class="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900">联系</a>
+      <a href="../download.html" class="rounded-full btn-gradient px-5 py-2.5 text-sm font-semibold text-white shadow-sm">免费试用</a>
+      <div class="relative ml-1 border-l border-gray-200 pl-4">
+        <button id="blogLangBtn" type="button" aria-haspopup="true" aria-controls="blogLangMenu" class="flex items-center gap-1 text-xs font-medium text-gray-500 transition-colors hover:text-gray-700">
+          中文 <svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div id="blogLangMenu" class="lang-menu">
+          <a data-lang="en" href="/blog/">English</a>
+          <a data-lang="fr" href="/fr/blog/">Français</a>
+          <a data-lang="de" href="/de/blog/">Deutsch</a>
+          <a data-lang="es" href="/es/blog/">Español</a>
+          <a data-lang="it" href="/it/blog/">Italiano</a>
+          <a data-lang="zh" href="/zh/blog/">中文</a>
+        </div>
+      </div>
+    </div>
+    <button id="menuToggle" class="rounded-lg p-2 text-gray-600 hover:bg-gray-100 md:hidden" aria-label="菜单">
+      <svg id="menuIcon" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+  <div id="mobileMenu" class="max-h-0 overflow-hidden transition-all duration-300 md:hidden">
+    <div class="mx-4 flex flex-col gap-1 border-t border-gray-100 pb-4 pt-3">
+      <a href="../" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-50">首页</a>
+      <a href="../pricing.html" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-50">定价</a>
+      <a href="./" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-semibold text-brand-600 hover:bg-gray-50">博客</a>
+      <a href="../download.html" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-50">下载</a>
+      <a href="../contact.html" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-50">联系</a>
+      <a href="../download.html" class="mobile-link mt-2 rounded-full btn-gradient px-5 py-2.5 text-center text-sm font-semibold text-white">免费试用</a>
+      <div class="mt-3 flex flex-wrap gap-x-4 gap-y-2 border-t border-gray-100 px-3 pt-3 text-xs font-medium text-gray-500">
+        <a href="/blog/" class="hover:text-gray-900">English</a>
+        <a href="/fr/blog/" class="hover:text-gray-900">Français</a>
+        <a href="/de/blog/" class="hover:text-gray-900">Deutsch</a>
+        <a href="/es/blog/" class="hover:text-gray-900">Español</a>
+        <a href="/it/blog/" class="hover:text-gray-900">Italiano</a>
+        <a href="/zh/blog/" class="text-brand-600">中文</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main class="pb-20">
+  <header class="article-header">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6">
+      <nav class="mb-6 flex items-center gap-2 text-xs font-medium text-gray-400" aria-label="Breadcrumb">
+        <a href="./" class="transition-colors hover:text-gray-700">博客</a>
+        <span>/</span>
+        <span class="text-gray-500">学习</span>
+      </nav>
+      <span class="article-badge">语音转文字</span>
+      <h1 class="mt-5 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl lg:text-[2.75rem] lg:leading-[1.15]">如何把语音笔记变成学习笔记</h1>
+      <p class="lead mt-5 text-lg leading-relaxed text-gray-500">你录了整节课，现在手上有四千字的逐字稿，却一份笔记都没有。问题不在转写质量：逐字稿记录的是「讲了什么」，而笔记得反过来教会你。</p>
+      <div class="article-meta mt-7 border-b border-gray-100 pb-7">
+        <span><time datetime="2026-10-27">2026 年 10 月 27 日</time></span>
+        <span class="h-1 w-1 rounded-full bg-gray-300"></span>
+        <span>9 分钟阅读</span>
+        <span class="h-1 w-1 rounded-full bg-gray-300"></span>
+        <span><a href="https://x.com/elaine20230910" target="_blank" rel="me noopener">Elaine</a></span>
+      </div>
+    </div>
+  </header>
+
+  <article class="mx-auto mt-10 max-w-3xl px-4 sm:px-6">
+    <div class="prose-article">
+      <div class="takeaways">
+        <p class="takeaways-label">要点</p>
+        <ul>
+          <li>学习笔记是自测工具，不是记录：合上材料答不出来，它就还只是逐字稿。</li>
+          <li>按段落分开录，并把结构说出来——「第二点是……」。</li>
+          <li>Course Notes 会把复盘整理成核心概念、定义和例子；问题要你自己加。</li>
+          <li>把每个概念变成一个问句。重读像在复习，回答不会骗人。</li>
+        </ul>
+      </div>
+
+      <p>录一节课像给自己铺了张安全网：漏掉的内容还能回听。实际上几乎没人回听——一段九十分钟的音频，比一页白纸更不适合复习，因为它奖励的是「我把它存下来了」的感觉，而不要求你真正弄懂。</p>
+      <p>真正有用的中间步骤，是一页能拿来考自己的笔记。课后花十五分钟就能做到，而这正是「有材料」和「学过了」的差别。</p>
+
+      <h2>为什么逐字稿不适合用来学习</h2>
+      <p>逐字稿是平的。每句话分量都一样，于是考试要考的那个定义，就挨着一段关于投影仪的闲话。没有层级，没有重点，也没有任何东西告诉你该拿它怎么办。</p>
+      <p>更糟的是，它会诱导你重读。重读让人觉得在学，因为材料变熟了；但「熟悉」不等于「记得」。你看见那段话能认出来，考试时才发现写不出来。</p>
+      <p>笔记的运作方向相反。它把一节课压缩成若干概念，给每个概念配一条定义和一个例子，然后要求你在合上笔记的情况下回答问题。最后这一步才是真正的学习，而多数人恰恰跳过了它。</p>
+
+      <p>这跟写会议纪要是一回事：<a href="voice-note-to-meeting-minutes.html">要看的是结果，不是原话</a>。</p>
+
+      <h2>录的时候就把笔记「说」出来</h2>
+      <p>笔记的质量在复盘时决定，而不是事后。四个习惯最关键：</p>
+      <ol>
+        <li><strong>一段一条。</strong>不要九十分钟录成一个文件。每到一个自然的段落停顿，趁记忆新鲜把这一段复述一遍。短录音更好核对，也更容易改。</li>
+        <li><strong>把结构说出来。</strong>「第二点是……」「这跟……有关」。转写会保留这些标记，它们就是笔记的骨架。</li>
+        <li><strong>用自己的话定义。</strong>如果原样复述老师的句子，你录下的是一句引用，不是理解。把概念讲成「跟朋友解释」的样子。</li>
+        <li><strong>说出例子，也说出它从哪来。</strong>「第一篇阅读里的那个大猩猩实验」能留下来；「他提到的那个研究」留不下来。</li>
+      </ol>
+      <p>复盘时不要中途去查资料。把空白记下来——「这里说的编码到底指什么，要确认」——它就会变成你问题清单上的一条。</p>
+
+      <h2>四遍整理</h2>
+      <ol>
+        <li><strong>说一遍复盘。</strong>每段两到四分钟，下课后马上说，用自己的话。</li>
+        <li><strong>套用 Course Notes。</strong>这个风格会把复盘整理成以核心概念为中心的结构化笔记。</li>
+        <li><strong>重建结构。</strong>每个概念都要有三行：它是什么、一个例子、为什么重要。缺哪一行，那就是漏洞，不是细节。</li>
+        <li><strong>把每个概念变成问题。</strong>「提取练习」变成「为什么自测比重读更有效？」。你复习时看的是这份问题清单，笔记本身只是答案。</li>
+      </ol>
+
+      <h2>在 VoiceNote 里怎么做</h2>
+      <ol>
+        <li><strong>按段落录。</strong>打开 VoiceNote（第一次用？<a href="../download.html">先下载</a>），点麦克风开始复盘。免费版包含<a href="../pricing.html">10 条笔记，每条最长 2 分钟</a>；Prime 不限条数，单条延长到 15 分钟。一条五十分钟的课，三四条录音就够了。</li>
+        <li><strong>选择 Course Notes 风格。</strong><a href="../">VoiceNote</a> 会把它整理成围绕核心概念的结构化笔记，而不是一大段文字。</li>
+        <li><strong>核对术语。</strong>专业名词、人名和数字最容易转错。在页面顶部留一行术语表，每个词核对一次。</li>
+        <li><strong>问题自己加。</strong>风格可以整理思路，但只有你知道考试或项目会问什么。一节课先写五个问题就够。</li>
+        <li><strong>放在你找得到的地方。</strong>一节课一页，文件名带上课程和日期，每周都放在同一个位置。</li>
+      </ol>
+
+      <figure class="article-figure article-figure--phone">
+        <img src="/blog/assets/recording-voice-note.png" alt="VoiceNote 录音界面，显示 7 秒计时和实时波形。" width="1242" height="2688" loading="lazy">
+        <figcaption>下课后马上把每一段复述一遍。计时器会让每条录音控制在两三分钟。</figcaption>
+      </figure>
+
+      <figure class="article-figure">
+        <img src="/blog/assets/course-notes-style.png" alt="VoiceNote 的 AI Style Conversion 列表，Course Notes 已选中，上方是 Professional Email 与 Meeting Minutes。" width="1080" height="890" loading="lazy">
+        <figcaption>Course Notes 会把口述复盘变成以核心概念为中心的结构化笔记。</figcaption>
+      </figure>
+
+      <h2>一个完整示例</h2>
+      <p>一节五十分钟的记忆心理学课，二十分钟后用两分钟录了一段复盘——包括中途说丢了线索的地方，这很正常，也不影响结果。</p>
+
+      <div class="example">
+        <p class="example-label"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/></svg> 口述复盘</p>
+        <blockquote class="spoken"><p>「好，第三节课，记忆与学习。主要观点是：提取会改变记忆本身，也就是提取练习——自测会让记忆更强，不只是测出强弱。呃，证据是 Roediger 和 Karpicke 那个研究，自测的学生一周后记得比重读的学生多，虽然重读的人当时更有信心。信心就是陷阱，这是关键。第二个概念是间隔：同样的学习时间分散到几天，比集中一次效果好，间隔要长到几乎快忘掉。这里有个图，数字我没记下来。我得确认‘合意难度’到底是什么意思，他讲了两次。考试提示：她说论述题会考‘为什么重读没用’。」</p></blockquote>
+        <p class="example-label"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg> 应用风格后的学习笔记</p>
+        <div class="minutes-card">
+          <p class="minutes-title">第 3 讲 — 记忆与学习</p>
+          <p class="minutes-meta">50 分钟 · 2026 年 10 月 27 日复盘 · 2 分钟录音</p>
+          <p class="minutes-label">核心概念</p>
+          <ul>
+            <li><strong>提取练习</strong> — 回忆会改变并强化记忆本身。</li>
+            <li><strong>间隔效应</strong> — 同样的学习时间分散到几天，胜过集中一次。</li>
+            <li><strong>合意难度</strong> — 正是费力的回忆过程带来了学习。</li>
+          </ul>
+          <p class="minutes-label">证据</p>
+          <ul>
+            <li>Roediger 与 Karpicke：自测的学生一周后记得更多，尽管他们当时感觉更没把握。</li>
+          </ul>
+          <p class="minutes-label">自测</p>
+          <ul>
+            <li>为什么自测比重复阅读更有效，即使重读感觉更轻松？</li>
+            <li>两次学习之间的间隔应该多长？</li>
+            <li>「合意难度」到底指什么？<em>（待查）</em></li>
+            <li>课上明确说过的论述题：为什么重读会失败。</li>
+          </ul>
+        </div>
+        <p class="example-note">改了什么：一段口语变成了三个概念、一条证据和四个问题。漏掉的图和没听清的术语被保留成显眼的空白，而不是被抹平。</p>
+      </div>
+
+      <h2>能真正拿来复习的笔记</h2>
+      <ul>
+        <li><strong>一节课一页。</strong>超过一页，说明你在留那些永远不会再看的细节。挪到附录，或者直接删掉。</li>
+        <li><strong>用自己的话，不抄课件。</strong>抄来的定义，在考场上用不出来。</li>
+        <li><strong>每个概念配一个例子。</strong>紧张时定义想不起来，能救你的是例子。</li>
+        <li><strong>一栏显眼的「自测」。</strong>问题写在纸上，答案在脑子里。这才是一次复习。</li>
+        <li><strong>每页都写日期和出处。</strong>第几讲、哪篇阅读、第几周。三个月后这些上下文就没了。</li>
+      </ul>
+
+      <h2>要避免的错误</h2>
+      <ul>
+        <li><strong>把录了课当成记了笔记。</strong>一段没动过的音频，只是「以后再学」的计划，而以后很少到来。</li>
+        <li><strong>给逐字稿划荧光笔。</strong>颜色不是压缩，用自己的话重写才是。</li>
+        <li><strong>隔一周才复盘。</strong>复盘的价值掉得很快，你在教室里建立的那些联系，第二天就没了。</li>
+        <li><strong>只写笔记，不写问题。</strong>读笔记是最弱的复习方式，用笔记答题才最强。</li>
+        <li><strong>把空白抹掉。</strong>「这里要确认……」是页面上最值钱的一行，别把它删了。</li>
+      </ul>
+
+      <h2>常见问题</h2>
+      <h3>VoiceNote 能录完整一节课吗？</h3>
+      <p>不能录成一条。免费版提供 10 条笔记，每条最长 2 分钟；Prime 不限条数，单条最长 15 分钟。按段落分开录本来就更好：每段复盘都短、聚焦，也更容易改。</p>
+      <h3>专业术语和口音怎么办？</h3>
+      <p>这是常见的薄弱点。把术语说清楚，在页面顶部留一行术语表，每个词对着课件或阅读材料核对一次。花两分钟校对，比拿一个错误的定义复习划算得多。</p>
+      <h3>VoiceNote 支持哪些语言？</h3>
+      <p>转写和润色都支持 46 种语言，你可以用上课的语言复盘，也可以用你思考时更顺的那种语言。</p>
+      <h3>可以把笔记分享给同学吗？</h3>
+      <p>可以，而且这是一个好用的检验：如果同学只看这一页就能回答你的问题，说明笔记成立。发送前先核对人名和数字，错误传播得很快。</p>
+      <h3>录课可以吗？</h3>
+      <p>先问。很多学校把决定权交给授课老师，有些课程明确禁止。说清楚录音的用途，音频自己保留，并遵守课程规定。</p>
+
+      <aside id="author" class="author-card">
+        <div class="author-avatar" aria-hidden="true">E</div>
+        <div class="author-body">
+          <p class="author-name">Elaine</p>
+          <p class="author-role">@elaine20230910 · VoiceNote</p>
+          <p class="author-bio">Elaine 是 VoiceNote 的开发者。这是一款 iPhone 语音转文字 App，这个博客记录真正省时间的口述工作流。</p>
+          <a class="author-link" href="https://x.com/elaine20230910" target="_blank" rel="me noopener">在 X 上关注</a>
+        </div>
+      </aside>
+      <div class="article-cta">
+        <p class="text-base font-semibold text-gray-900">把今天的课变成能复习的笔记</p>
+        <p class="mt-1 text-sm text-gray-500">下载 VoiceNote，走出教室就把每段复述一遍，趁记忆新鲜把问题也写下来。</p>
+        <a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/voicenote-ai-voice-to-text/id6774268799" class="btn-gradient mt-5 inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold text-white shadow-sm">在 App Store 下载</a>
+      </div>
+
+    </div>
+  </article>
+</main>
+
+<!-- FOOTER -->
+<footer class="border-t border-gray-100 bg-white">
+  <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+    <div class="flex flex-col items-center justify-between gap-6 sm:flex-row">
+      <a href="../" class="flex items-center gap-2 text-xl font-bold">
+        <div class="flex h-8 w-8 items-center justify-center rounded-lg logo-gradient text-white"><svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></div>
+        <span class="tracking-tight">VoiceNote</span>
+      </a>
+      <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-gray-500">
+        <a href="../pricing.html" class="transition-colors hover:text-gray-900">定价</a>
+        <a href="../download.html" class="transition-colors hover:text-gray-900">下载</a>
+        <a href="../contact.html" class="transition-colors hover:text-gray-900">联系</a>
+        <a href="./" class="transition-colors hover:text-gray-900">博客</a>
+        <a href="../privacy.html" class="transition-colors hover:text-gray-900">隐私政策</a>
+        <a href="../terms.html" class="transition-colors hover:text-gray-900">服务条款</a>
+        <a href="../cookies.html" class="transition-colors hover:text-gray-900">Cookie 政策</a>
+      </div>
+    </div>
+    <p class="mt-8 text-center text-xs text-gray-400">&copy; 2026 VoiceNote. 保留所有权利。</p>
+  </div>
+</footer>
+
+<script>
+  window.BLOG_TRANSLATIONS = {
+    en: '/blog/voice-note-to-study-notes.html',
+    fr: '/fr/blog/voice-note-to-study-notes.html',
+    de: '/de/blog/voice-note-to-study-notes.html',
+    es: '/es/blog/voice-note-to-study-notes.html',
+    it: '/it/blog/voice-note-to-study-notes.html',
+    zh: '/zh/blog/voice-note-to-study-notes.html'
+  };
+</script>
+<script src="/blog/blog.js"></script>
+</body>
+</html>
