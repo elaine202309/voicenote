@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cómo convertir una nota de voz en una lista de tareas — VoiceNote Blog</title>
+  <meta name="description" content="Convierte una nota de voz dispersa en una lista de tareas corta y con fechas: método de cinco minutos, ejemplo completo y errores habituales.">
+  <meta name="author" content="Elaine">
+  <meta name="robots" content="index,follow">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="canonical" href="https://voicenote.uk/es/blog/voice-note-to-to-do-list.html">
+  <link rel="alternate" hreflang="en" href="https://voicenote.uk/blog/voice-note-to-to-do-list.html">
+  <link rel="alternate" hreflang="fr" href="https://voicenote.uk/fr/blog/voice-note-to-to-do-list.html">
+  <link rel="alternate" hreflang="de" href="https://voicenote.uk/de/blog/voice-note-to-to-do-list.html">
+  <link rel="alternate" hreflang="es" href="https://voicenote.uk/es/blog/voice-note-to-to-do-list.html">
+  <link rel="alternate" hreflang="it" href="https://voicenote.uk/it/blog/voice-note-to-to-do-list.html">
+  <link rel="alternate" hreflang="zh" href="https://voicenote.uk/zh/blog/voice-note-to-to-do-list.html">
+  <link rel="alternate" hreflang="x-default" href="https://voicenote.uk/blog/voice-note-to-to-do-list.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Cómo convertir una nota de voz en una lista de tareas">
+  <meta property="og:description" content="Convierte una nota de voz dispersa en una lista de tareas corta y con fechas: método de cinco minutos, ejemplo completo y errores habituales.">
+  <meta property="og:url" content="https://voicenote.uk/es/blog/voice-note-to-to-do-list.html">
+  <meta property="og:image" content="https://voicenote.uk/blog/assets/og/voice-note-todo-es.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Cómo convertir una nota de voz en una lista de tareas">
+  <meta property="og:locale" content="es_ES">
+  <meta property="article:published_time" content="2026-11-06">
+  <meta property="article:modified_time" content="2026-11-06">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cómo convertir una nota de voz en una lista de tareas">
+  <meta name="twitter:description" content="Convierte una nota de voz dispersa en una lista de tareas corta y con fechas: método de cinco minutos, ejemplo completo y errores habituales.">
+  <meta name="twitter:image" content="https://voicenote.uk/blog/assets/og/voice-note-todo-es.png">
+  <meta name="twitter:image:alt" content="Cómo convertir una nota de voz en una lista de tareas">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QNKGT9R5FB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-QNKGT9R5FB');
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { 50:'#eff6ff',100:'#dbeafe',200:'#bfdbfe',300:'#93c5fd',400:'#60a5fa',500:'#4f8af7',600:'#3b6ef5',700:'#2d5de0',800:'#2449c4',900:'#1e3a8a',950:'#172554' },
+            warm: { 50:'#fffbf5',100:'#fef7ed',200:'#fdefd6',300:'#fce3b6',400:'#f9cf8a',500:'#f5b85c',600:'#f09e34',700:'#e08816',800:'#bc7012',900:'#995813' }
+          },
+          fontFamily: { sans: ['Inter','system-ui','sans-serif'] },
+          borderRadius: { '4xl': '2rem' }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/blog/blog.css?v=6">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Cómo convertir una nota de voz en una lista de tareas",
+  "description": "Convierte una nota de voz dispersa en una lista de tareas corta y con fechas: método de cinco minutos, ejemplo completo y errores habituales.",
+  "datePublished": "2026-11-06",
+  "dateModified": "2026-11-06",
+  "mainEntityOfPage": "https://voicenote.uk/es/blog/voice-note-to-to-do-list.html",
+  "inLanguage": "es",
+  "image": [
+    "https://voicenote.uk/blog/assets/og/voice-note-todo-es.png",
+    "https://voicenote.uk/blog/assets/recording-voice-note.png",
+    "https://voicenote.uk/blog/assets/todo-list-style.png"
+  ],
+  "author": {
+    "@type": "Person",
+    "name": "Elaine",
+    "url": "https://x.com/elaine20230910",
+    "sameAs": [
+      "https://x.com/elaine20230910"
+    ],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "VoiceNote",
+      "url": "https://voicenote.uk/"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "VoiceNote",
+    "url": "https://voicenote.uk/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://voicenote.uk/logo.png"
+    }
+  }
+}
+  </script>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+
+<!-- NAVBAR -->
+<nav id="navbar" class="blog-nav fixed top-0 z-50 w-full border-b border-gray-100/80 transition-shadow duration-300">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
+    <a href="../" class="flex items-center gap-2 text-xl font-bold">
+      <div class="flex h-9 w-9 items-center justify-center rounded-lg logo-gradient text-white"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></div>
+      <span class="tracking-tight">VoiceNote</span>
+    </a>
+    <div class="hidden items-center gap-7 md:flex">
+      <a href="../" class="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900">Inicio</a>
+      <a href="../pricing.html" class="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900">Precios</a>
+      <a href="./" class="text-sm font-semibold text-brand-600 transition-colors">Blog</a>
+      <a href="../download.html" class="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900">Descargar</a>
+      <a href="../contact.html" class="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900">Contacto</a>
+      <a href="../download.html" class="rounded-full btn-gradient px-5 py-2.5 text-sm font-semibold text-white shadow-sm">Probar</a>
+      <div class="relative ml-1 border-l border-gray-200 pl-4">
+        <button id="blogLangBtn" type="button" aria-haspopup="true" aria-controls="blogLangMenu" class="flex items-center gap-1 text-xs font-medium text-gray-500 transition-colors hover:text-gray-700">
+          ES <svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div id="blogLangMenu" class="lang-menu">
+          <a data-lang="en" href="/blog/">English</a>
+          <a data-lang="fr" href="/fr/blog/">Français</a>
+          <a data-lang="de" href="/de/blog/">Deutsch</a>
+          <a data-lang="es" href="/es/blog/">Español</a>
+          <a data-lang="it" href="/it/blog/">Italiano</a>
+          <a data-lang="zh" href="/zh/blog/">中文</a>
+        </div>
+      </div>
+    </div>
+    <button id="menuToggle" class="rounded-lg p-2 text-gray-600 hover:bg-gray-100 md:hidden" aria-label="Menú">
+      <svg id="menuIcon" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+  <div id="mobileMenu" class="max-h-0 overflow-hidden transition-all duration-300 md:hidden">
+    <div class="mx-4 flex flex-col gap-1 border-t border-gray-100 pb-4 pt-3">
+      <a href="../" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-50">Inicio</a>
+      <a href="../pricing.html" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-50">Precios</a>
+      <a href="./" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-semibold text-brand-600 hover:bg-gray-50">Blog</a>
+      <a href="../download.html" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-50">Descargar</a>
+      <a href="../contact.html" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-50">Contacto</a>
+      <a href="../download.html" class="mobile-link mt-2 rounded-full btn-gradient px-5 py-2.5 text-center text-sm font-semibold text-white">Probar</a>
+      <div class="mt-3 flex flex-wrap gap-x-4 gap-y-2 border-t border-gray-100 px-3 pt-3 text-xs font-medium text-gray-500">
+        <a href="/blog/" class="hover:text-gray-900">English</a>
+        <a href="/fr/blog/" class="hover:text-gray-900">Français</a>
+        <a href="/de/blog/" class="hover:text-gray-900">Deutsch</a>
+        <a href="/es/blog/" class="text-brand-600">Español</a>
+        <a href="/it/blog/" class="hover:text-gray-900">Italiano</a>
+        <a href="/zh/blog/" class="hover:text-gray-900">中文</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main class="pb-20">
+  <header class="article-header">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6">
+      <nav class="mb-6 flex items-center gap-2 text-xs font-medium text-gray-400" aria-label="Breadcrumb">
+        <a href="./" class="transition-colors hover:text-gray-700">Blog</a>
+        <span>/</span>
+        <span class="text-gray-500">Productividad</span>
+      </nav>
+      <span class="article-badge">Voz a texto</span>
+      <h1 class="mt-5 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl lg:text-[2.75rem] lg:leading-[1.15]">Cómo convertir una nota de voz en una lista de tareas</h1>
+      <p class="lead mt-5 text-lg leading-relaxed text-gray-500">Noventa segundos hablando y la cabeza vacía: nueve cosas que tienes que hacer, dos que estás evitando y una que todavía no puedes empezar. Una grabación lo recuerda todo. Una lista de tareas tiene que decidir qué pasa hoy. En medio hay cinco minutos de orden.</p>
+      <div class="article-meta mt-7 border-b border-gray-100 pb-7">
+        <span><time datetime="2026-11-06">6 de noviembre de 2026</time></span>
+        <span class="h-1 w-1 rounded-full bg-gray-300"></span>
+        <span>8 min de lectura</span>
+        <span class="h-1 w-1 rounded-full bg-gray-300"></span>
+        <span><a href="https://x.com/elaine20230910" target="_blank" rel="me noopener">Elaine</a></span>
+      </div>
+    </div>
+  </header>
+
+  <article class="mx-auto mt-10 max-w-3xl px-4 sm:px-6">
+    <div class="prose-article">
+      <div class="takeaways">
+        <p class="takeaways-label">Puntos clave</p>
+        <ul>
+          <li>Una tarea necesita un verbo, un objeto y una fecha o un disparador. Lo demás es una nota.</li>
+          <li>Primero vuelca, luego ordena. Si decides mientras hablas, la lista se triplica.</li>
+          <li>To-do List convierte el volcado en una checklist; las cinco de hoy las eliges tú.</li>
+          <li>Mantén una lista de «pendiente de otros», o las tareas ajenas seguirán dando vueltas en tu cabeza.</li>
+        </ul>
+      </div>
+
+      <p>Las notas de voz son la forma más rápida de vaciar la cabeza. Camina, habla noventa segundos y cada obligación a medio formar sale de tu memoria de trabajo y entra en la app. Esa parte está resuelta.</p>
+      <p>La siguiente es donde se cae la mayoría de los sistemas. La transcripción de todo lo que tienes que hacer no es una lista con la que trabajar: es una segunda versión, más ruidosa, de la ansiedad con la que empezaste. Una lista útil nace de restar: menos líneas, cada una lo bastante pequeña para empezar y atada a un día.</p>
+
+      <h2>Por qué un volcado mental es una mala lista</h2>
+      <p>Un volcado mental funciona por asociación. Una tarea te recuerda otra, que te recuerda una conversación, que añade una tercera. Eso es justo lo que quieres al capturar —estás vaciando el depósito— y justo lo que no quieres en una lista.</p>
+      <p>Hablar también aplana las prioridades. «Tengo que enviar la factura» y «debería aprender inglés» suenan igual de urgentes. La grabación no distingue un trabajo del martes de una idea para algún día; solo tú puedes.</p>
+      <p>Y un volcado guarda intenciones, no acciones. «Lo de Hacienda» es un tema. «Encontrar la carpeta de Hacienda y presentar la declaración antes del 13 de noviembre» es una tarea. La distancia entre esas dos frases es todo el trabajo del orden.</p>
+
+      <p>Es la misma distinción que en las tareas de <a href="voice-note-to-meeting-minutes.html">un acta de reunión</a>: una línea sin responsable ni fecha es un deseo, no un compromiso.</p>
+
+      <h2>Qué hace que una tarea sea accionable</h2>
+      <p>Antes de ordenar, ponte de acuerdo en qué cuenta como tarea. Cinco pruebas, en orden:</p>
+      <ol>
+        <li><strong>Empieza por un verbo.</strong> «Redactar», «enviar», «reservar», «cancelar». Si la línea empieza por un sustantivo —«precios», «dentista»— es un tema, no una acción.</li>
+        <li><strong>Es una sola acción.</strong> «Revisar los precios y enviárselos a Alex» son dos tareas. Sepáralas; la segunda depende de la primera y querrás tacharlas por separado.</li>
+        <li><strong>Tiene una fecha o un disparador.</strong> «Viernes» o «cuando Alex envíe los números». Sin ninguno de los dos, una tarea se relee durante una semana sin moverse.</li>
+        <li><strong>Es lo bastante pequeña para empezar.</strong> «Hacer la presentación» es un proyecto. «Hacer el esquema de la presentación» es una tarea; la siguiente aparece cuando terminas.</li>
+        <li><strong>Nombra el resultado.</strong> «Pedir cita en el dentista para la semana del 16 de noviembre» te dice cuándo has terminado. «Dentista» no.</li>
+      </ol>
+
+      <h2>Un repaso de cinco minutos</h2>
+      <ol>
+        <li><strong>Vuelca en una sola toma.</strong> Sesenta a noventa segundos, sin corregir, sin decidir. Si te sorprendes planificando, di «eso es otra cosa» y sigue.</li>
+        <li><strong>Aplica To-do List.</strong> El estilo convierte el volcado en una checklist, una tarea por línea. No conoce tus prioridades y no debe adivinarlas.</li>
+        <li><strong>Quita lo que no es tuyo.</strong> Todo lo que espera a otra persona va a una lista aparte de «pendiente de», con su nombre. No es una tarea hasta que vuelve a ti.</li>
+        <li><strong>Pon fecha al resto.</strong> Hoy, esta semana, más adelante. Si una línea no tiene fecha, dásela o muévela a una página de «algún día». «Más adelante» solo es una fecha si lleva una semana pegada.</li>
+        <li><strong>Elige las cinco de hoy.</strong> No diez. Cinco son suficientes para terminar, y terminar es lo que mantiene vivo el sistema.</li>
+      </ol>
+
+      <h2>Cómo hacerlo en VoiceNote</h2>
+      <ol>
+        <li><strong>Graba el volcado, no el plan.</strong> Abre VoiceNote (¿primera vez? <a href="../download.html">Descárgala aquí</a>), toca el micrófono y habla. El plan gratuito incluye <a href="../pricing.html">10 notas de hasta 2 minutos</a>; Prime quita el límite de notas y amplía las grabaciones a 15 minutos. Un volcado casi nunca necesita más de dos.</li>
+        <li><strong>Di las fechas en voz alta.</strong> «Antes del viernes», «antes del 15», «cuando Alex envíe los números». La transcripción las conserva, y el estilo puede unirlas a la tarea correcta en vez de dejar una lista de fechas al final.</li>
+        <li><strong>Toca To-do List.</strong> El estilo de <a href="../">VoiceNote</a> convierte la nota en una checklist. No inventa responsables, plazos ni prioridades; lo que no dijiste se queda fuera.</li>
+        <li><strong>Corrige nombres, números y negaciones.</strong> Son los tres puntos donde falla la transcripción. Revisa «Alex», «el 15» y cada «no» antes de fiarte de la lista.</li>
+        <li><strong>Lleva la lista a donde la consultas.</strong> VoiceNote es la herramienta de captura, no el lugar donde vas a mirar a las cuatro. Copia la checklist en la app que ya abres —Recordatorios, Notas, una hoja de papel— y borra el duplicado.</li>
+      </ol>
+
+      <figure class="article-figure article-figure--phone">
+        <img src="/blog/assets/recording-voice-note.png" alt="Pantalla de grabación de VoiceNote con un temporizador de siete segundos y una onda en directo." width="1242" height="2688" loading="lazy">
+        <figcaption>Una toma, noventa segundos. El temporizador evita que el volcado se convierta en una reunión de planificación contigo mismo.</figcaption>
+      </figure>
+
+      <figure class="article-figure">
+        <img src="/blog/assets/todo-list-style.png" alt="El estilo To-do List en el selector de estilos de IA de VoiceNote, junto a Speech Draft." width="1083" height="420" loading="lazy">
+        <figcaption>To-do List convierte un volcado hablado en una checklist. Decidir qué toca hoy sigue siendo cosa tuya.</figcaption>
+      </figure>
+
+      <h2>Un ejemplo completo</h2>
+      <p>Noventa segundos, grabados un viernes por la mañana. La persona divaga, se repite y cambia de opinión dos veces: es lo normal.</p>
+
+      <div class="example">
+        <p class="example-label"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/></svg> Volcado hablado</p>
+        <blockquote class="spoken"><p>«Vale, es viernes. Tengo que enviarle a Alex los precios revisados —todavía no lo he hecho— y los correos de onboarding, bueno, solo el segundo, tienen que estar antes del lunes. Pedir cita en el dentista, hace tres meses, quizá la semana del 16. Comprobar si llegó la factura del diseñador. Le prometí a mamá que miraría sus horarios de vuelo esta semana. La declaración vence el 15 y primero tengo que encontrar la carpeta. Quiero volver a correr, quizá martes y jueves. Ah, y responder a Sam sobre el offsite. Eso es todo. Creo.»</p></blockquote>
+        <p class="example-label"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg> Checklist tras aplicar el estilo</p>
+        <div class="minutes-card">
+          <p class="minutes-title">Volcado del viernes — ordenado</p>
+          <p class="minutes-meta">6 nov 2026 · nota de 90 segundos</p>
+          <p class="minutes-label">Hoy — vie 6 nov</p>
+          <ul>
+            <li class="is-action">Enviar a Alex los precios revisados</li>
+            <li class="is-action">Responder a Sam sobre el offsite</li>
+            <li class="is-action">Comprobar que llegó la factura del diseñador</li>
+          </ul>
+          <p class="minutes-label">Esta semana</p>
+          <ul>
+            <li class="is-action">Terminar el correo de onboarding 2 <span class="minutes-due">antes del lun 9 nov</span></li>
+            <li class="is-action">Mirar los horarios de vuelo de mamá <span class="minutes-due">antes del dom 8 nov</span></li>
+            <li class="is-action">Pedir cita en el dentista para la semana del 16 nov</li>
+            <li class="is-action">Encontrar la carpeta de Hacienda y presentar la declaración <span class="minutes-due">antes del vie 13 nov</span></li>
+          </ul>
+          <p class="minutes-label">Pendiente de</p>
+          <ul>
+            <li><span class="minutes-owner">Alex</span> — los números, sin los que no puede salir la hoja de precios</li>
+          </ul>
+          <p class="minutes-label">No es una tarea</p>
+          <ul>
+            <li>Plan de running — decidir el domingo; es un hábito, no una tarea</li>
+          </ul>
+        </div>
+        <p class="example-note">Qué cambió: un minuto disperso se convirtió en tres tareas para hoy, cuatro con fecha para la semana, un asunto pendiente y una cosa que nunca fue una tarea. No se añadió nada que la persona no dijera.</p>
+      </div>
+
+      <h2>Cómo mantener la lista corta</h2>
+      <ul>
+        <li><strong>Una lista por contexto.</strong> El trabajo y lo personal compiten por la misma atención; mantenlos separados y consulta cada uno a su hora.</li>
+        <li><strong>Cinco para hoy.</strong> Una lista de quince es un menú de culpa. Cinco es un día que terminas y aún contestas correos.</li>
+        <li><strong>La regla de los dos minutos.</strong> Si lleva menos de dos minutos, hazlo ahora en vez de apuntarlo. Capturarlo cuesta más que hacerlo.</li>
+        <li><strong>Una lista de pendientes de otros.</strong> Cada asunto delegado o bloqueado vive ahí con un nombre y una fecha para reclamar. Si no, vuelve a tu cabeza disfrazado de tarea.</li>
+        <li><strong>Una revisión semanal.</strong> Diez minutos el viernes: cerrar lo hecho, poner fecha a lo que se retrasó y avanzar una cosa. La misma revisión sirve para un <a href="voice-journal.html">diario de voz</a>.</li>
+      </ul>
+
+      <h2>Errores que evitar</h2>
+      <ul>
+        <li><strong>Ordenar mientras hablas.</strong> El volcado debe ser desordenado. En cuanto empiezas a decidir, dejas de recordar.</li>
+        <li><strong>Convertir cada frase en una tarea.</strong> «Debería…» es un pensamiento, no un compromiso. Déjalo fuera o ponlo en una página de «algún día».</li>
+        <li><strong>Tareas sin fecha.</strong> Una lista sin fechas es un estado de ánimo. Dale a cada línea un día, una semana o un disparador.</li>
+        <li><strong>Dejar la lista en la grabadora.</strong> Una grabación es donde las tareas se olvidan con educación. Llévalas a donde miras.</li>
+        <li><strong>Reescribir la lista cada día.</strong> Si las mismas cinco líneas avanzan durante una semana, no son tareas: son decisiones que estás evitando. Pártelas o déjalas caer.</li>
+      </ul>
+
+      <h2>Preguntas frecuentes</h2>
+      <h3>¿VoiceNote puede convertir una nota de voz en una checklist?</h3>
+      <p>Sí. Elige el estilo To-do List y reorganiza la nota en tareas, una por línea. Tú sigues poniendo las fechas y eligiendo qué toca hoy: el estilo no conoce tu semana.</p>
+      <h3>¿Cuánto debe durar la grabación?</h3>
+      <p>Sesenta a noventa segundos bastan para un día normal. El plan gratuito permite notas de hasta 2 minutos; Prime amplía las grabaciones a 15 minutos. Si el volcado se alarga, graba una segunda nota en vez de editar la primera.</p>
+      <h3>¿Crea recordatorios por mí?</h3>
+      <p>No. VoiceNote produce la lista como texto; los recordatorios viven en tu app de tareas. Copia la checklist en Recordatorios, Notas o la herramienta que ya usas, y mantén una sola lista.</p>
+      <h3>¿Y si divago o me repito?</h3>
+      <p>Es lo esperable. El estilo condensa las repeticiones y el repaso elimina el resto. Di «eso no es una tarea» cuando notes una digresión: es más rápido que corregir a mitad de frase.</p>
+      <h3>¿Y las tareas del trabajo y las personales?</h3>
+      <p>Mantén dos listas. Lo del trabajo va en la herramienta que ve tu equipo; lo personal, donde de verdad vayas a mirarlo. Graba cada volcado por separado para que no se mezclen.</p>
+      <h3>¿Qué idiomas admite VoiceNote?</h3>
+      <p>46 idiomas para transcribir y pulir, así que puedes volcar en el idioma en el que piensas y aun así obtener una lista que puedas usar.</p>
+
+      <aside id="author" class="author-card">
+        <div class="author-avatar" aria-hidden="true">E</div>
+        <div class="author-body">
+          <p class="author-name">Elaine</p>
+          <p class="author-role">@elaine20230910 · VoiceNote</p>
+          <p class="author-bio">Elaine desarrolla VoiceNote, una app de voz a texto para iPhone, y escribe sobre los flujos que hacen que dictar sea más rápido que teclear.</p>
+          <a class="author-link" href="https://x.com/elaine20230910" target="_blank" rel="me noopener">Seguir en X</a>
+        </div>
+      </aside>
+      <div class="article-cta">
+        <p class="text-base font-semibold text-gray-900">Sal del volcado con una lista</p>
+        <p class="mt-1 text-sm text-gray-500">Descarga VoiceNote, habla noventa segundos y conviértelo en las cinco cosas que sí harás hoy.</p>
+        <a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/voicenote-ai-voice-to-text/id6774268799" class="btn-gradient mt-5 inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold text-white shadow-sm">Descargar en App Store</a>
+      </div>
+
+    </div>
+  </article>
+</main>
+
+<!-- FOOTER -->
+<footer class="border-t border-gray-100 bg-white">
+  <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+    <div class="flex flex-col items-center justify-between gap-6 sm:flex-row">
+      <a href="../" class="flex items-center gap-2 text-xl font-bold">
+        <div class="flex h-8 w-8 items-center justify-center rounded-lg logo-gradient text-white"><svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></div>
+        <span class="tracking-tight">VoiceNote</span>
+      </a>
+      <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-gray-500">
+        <a href="../pricing.html" class="transition-colors hover:text-gray-900">Precios</a>
+        <a href="../download.html" class="transition-colors hover:text-gray-900">Descargar</a>
+        <a href="../contact.html" class="transition-colors hover:text-gray-900">Contacto</a>
+        <a href="./" class="transition-colors hover:text-gray-900">Blog</a>
+        <a href="../privacy.html" class="transition-colors hover:text-gray-900">Privacidad</a>
+        <a href="../terms.html" class="transition-colors hover:text-gray-900">Términos del servicio</a>
+        <a href="../cookies.html" class="transition-colors hover:text-gray-900">Política de cookies</a>
+      </div>
+    </div>
+    <p class="mt-8 text-center text-xs text-gray-400">&copy; 2026 VoiceNote. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<script>
+  window.BLOG_TRANSLATIONS = {
+    en: '/blog/voice-note-to-to-do-list.html',
+    fr: '/fr/blog/voice-note-to-to-do-list.html',
+    de: '/de/blog/voice-note-to-to-do-list.html',
+    es: '/es/blog/voice-note-to-to-do-list.html',
+    it: '/it/blog/voice-note-to-to-do-list.html',
+    zh: '/zh/blog/voice-note-to-to-do-list.html'
+  };
+</script>
+<script src="/blog/blog.js"></script>
+</body>
+</html>
