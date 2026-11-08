@@ -119,7 +119,7 @@
 </nav>
 
 <!-- HERO -->
-<header class="blog-hero relative overflow-hidden pb-16 pt-32 sm:pb-20 sm:pt-40">
+<header class="blog-hero relative overflow-hidden pb-6 pt-24 sm:pb-8 sm:pt-28">
   <div class="pointer-events-none absolute inset-0">
     <div class="absolute -left-40 top-24 h-[420px] w-[420px] rounded-full bg-brand-400/10 blur-3xl"></div>
     <div class="absolute -right-32 bottom-0 h-[420px] w-[420px] rounded-full bg-purple-400/10 blur-3xl"></div>
@@ -130,17 +130,118 @@
         <svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
         Il blog di VoiceNote
       </span>
-      <h1 class="mt-6 text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">Parla prima.<br><span class="gradient-text">Scrivi meglio.</span></h1>
-      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-gray-500">Guide pratiche per trasformare pensieri disordinati in testo chiaro — dalle note vocali rapide alle email curate, ai riassunti di riunione e alle prime bozze.</p>
-      <div class="mt-8 flex flex-wrap gap-3">
-        <span class="topic-chip"><span class="dot"></span>Voce in testo</span>
-        <span class="topic-chip"><span class="dot"></span>Riscrittura IA</span>
-        <span class="topic-chip"><span class="dot"></span>Flussi di lavoro</span>
-        <span class="topic-chip"><span class="dot"></span>Produttività</span>
-      </div>
+      <h1 class="mt-4 text-3xl font-extrabold tracking-tight sm:text-4xl">Parla prima. <span class="gradient-text">Scrivi meglio.</span></h1>
+      <p class="mt-3 max-w-2xl text-base leading-relaxed text-gray-500">Guide pratiche per trasformare pensieri disordinati in testo chiaro — dalle note vocali rapide alle email curate, ai riassunti di riunione e alle prime bozze.</p>
+
     </div>
   </div>
 </header>
+
+
+
+<!-- POSTS -->
+<section class="bg-warm-50 py-6 sm:py-8">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6">
+    <div class="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between reveal">
+      <div>
+        <span class="text-sm font-semibold uppercase tracking-widest text-brand-500">Blog</span>
+        <h2 class="mt-1 text-2xl font-extrabold tracking-tight sm:text-3xl">Ultimi articoli</h2>
+      </div>
+      <p class="text-sm text-gray-400">Nuove guide ogni paio di settimane.</p>
+    </div>
+
+    <div id="posts" class="post-grid mt-6">
+      <!-- POSTS:START -->
+      <a class="post-card reveal" href="voice-note-to-x-post.html">
+        <div class="post-cover post-cover--3">
+          <svg class="h-10 w-10" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M7 9h10M7 12h6"/></svg>
+        </div>
+        <div class="post-body">
+          <span class="post-topic">Scrittura</span>
+          <h3 class="post-title">Come trasformare una nota vocale in un post su X</h3>
+          <p class="post-excerpt">Registra il pensiero, lascia che X Post lo comprima e fai il passaggio che tiene l’affermazione e taglia il riscaldamento.</p>
+          <span class="post-meta">8 novembre 2026 · 7 min di lettura</span>
+        </div>
+      </a>
+      <a class="post-card reveal" href="voice-note-to-speech-draft.html">
+        <div class="post-cover post-cover--1">
+          <svg class="h-10 w-10" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M3 11l14-6v14L3 13v-2z"/><path d="M7 13v5a2 2 0 0 0 2 2h1"/></svg>
+        </div>
+        <div class="post-body">
+          <span class="post-topic">Parlare in pubblico</span>
+          <h3 class="post-title">Come trasformare una nota vocale in un discorso</h3>
+          <p class="post-excerpt">Parla il discorso prima di scriverlo, modellalo per l’orecchio e provalo ad alta voce, con un esempio completo.</p>
+          <span class="post-meta">7 novembre 2026 · 8 min di lettura</span>
+        </div>
+      </a>
+      <a class="post-card reveal" href="voice-note-to-to-do-list.html">
+        <div class="post-cover post-cover--1">
+          <svg class="h-10 w-10" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        </div>
+        <div class="post-body">
+          <span class="post-topic">Produttività</span>
+          <h3 class="post-title">Come trasformare una nota vocale in una lista di attività</h3>
+          <p class="post-excerpt">Un passaggio di cinque minuti e un esempio completo: da uno sfogo parlato a una checklist breve e con date.</p>
+          <span class="post-meta">6 novembre 2026 · 8 min di lettura</span>
+        </div>
+      </a>
+      <a class="post-card reveal" href="voice-journal.html">
+        <div class="post-cover post-cover--4">
+          <svg class="h-10 w-10" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+        </div>
+        <div class="post-body">
+          <span class="post-topic">Diario</span>
+          <h3 class="post-title">Come tenere un diario vocale che rileggerai davvero</h3>
+          <p class="post-excerpt">Due minuti al giorno, tre domande e una rilettura la domenica che trasforma sette giorni in un cambiamento.</p>
+          <span class="post-meta">28 ottobre 2026 · 9 min di lettura</span>
+        </div>
+      </a>
+      <a class="post-card reveal" href="voice-note-to-study-notes.html">
+        <div class="post-cover post-cover--2">
+          <svg class="h-10 w-10" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        </div>
+        <div class="post-body">
+          <span class="post-topic">Studio</span>
+          <h3 class="post-title">Come trasformare una nota vocale in appunti di studio</h3>
+          <p class="post-excerpt">Quattro passaggi e un esempio completo per passare dal riepilogo di una lezione a una pagina di appunti con cui metterti alla prova.</p>
+          <span class="post-meta">27 ottobre 2026 · 9 min di lettura</span>
+        </div>
+      </a>
+      <a class="post-card reveal" href="voice-note-to-meeting-minutes.html">
+        <div class="post-cover post-cover--3">
+          <svg class="h-10 w-10" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div class="post-body">
+          <span class="post-topic">Riunioni</span>
+          <h3 class="post-title">Come trasformare una nota vocale nel verbale di una riunione</h3>
+          <p class="post-excerpt">Cinque parti e un esempio completo per passare da un riepilogo parlato a una pagina di verbale: decisioni, responsabili, date.</p>
+          <span class="post-meta">23 ottobre 2026 · 9 min di lettura</span>
+        </div>
+      </a>
+      <a class="post-card reveal" href="voice-note-to-professional-email.html">
+        <div class="post-cover post-cover--1">
+          <svg class="h-10 w-10" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+        </div>
+        <div class="post-body">
+          <span class="post-topic">Flusso email</span>
+          <h3 class="post-title">Come trasformare una nota vocale in un'email professionale</h3>
+          <p class="post-excerpt">Un metodo in quattro passaggi e tre esempi prima/dopo per trasformare una nota vocale in un'email chiara.</p>
+          <span class="post-meta">22 ottobre 2026 · 8 min di lettura</span>
+        </div>
+      </a>
+      <!-- POSTS:END -->
+    </div>
+
+    <div id="blog-empty" class="empty-state mt-10 reveal">
+      <span class="empty-icon">
+        <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+      </span>
+      <h3 class="mt-6 text-xl font-bold text-gray-900 sm:text-2xl">I primi articoli stanno arrivando</h3>
+      <p class="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-gray-500 sm:text-base">Stiamo scrivendo guide approfondite sui flussi voce-testo, la rifinitura con IA e la scrittura a mani libere. Torna presto — o prova VoiceNote oggi stesso.</p>
+      <a href="../download.html" class="btn-gradient mt-7 inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-white shadow-sm">Prova VoiceNote gratis</a>
+    </div>
+  </div>
+</section>
 
 <!-- WHAT YOU'LL FIND -->
 <section class="bg-white py-16 sm:py-20">
@@ -172,110 +273,6 @@
         <h3 class="mt-5 text-lg font-semibold text-gray-900">Flussi a mani libere</h3>
         <p class="mt-2 text-sm leading-relaxed text-gray-500">Cattura idee mentre cammini, cucini o sei tra due riunioni — e portale nei tuoi strumenti senza digitare.</p>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- POSTS -->
-<section class="bg-warm-50 py-16 sm:py-20">
-  <div class="mx-auto max-w-6xl px-4 sm:px-6">
-    <div class="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between reveal">
-      <div>
-        <span class="text-sm font-semibold uppercase tracking-widest text-brand-500">Blog</span>
-        <h2 class="mt-2 text-3xl font-extrabold tracking-tight sm:text-4xl">Ultimi articoli</h2>
-      </div>
-      <p class="text-sm text-gray-400">Nuove guide ogni paio di settimane.</p>
-    </div>
-
-    <div id="posts" class="post-grid mt-10">
-      <!-- POSTS:START -->
-      <a class="post-card reveal" href="voice-note-to-professional-email.html">
-        <div class="post-cover post-cover--1">
-          <svg class="h-10 w-10" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
-        </div>
-        <div class="post-body">
-          <span class="post-topic">Flusso email</span>
-          <h3 class="post-title">Come trasformare una nota vocale in un'email professionale</h3>
-          <p class="post-excerpt">Un metodo in quattro passaggi e tre esempi prima/dopo per trasformare una nota vocale in un'email chiara.</p>
-          <span class="post-meta">22 ottobre 2026 · 8 min di lettura</span>
-        </div>
-      </a>
-      <a class="post-card reveal" href="voice-note-to-meeting-minutes.html">
-        <div class="post-cover post-cover--3">
-          <svg class="h-10 w-10" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        </div>
-        <div class="post-body">
-          <span class="post-topic">Riunioni</span>
-          <h3 class="post-title">Come trasformare una nota vocale nel verbale di una riunione</h3>
-          <p class="post-excerpt">Cinque parti e un esempio completo per passare da un riepilogo parlato a una pagina di verbale: decisioni, responsabili, date.</p>
-          <span class="post-meta">23 ottobre 2026 · 9 min di lettura</span>
-        </div>
-      </a>
-      <a class="post-card reveal" href="voice-note-to-study-notes.html">
-        <div class="post-cover post-cover--2">
-          <svg class="h-10 w-10" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-        </div>
-        <div class="post-body">
-          <span class="post-topic">Studio</span>
-          <h3 class="post-title">Come trasformare una nota vocale in appunti di studio</h3>
-          <p class="post-excerpt">Quattro passaggi e un esempio completo per passare dal riepilogo di una lezione a una pagina di appunti con cui metterti alla prova.</p>
-          <span class="post-meta">27 ottobre 2026 · 9 min di lettura</span>
-        </div>
-      </a>
-      <a class="post-card reveal" href="voice-journal.html">
-        <div class="post-cover post-cover--4">
-          <svg class="h-10 w-10" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
-        </div>
-        <div class="post-body">
-          <span class="post-topic">Diario</span>
-          <h3 class="post-title">Come tenere un diario vocale che rileggerai davvero</h3>
-          <p class="post-excerpt">Due minuti al giorno, tre domande e una rilettura la domenica che trasforma sette giorni in un cambiamento.</p>
-          <span class="post-meta">28 ottobre 2026 · 9 min di lettura</span>
-        </div>
-      </a>
-      <a class="post-card reveal" href="voice-note-to-to-do-list.html">
-        <div class="post-cover post-cover--1">
-          <svg class="h-10 w-10" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-        </div>
-        <div class="post-body">
-          <span class="post-topic">Produttività</span>
-          <h3 class="post-title">Come trasformare una nota vocale in una lista di attività</h3>
-          <p class="post-excerpt">Un passaggio di cinque minuti e un esempio completo: da uno sfogo parlato a una checklist breve e con date.</p>
-          <span class="post-meta">6 novembre 2026 · 8 min di lettura</span>
-        </div>
-      </a>
-      <a class="post-card reveal" href="voice-note-to-speech-draft.html">
-        <div class="post-cover post-cover--1">
-          <svg class="h-10 w-10" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M3 11l14-6v14L3 13v-2z"/><path d="M7 13v5a2 2 0 0 0 2 2h1"/></svg>
-        </div>
-        <div class="post-body">
-          <span class="post-topic">Parlare in pubblico</span>
-          <h3 class="post-title">Come trasformare una nota vocale in un discorso</h3>
-          <p class="post-excerpt">Parla il discorso prima di scriverlo, modellalo per l’orecchio e provalo ad alta voce, con un esempio completo.</p>
-          <span class="post-meta">7 novembre 2026 · 8 min di lettura</span>
-        </div>
-      </a>
-      <a class="post-card reveal" href="voice-note-to-x-post.html">
-        <div class="post-cover post-cover--3">
-          <svg class="h-10 w-10" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M7 9h10M7 12h6"/></svg>
-        </div>
-        <div class="post-body">
-          <span class="post-topic">Scrittura</span>
-          <h3 class="post-title">Come trasformare una nota vocale in un post su X</h3>
-          <p class="post-excerpt">Registra il pensiero, lascia che X Post lo comprima e fai il passaggio che tiene l’affermazione e taglia il riscaldamento.</p>
-          <span class="post-meta">8 novembre 2026 · 7 min di lettura</span>
-        </div>
-      </a>
-      <!-- POSTS:END -->
-    </div>
-
-    <div id="blog-empty" class="empty-state mt-10 reveal">
-      <span class="empty-icon">
-        <svg class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
-      </span>
-      <h3 class="mt-6 text-xl font-bold text-gray-900 sm:text-2xl">I primi articoli stanno arrivando</h3>
-      <p class="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-gray-500 sm:text-base">Stiamo scrivendo guide approfondite sui flussi voce-testo, la rifinitura con IA e la scrittura a mani libere. Torna presto — o prova VoiceNote oggi stesso.</p>
-      <a href="../download.html" class="btn-gradient mt-7 inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-white shadow-sm">Prova VoiceNote gratis</a>
     </div>
   </div>
 </section>
