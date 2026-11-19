@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>如何用语音笔记写技术文档 — VoiceNote Blog</title>
+  <meta name="description" content="像带新人一样把系统讲出来，让 Tech Doc 整理结构，再补上口述容易漏掉的命令、版本和失败场景。">
+  <meta name="author" content="Elaine">
+  <meta name="robots" content="index,follow">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="canonical" href="https://voicenote.uk/zh/blog/voice-note-to-tech-doc.html">
+  <link rel="alternate" hreflang="en" href="https://voicenote.uk/blog/voice-note-to-tech-doc.html">
+  <link rel="alternate" hreflang="fr" href="https://voicenote.uk/fr/blog/voice-note-to-tech-doc.html">
+  <link rel="alternate" hreflang="de" href="https://voicenote.uk/de/blog/voice-note-to-tech-doc.html">
+  <link rel="alternate" hreflang="es" href="https://voicenote.uk/es/blog/voice-note-to-tech-doc.html">
+  <link rel="alternate" hreflang="it" href="https://voicenote.uk/it/blog/voice-note-to-tech-doc.html">
+  <link rel="alternate" hreflang="zh" href="https://voicenote.uk/zh/blog/voice-note-to-tech-doc.html">
+  <link rel="alternate" hreflang="x-default" href="https://voicenote.uk/blog/voice-note-to-tech-doc.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="如何用语音笔记写技术文档">
+  <meta property="og:description" content="像带新人一样把系统讲出来，让 Tech Doc 整理结构，再补上口述容易漏掉的命令、版本和失败场景。">
+  <meta property="og:url" content="https://voicenote.uk/zh/blog/voice-note-to-tech-doc.html">
+  <meta property="og:image" content="https://voicenote.uk/blog/assets/og/voice-note-techdoc-zh.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="如何用语音笔记写技术文档">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="article:published_time" content="2026-11-19">
+  <meta property="article:modified_time" content="2026-11-19">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="如何用语音笔记写技术文档">
+  <meta name="twitter:description" content="像带新人一样把系统讲出来，让 Tech Doc 整理结构，再补上口述容易漏掉的命令、版本和失败场景。">
+  <meta name="twitter:image" content="https://voicenote.uk/blog/assets/og/voice-note-techdoc-zh.png">
+  <meta name="twitter:image:alt" content="如何用语音笔记写技术文档">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QNKGT9R5FB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-QNKGT9R5FB');
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { 50:'#eff6ff',100:'#dbeafe',200:'#bfdbfe',300:'#93c5fd',400:'#60a5fa',500:'#4f8af7',600:'#3b6ef5',700:'#2d5de0',800:'#2449c4',900:'#1e3a8a',950:'#172554' },
+            warm: { 50:'#fffbf5',100:'#fef7ed',200:'#fdefd6',300:'#fce3b6',400:'#f9cf8a',500:'#f5b85c',600:'#f09e34',700:'#e08816',800:'#bc7012',900:'#995813' }
+          },
+          fontFamily: { sans: ['Inter','system-ui','sans-serif'] },
+          borderRadius: { '4xl': '2rem' }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/blog/blog.css?v=6">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "如何用语音笔记写技术文档",
+  "description": "像带新人一样把系统讲出来，让 Tech Doc 整理结构，再补上口述容易漏掉的命令、版本和失败场景。",
+  "datePublished": "2026-11-19",
+  "dateModified": "2026-11-19",
+  "mainEntityOfPage": "https://voicenote.uk/zh/blog/voice-note-to-tech-doc.html",
+  "inLanguage": "zh",
+  "image": [
+    "https://voicenote.uk/blog/assets/og/voice-note-techdoc-zh.png",
+    "https://voicenote.uk/blog/assets/recording-voice-note.png",
+    "https://voicenote.uk/blog/assets/tech-doc-style.png"
+  ],
+  "author": {
+    "@type": "Person",
+    "name": "Elaine",
+    "url": "https://x.com/elaine20230910",
+    "sameAs": [
+      "https://x.com/elaine20230910"
+    ],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "VoiceNote",
+      "url": "https://voicenote.uk/"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "VoiceNote",
+    "url": "https://voicenote.uk/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://voicenote.uk/logo.png"
+    }
+  }
+}
+  </script>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+
+<!-- NAVBAR -->
+<nav id="navbar" class="blog-nav fixed top-0 z-50 w-full border-b border-gray-100/80 transition-shadow duration-300">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
+    <a href="../" class="flex items-center gap-2 text-xl font-bold">
+      <div class="flex h-9 w-9 items-center justify-center rounded-lg logo-gradient text-white"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></div>
+      <span class="tracking-tight">VoiceNote</span>
+    </a>
+    <div class="hidden items-center gap-7 md:flex">
+      <a href="../" class="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900">首页</a>
+      <a href="../pricing.html" class="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900">定价</a>
+      <a href="./" class="text-sm font-semibold text-brand-600 transition-colors">博客</a>
+      <a href="../download.html" class="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900">下载</a>
+      <a href="../contact.html" class="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900">联系</a>
+      <a href="../download.html" class="rounded-full btn-gradient px-5 py-2.5 text-sm font-semibold text-white shadow-sm">免费试用</a>
+      <div class="relative ml-1 border-l border-gray-200 pl-4">
+        <button id="blogLangBtn" type="button" aria-haspopup="true" aria-controls="blogLangMenu" class="flex items-center gap-1 text-xs font-medium text-gray-500 transition-colors hover:text-gray-700">
+          中文 <svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div id="blogLangMenu" class="lang-menu">
+          <a data-lang="en" href="/blog/">English</a>
+          <a data-lang="fr" href="/fr/blog/">Français</a>
+          <a data-lang="de" href="/de/blog/">Deutsch</a>
+          <a data-lang="es" href="/es/blog/">Español</a>
+          <a data-lang="it" href="/it/blog/">Italiano</a>
+          <a data-lang="zh" href="/zh/blog/">中文</a>
+        </div>
+      </div>
+    </div>
+    <button id="menuToggle" class="rounded-lg p-2 text-gray-600 hover:bg-gray-100 md:hidden" aria-label="菜单">
+      <svg id="menuIcon" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+  <div id="mobileMenu" class="max-h-0 overflow-hidden transition-all duration-300 md:hidden">
+    <div class="mx-4 flex flex-col gap-1 border-t border-gray-100 pb-4 pt-3">
+      <a href="../" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-50">首页</a>
+      <a href="../pricing.html" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-50">定价</a>
+      <a href="./" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-semibold text-brand-600 hover:bg-gray-50">博客</a>
+      <a href="../download.html" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-50">下载</a>
+      <a href="../contact.html" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-50">联系</a>
+      <a href="../download.html" class="mobile-link mt-2 rounded-full btn-gradient px-5 py-2.5 text-center text-sm font-semibold text-white">免费试用</a>
+      <div class="mt-3 flex flex-wrap gap-x-4 gap-y-2 border-t border-gray-100 px-3 pt-3 text-xs font-medium text-gray-500">
+        <a href="/blog/" class="hover:text-gray-900">English</a>
+        <a href="/fr/blog/" class="hover:text-gray-900">Français</a>
+        <a href="/de/blog/" class="hover:text-gray-900">Deutsch</a>
+        <a href="/es/blog/" class="hover:text-gray-900">Español</a>
+        <a href="/it/blog/" class="hover:text-gray-900">Italiano</a>
+        <a href="/zh/blog/" class="text-brand-600">中文</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main class="pb-20">
+  <header class="article-header">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6">
+      <nav class="mb-6 flex items-center gap-2 text-xs font-medium text-gray-400" aria-label="Breadcrumb">
+        <a href="./" class="transition-colors hover:text-gray-700">Blog</a>
+        <span>/</span>
+        <span class="text-gray-500">技术文档</span>
+      </nav>
+      <span class="article-badge">语音转文字</span>
+      <h1 class="mt-5 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl lg:text-[2.75rem] lg:leading-[1.15]">如何用语音笔记写技术文档</h1>
+      <p class="lead mt-5 text-lg leading-relaxed text-gray-500">文档写得薄，往往是因为写的人早就知道答案。把系统开口讲一遍，缺口就露出来了；Tech Doc 把这段讲解整理成结构，然后你再动手校正。</p>
+      <div class="article-meta mt-7 border-b border-gray-100 pb-7">
+        <span><time datetime="2026-11-19">2026 年 11 月 19 日</time></span>
+        <span class="h-1 w-1 rounded-full bg-gray-300"></span>
+        <span>7 分钟阅读</span>
+        <span class="h-1 w-1 rounded-full bg-gray-300"></span>
+        <span><a href="https://x.com/elaine20230910" target="_blank" rel="me noopener">Elaine</a></span>
+      </div>
+      <div class="mt-8 text-center"><a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/voicenote-ai-voice-to-text/id6774268799" class="btn-gradient inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-white shadow-sm"><svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.46-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 2.95 2.58 3.93 2.61 3.94-.03.07-.41 1.39-1.3 2.73M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg> 在 App Store 下载</a></div>
+    </div>
+  </header>
+
+  <article class="mx-auto mt-10 max-w-3xl px-4 sm:px-6">
+    <div class="prose-article">
+      <div class="takeaways">
+        <p class="takeaways-label">要点</p>
+        <ul>
+          <li>文档写得薄，是因为作者早知道答案；开口讲一遍，缺口就藏不住了。</li>
+          <li>分三遍录：它是什么、怎么运行、怎么坏掉。</li>
+          <li>Tech Doc 负责结构；准确的命令、版本和路径仍然是你自己的活。</li>
+          <li>如果你在干净环境里照着自己的文档走不下来，它就还没写完。</li>
+        </ul>
+      </div>
+
+      <p>每个团队都有一份文档，写着“运行迁移脚本”，却没说在哪个目录、哪个环境，也没说跑到一半失败该怎么办。写它的人，对这些都不觉得是个问题。</p>
+      <p>把系统开口讲一遍，作者的假设就会被摆出来：你会听见自己跳过前置条件，也会注意到某个步骤你之所以会，只是因为上周刚做过。</p>
+
+      <h2>在 VoiceNote 里怎么做</h2>
+      <h3>第 1 步——像有新同事在听那样讲</h3>
+      <p>打开 VoiceNote 点麦克风。想象一个具体的人——一位从没见过这套系统的、水平不错的工程师——然后讲给他听。分三遍短录。免费版每条最长两分钟，正好一遍一条；用 Prime 单次可到十五分钟，想一口气讲完也行。</p>
+      <ul>
+        <li><strong>第一遍：它是什么。</strong>这个组件做什么、和谁通信、停了之后什么会坏。</li>
+        <li><strong>第二遍：怎么运行。</strong>操作顺序，包括那些你已经做成本能的无聊准备工作。</li>
+        <li><strong>第三遍：怎么坏掉。</strong>你真正见过的报错、当时的原因、你做了什么。这一遍没人写，而值班的人最需要它。</li>
+        <li><strong>说出你默认对方已经会的。</strong>“你需要有 staging 集群的权限”对你很自然，对新人恰恰是第一个缺的东西。</li>
+      </ul>
+
+      <figure class="article-figure article-figure--phone">
+        <img src="/blog/assets/recording-voice-note.png" alt="VoiceNote 录音界面，显示七秒计时和实时波形。" width="1242" height="2688" loading="lazy">
+        <figcaption>三遍，各一条录音：它是什么、怎么运行、怎么坏掉。</figcaption>
+      </figure>
+
+      <h3>第 2 步——应用 Tech Doc</h3>
+      <p>打开每条笔记，点 AI Style Conversion，选择 Tech Doc。这个风格把讲解整理成结构良好的技术文档：分节、步骤有序，语气比口语收敛得多。</p>
+
+      <figure class="article-figure article-figure--phone">
+        <img src="/blog/assets/tech-doc-style.png" alt="VoiceNote 的 AI Style Conversion 界面，Tech Doc 风格被圈出。" width="1179" height="2556" loading="lazy">
+        <figcaption>Tech Doc 位于 Work &amp; Writing 分组，圆圈标出的是本文用到的风格。</figcaption>
+      </figure>
+
+      <p>它给出的是一份草稿，不是已验证的流程。它继承了你的假设，也无法知道某条命令是抄错了，还是版本已经变了。读的时候把仓库、终端和配置都打开。</p>
+
+      <h3>第 3 步——补上口述漏掉的东西</h3>
+      <p>口述在意图上很强，在精确细节上很弱。在文档交给新人之前，把这五样补齐：</p>
+      <ul>
+        <li><strong>准确的命令、路径和版本。</strong>从终端复制，别凭记忆敲进一份别人会信以为真的文档里。</li>
+        <li><strong>前置条件。</strong>权限、凭据、安装好的工具、环境变量，以及缺了这些该怎么办。</li>
+        <li><strong>证明成功的检查。</strong>具体的输出、日志行或状态，不是“应该没问题”。</li>
+        <li><strong>失败场景一节。</strong>最可能遇到的三个错误，用读者的话写，并写清各自怎么处理。</li>
+        <li><strong>给谁看、什么时候不适用。</strong>开头一句，能省掉错误读者的二十分钟。</li>
+      </ul>
+
+      <h2>为什么“讲出来”能找出缺口</h2>
+      <p>写文档是安静的活动，而安静允许你跳过一切你本来就懂的东西。开口讲解是有顺序的：你必须说出下一句，一旦走到那个只靠本能知道的步骤，句子就停住了。</p>
+      <p>它还会换掉你脑中的读者。为“谁需要谁看”写的文档，等于没写给任何人；讲给一位有名字的同事听，就会包含这位同事真的会问的部分。</p>
+      <p>而且它能在失败经验还具体的时候把它抓下来。你三月修掉的那个问题，是一个九十秒能讲完的故事——文档需要的正是这个故事，赶在它退化成“看看日志”之前。</p>
+
+      <h2>一个示例</h2>
+      <p>以下为虚构示例。一位工程师讲了一遍回滚流程，再把录音整理成 runbook。</p>
+      <div class="example">
+        <p class="example-label"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg> 口述讲解，第三遍</p>
+        <blockquote class="spoken"><p>“好，回滚。只有在新版本比原来更糟的时候才做——这本身就是个判断，说实话三月我就是在这儿判断错的。先确认迁移有没有跑过，因为如果跑过了，回滚应用并不会回滚表结构，就会出十七号那个崩。所以：查迁移表，今天的迁移在里面，就停下来叫我。没有的话，从 CI 重新部署上一个 tag。大概四分钟，流量切换前健康检查会连续两次变绿，所以别信第一次。如果健康检查一直不绿，说明上一版本身也是坏的，那就不是回滚，是事故了。”</p></blockquote>
+        <p class="example-label"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 6l-5 6 5 6M16 6l5 6-5 6"/></svg> Tech Doc，补齐细节之后</p>
+        <div class="email-card">
+          <p><strong>回滚一次部署</strong><br><em>给值班工程师。如果已经跑过数据表迁移，不要用这个流程。</em><br><br><strong>开始之前</strong><br>需要生产环境面板和 CI 流水线权限。确认事故频道已经开启。<br><br><strong>1. 检查迁移是否已执行</strong><br>查询生产库的 <code>schema_migrations</code> 表。如果今天的迁移在其中，<strong>停止</strong>——回滚应用不会回滚表结构——并升级给平台团队。<br><br><strong>2. 重新部署上一个镜像 tag</strong><br>在 CI 中重新部署 <code>releases</code> 流水线最近一个绿色 tag。通常耗时四分钟。<br><br><strong>3. 等第二次健康检查</strong><br>流量只在连续两次检查通过后才切换。一次绿不算数。<br><br><strong>如果没能恢复</strong><br>回滚后健康检查仍失败，说明上一版也是坏的：这是事故而不是回滚，立即联系平台团队。</p>
+        </div>
+        <p class="example-note">变了什么：口述里的判断变成了明确的停止条件，那个故事变成了具体的检查，四分钟写出来，是为了让人在第三分钟不至于慌。</p>
+      </div>
+
+      <h2>发布之前</h2>
+      <ul>
+        <li><strong>在干净环境里照着自己的文档走一遍。</strong>每一个你因为知道捷径而跳过的步骤，都是文档缺的步骤。</li>
+        <li><strong>每条命令按原文执行一遍。</strong>从文档里复制，不要从 shell 历史里复制。</li>
+        <li><strong>写上日期和适用的版本。</strong>没有日期的文档，只是一则传闻。</li>
+      </ul>
+
+      <h2>常见错误</h2>
+      <ul>
+        <li><strong>写你知道的，而不是读者需要的。</strong>两者之间的差，就是文档的大部分内容。</li>
+        <li><strong>省掉失败场景。</strong>顺利路径的文档用一次；失败场景的文档，凌晨三点用。</li>
+        <li><strong>凭记忆重敲命令。</strong>一个参数错，runbook 就变成隐患。</li>
+        <li><strong>用说话的语气写。</strong>保留风格给的结构，把“就是说、基本上”删掉——文档应该听起来冷静，不是聊天。</li>
+        <li><strong>没有日期、负责人和适用范围。</strong>没人能判断这份文档是最新的，还是权威的。</li>
+      </ul>
+
+      <h2>常见问题</h2>
+      <h3>VoiceNote 能读代码或仓库吗？</h3>
+      <p>不能。它基于你的录音工作，所以文档的准确度取决于你讲了多少、之后补了多少。把草稿当成结构，而不是验证。</p>
+      <h3>一次讲解能多长？</h3>
+      <p>免费版每条两分钟，Prime 十五分钟。长流程按小节各录一条更轻松——准备、执行、验证、失败——比一条长录音好写。</p>
+      <h3>可以边做边录吗？</h3>
+      <p>可以，这也是抓真实操作顺序的好办法。但不可逆的步骤之前先停录，命令事后从终端复制，不要凭记忆。</p>
+      <h3>这跟<a href="voice-note-to-meeting-minutes.html">会议纪要</a>有什么区别？</h3>
+      <p>纪要记录一群人的决定；技术文档记录系统怎么运作、流程怎么执行——读的人当时不在现场。</p>
+      <h3>可以把输出直接贴进文档站吗？</h3>
+      <p>当作草稿可以，然后在那里编辑。风格给结构和措辞；命令、版本和警告是否正确，由你负责。</p>
+      <h3>VoiceNote 支持哪些语言？</h3>
+      <p>VoiceNote 支持 46 种语言转写。用团队读文档的语言讲解；App 里的风格名称保持英文。</p>
+
+      <p>文档写完之后，<a href="voice-note-to-professional-email.html">告诉大家它放在哪</a>，才是让人真的去读的那一步。</p>
+
+      <aside id="author" class="author-card">
+        <div class="author-avatar" aria-hidden="true">E</div>
+        <div class="author-body">
+          <p class="author-name">Elaine</p>
+          <p class="author-role">@elaine20230910 · VoiceNote</p>
+          <p class="author-bio">Elaine 是 VoiceNote 的开发者。这是一款 iPhone 语音转文字 App，这个博客记录真正省时间的口述工作流。</p>
+          <a class="author-link" href="https://x.com/elaine20230910" target="_blank" rel="me noopener">在 X 上关注</a>
+        </div>
+      </aside>
+      <div class="article-cta">
+        <p class="text-base font-semibold text-gray-900">先讲清楚，再写下来</p>
+        <p class="mt-1 text-sm text-gray-500">下载 VoiceNote，假装有位新同事在听，把系统讲一遍，再整理成结构化的技术文档。</p>
+        <a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/voicenote-ai-voice-to-text/id6774268799" class="btn-gradient mt-5 inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold text-white shadow-sm">在 App Store 下载</a>
+      </div>
+
+    </div>
+  </article>
+</main>
+
+<!-- FOOTER -->
+<footer class="border-t border-gray-100 bg-white">
+  <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+    <div class="flex flex-col items-center justify-between gap-6 sm:flex-row">
+      <a href="../" class="flex items-center gap-2 text-xl font-bold">
+        <div class="flex h-8 w-8 items-center justify-center rounded-lg logo-gradient text-white"><svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></div>
+        <span class="tracking-tight">VoiceNote</span>
+      </a>
+      <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-gray-500">
+        <a href="../pricing.html" class="transition-colors hover:text-gray-900">定价</a>
+        <a href="../download.html" class="transition-colors hover:text-gray-900">下载</a>
+        <a href="../contact.html" class="transition-colors hover:text-gray-900">联系</a>
+        <a href="./" class="transition-colors hover:text-gray-900">博客</a>
+        <a href="../privacy.html" class="transition-colors hover:text-gray-900">隐私政策</a>
+        <a href="../terms.html" class="transition-colors hover:text-gray-900">服务条款</a>
+        <a href="../cookies.html" class="transition-colors hover:text-gray-900">Cookie 政策</a>
+      </div>
+    </div>
+    <p class="mt-8 text-center text-xs text-gray-400">&copy; 2026 VoiceNote. 保留所有权利。</p>
+  </div>
+</footer>
+
+<script>
+  window.BLOG_TRANSLATIONS = {
+    en: '/blog/voice-note-to-tech-doc.html',
+    fr: '/fr/blog/voice-note-to-tech-doc.html',
+    de: '/de/blog/voice-note-to-tech-doc.html',
+    es: '/es/blog/voice-note-to-tech-doc.html',
+    it: '/it/blog/voice-note-to-tech-doc.html',
+    zh: '/zh/blog/voice-note-to-tech-doc.html'
+  };
+</script>
+<script src="/blog/blog.js"></script>
+</body>
+</html>

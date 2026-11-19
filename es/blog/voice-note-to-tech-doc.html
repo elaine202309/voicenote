@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escribir documentación técnica con una nota de voz — VoiceNote Blog</title>
+  <meta name="description" content="Explica el sistema en voz alta como a alguien nuevo, deja que Tech Doc lo estructure y añade comandos, versiones y fallos.">
+  <meta name="author" content="Elaine">
+  <meta name="robots" content="index,follow">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="canonical" href="https://voicenote.uk/es/blog/voice-note-to-tech-doc.html">
+  <link rel="alternate" hreflang="en" href="https://voicenote.uk/blog/voice-note-to-tech-doc.html">
+  <link rel="alternate" hreflang="fr" href="https://voicenote.uk/fr/blog/voice-note-to-tech-doc.html">
+  <link rel="alternate" hreflang="de" href="https://voicenote.uk/de/blog/voice-note-to-tech-doc.html">
+  <link rel="alternate" hreflang="es" href="https://voicenote.uk/es/blog/voice-note-to-tech-doc.html">
+  <link rel="alternate" hreflang="it" href="https://voicenote.uk/it/blog/voice-note-to-tech-doc.html">
+  <link rel="alternate" hreflang="zh" href="https://voicenote.uk/zh/blog/voice-note-to-tech-doc.html">
+  <link rel="alternate" hreflang="x-default" href="https://voicenote.uk/blog/voice-note-to-tech-doc.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Escribir documentación técnica con una nota de voz">
+  <meta property="og:description" content="Explica el sistema en voz alta como a alguien nuevo, deja que Tech Doc lo estructure y añade comandos, versiones y fallos.">
+  <meta property="og:url" content="https://voicenote.uk/es/blog/voice-note-to-tech-doc.html">
+  <meta property="og:image" content="https://voicenote.uk/blog/assets/og/voice-note-techdoc-es.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Escribir documentación técnica con una nota de voz">
+  <meta property="og:locale" content="es_ES">
+  <meta property="article:published_time" content="2026-11-19">
+  <meta property="article:modified_time" content="2026-11-19">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Escribir documentación técnica con una nota de voz">
+  <meta name="twitter:description" content="Explica el sistema en voz alta como a alguien nuevo, deja que Tech Doc lo estructure y añade comandos, versiones y fallos.">
+  <meta name="twitter:image" content="https://voicenote.uk/blog/assets/og/voice-note-techdoc-es.png">
+  <meta name="twitter:image:alt" content="Escribir documentación técnica con una nota de voz">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QNKGT9R5FB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-QNKGT9R5FB');
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { 50:'#eff6ff',100:'#dbeafe',200:'#bfdbfe',300:'#93c5fd',400:'#60a5fa',500:'#4f8af7',600:'#3b6ef5',700:'#2d5de0',800:'#2449c4',900:'#1e3a8a',950:'#172554' },
+            warm: { 50:'#fffbf5',100:'#fef7ed',200:'#fdefd6',300:'#fce3b6',400:'#f9cf8a',500:'#f5b85c',600:'#f09e34',700:'#e08816',800:'#bc7012',900:'#995813' }
+          },
+          fontFamily: { sans: ['Inter','system-ui','sans-serif'] },
+          borderRadius: { '4xl': '2rem' }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/blog/blog.css?v=6">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Escribir documentación técnica con una nota de voz",
+  "description": "Explica el sistema en voz alta como a alguien nuevo, deja que Tech Doc lo estructure y añade comandos, versiones y fallos.",
+  "datePublished": "2026-11-19",
+  "dateModified": "2026-11-19",
+  "mainEntityOfPage": "https://voicenote.uk/es/blog/voice-note-to-tech-doc.html",
+  "inLanguage": "es",
+  "image": [
+    "https://voicenote.uk/blog/assets/og/voice-note-techdoc-es.png",
+    "https://voicenote.uk/blog/assets/recording-voice-note.png",
+    "https://voicenote.uk/blog/assets/tech-doc-style.png"
+  ],
+  "author": {
+    "@type": "Person",
+    "name": "Elaine",
+    "url": "https://x.com/elaine20230910",
+    "sameAs": [
+      "https://x.com/elaine20230910"
+    ],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "VoiceNote",
+      "url": "https://voicenote.uk/"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "VoiceNote",
+    "url": "https://voicenote.uk/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://voicenote.uk/logo.png"
+    }
+  }
+}
+  </script>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+
+<!-- NAVBAR -->
+<nav id="navbar" class="blog-nav fixed top-0 z-50 w-full border-b border-gray-100/80 transition-shadow duration-300">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
+    <a href="../" class="flex items-center gap-2 text-xl font-bold">
+      <div class="flex h-9 w-9 items-center justify-center rounded-lg logo-gradient text-white"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></div>
+      <span class="tracking-tight">VoiceNote</span>
+    </a>
+    <div class="hidden items-center gap-7 md:flex">
+      <a href="../" class="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900">Inicio</a>
+      <a href="../pricing.html" class="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900">Precios</a>
+      <a href="./" class="text-sm font-semibold text-brand-600 transition-colors">Blog</a>
+      <a href="../download.html" class="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900">Descargar</a>
+      <a href="../contact.html" class="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900">Contacto</a>
+      <a href="../download.html" class="rounded-full btn-gradient px-5 py-2.5 text-sm font-semibold text-white shadow-sm">Probar</a>
+      <div class="relative ml-1 border-l border-gray-200 pl-4">
+        <button id="blogLangBtn" type="button" aria-haspopup="true" aria-controls="blogLangMenu" class="flex items-center gap-1 text-xs font-medium text-gray-500 transition-colors hover:text-gray-700">
+          ES <svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div id="blogLangMenu" class="lang-menu">
+          <a data-lang="en" href="/blog/">English</a>
+          <a data-lang="fr" href="/fr/blog/">Français</a>
+          <a data-lang="de" href="/de/blog/">Deutsch</a>
+          <a data-lang="es" href="/es/blog/">Español</a>
+          <a data-lang="it" href="/it/blog/">Italiano</a>
+          <a data-lang="zh" href="/zh/blog/">中文</a>
+        </div>
+      </div>
+    </div>
+    <button id="menuToggle" class="rounded-lg p-2 text-gray-600 hover:bg-gray-100 md:hidden" aria-label="Menú">
+      <svg id="menuIcon" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+  <div id="mobileMenu" class="max-h-0 overflow-hidden transition-all duration-300 md:hidden">
+    <div class="mx-4 flex flex-col gap-1 border-t border-gray-100 pb-4 pt-3">
+      <a href="../" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-50">Inicio</a>
+      <a href="../pricing.html" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-50">Precios</a>
+      <a href="./" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-semibold text-brand-600 hover:bg-gray-50">Blog</a>
+      <a href="../download.html" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-50">Descargar</a>
+      <a href="../contact.html" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-50">Contacto</a>
+      <a href="../download.html" class="mobile-link mt-2 rounded-full btn-gradient px-5 py-2.5 text-center text-sm font-semibold text-white">Probar</a>
+      <div class="mt-3 flex flex-wrap gap-x-4 gap-y-2 border-t border-gray-100 px-3 pt-3 text-xs font-medium text-gray-500">
+        <a href="/blog/" class="hover:text-gray-900">English</a>
+        <a href="/fr/blog/" class="hover:text-gray-900">Français</a>
+        <a href="/de/blog/" class="hover:text-gray-900">Deutsch</a>
+        <a href="/es/blog/" class="text-brand-600">Español</a>
+        <a href="/it/blog/" class="hover:text-gray-900">Italiano</a>
+        <a href="/zh/blog/" class="hover:text-gray-900">中文</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main class="pb-20">
+  <header class="article-header">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6">
+      <nav class="mb-6 flex items-center gap-2 text-xs font-medium text-gray-400" aria-label="Breadcrumb">
+        <a href="./" class="transition-colors hover:text-gray-700">Blog</a>
+        <span>/</span>
+        <span class="text-gray-500">Documentación</span>
+      </nav>
+      <span class="article-badge">Voz a texto</span>
+      <h1 class="mt-5 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl lg:text-[2.75rem] lg:leading-[1.15]">Escribir documentación técnica con una nota de voz</h1>
+      <p class="lead mt-5 text-lg leading-relaxed text-gray-500">La documentación queda escasa porque quien la escribe ya sabe cómo funciona. Explicar el sistema en voz alta saca a la luz los huecos, y el estilo Tech Doc convierte esa explicación en una estructura que luego corriges.</p>
+      <div class="article-meta mt-7 border-b border-gray-100 pb-7">
+        <span><time datetime="2026-11-19">19 de noviembre de 2026</time></span>
+        <span class="h-1 w-1 rounded-full bg-gray-300"></span>
+        <span>7 min de lectura</span>
+        <span class="h-1 w-1 rounded-full bg-gray-300"></span>
+        <span><a href="https://x.com/elaine20230910" target="_blank" rel="me noopener">Elaine</a></span>
+      </div>
+      <div class="mt-8 text-center"><a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/voicenote-ai-voice-to-text/id6774268799" class="btn-gradient inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-white shadow-sm"><svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.46-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 2.95 2.58 3.93 2.61 3.94-.03.07-.41 1.39-1.3 2.73M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg> Descargar en App Store</a></div>
+    </div>
+  </header>
+
+  <article class="mx-auto mt-10 max-w-3xl px-4 sm:px-6">
+    <div class="prose-article">
+      <div class="takeaways">
+        <p class="takeaways-label">Lo esencial</p>
+        <ul>
+          <li>La documentación es pobre porque el autor ya sabe la respuesta; decirla en voz alta revela los huecos.</li>
+          <li>Graba la explicación en tres pasadas: qué es, cómo se ejecuta, cómo falla.</li>
+          <li>Tech Doc da la estructura; los comandos exactos, versiones y rutas siguen siendo tu trabajo.</li>
+          <li>Si no puedes seguir tu propia documentación en una máquina limpia, no está terminada.</li>
+        </ul>
+      </div>
+
+      <p>Todo equipo tiene un documento que dice «ejecuta el script de migración» sin decir en qué directorio, en qué entorno ni qué hacer cuando falla a medias. Lo escribió alguien para quien nada de eso era una pregunta.</p>
+      <p>Explicar el sistema en voz alta pone al descubierto los supuestos del autor: te oyes saltarte el requisito previo y notas el paso que solo conoces porque lo hiciste la semana pasada.</p>
+
+      <h2>Cómo hacerlo en VoiceNote</h2>
+      <h3>Paso 1 — Explica como si escuchara alguien nuevo</h3>
+      <p>Abre VoiceNote y toca el micrófono. Imagina a una persona concreta —un ingeniero competente que nunca ha visto este sistema— y explícaselo. Graba en tres pasadas cortas. El plan gratuito permite hasta dos minutos por nota, lo que encaja con una pasada por nota; con Prime una grabación llega a quince minutos si prefieres una sola toma.</p>
+      <ul>
+        <li><strong>Pasada uno: qué es.</strong> Qué hace el componente, con qué habla y qué se rompe si se detiene.</li>
+        <li><strong>Pasada dos: cómo se ejecuta.</strong> El orden de las operaciones, incluidas las preparaciones aburridas que haces en automático.</li>
+        <li><strong>Pasada tres: cómo falla.</strong> Los mensajes de error que has visto de verdad, sus causas y qué hiciste. Es la pasada que nadie escribe y la que necesita quien está de guardia.</li>
+        <li><strong>Di qué das por sabido.</strong> «Necesitarás acceso al clúster de staging» te parece obvio y es lo primero que le falta a alguien nuevo.</li>
+      </ul>
+
+      <figure class="article-figure article-figure--phone">
+        <img src="/blog/assets/recording-voice-note.png" alt="Pantalla de grabación de VoiceNote con un temporizador de siete segundos y una onda en directo." width="1242" height="2688" loading="lazy">
+        <figcaption>Tres pasadas, una grabación cada una: qué es, cómo se ejecuta, cómo falla.</figcaption>
+      </figure>
+
+      <h3>Paso 2 — Aplica Tech Doc</h3>
+      <p>Abre cada nota, toca AI Style Conversion y elige Tech Doc. El estilo organiza la explicación en documentación técnica bien estructurada: secciones, pasos en orden y un registro más sereno que la conversación.</p>
+
+      <figure class="article-figure article-figure--phone">
+        <img src="/blog/assets/tech-doc-style.png" alt="La pantalla AI Style Conversion de VoiceNote, con el estilo Tech Doc resaltado." width="1179" height="2556" loading="lazy">
+        <figcaption>Tech Doc está en la sección Work &amp; Writing. El círculo marca el estilo usado aquí.</figcaption>
+      </figure>
+
+      <p>El resultado es un borrador, no un procedimiento verificado. Hereda tus supuestos y no puede saber si un comando se copió mal o si una versión cambió. Léelo con el repositorio, la terminal y la configuración abiertos.</p>
+
+      <h3>Paso 3 — Añade lo que el habla omite</h3>
+      <p>Una explicación hablada es fuerte en intención y débil en detalle exacto. Completa estas cinco cosas antes de que la doc se acerque a alguien nuevo:</p>
+      <ul>
+        <li><strong>Comandos, rutas y versiones exactos.</strong> Cópialos de la terminal: no los reescribas de memoria en un documento en el que alguien va a confiar.</li>
+        <li><strong>Requisitos previos.</strong> Accesos, credenciales, herramientas instaladas, variables de entorno y qué hacer si falta algo.</li>
+        <li><strong>La comprobación que demuestra que funcionó.</strong> Una salida, una línea de log o un estado concreto: no «debería estar bien».</li>
+        <li><strong>La sección de fallos.</strong> Los tres errores más probables, en palabras de quien lee, con qué hacer en cada caso.</li>
+        <li><strong>Para quién es y cuándo no aplica.</strong> Una línea arriba ahorra veinte minutos al lector equivocado.</li>
+      </ul>
+
+      <h2>Por qué hablar encuentra los huecos</h2>
+      <p>Escribir documentación es una actividad silenciosa, y el silencio permite saltarse todo lo que ya entiendes. Explicar en voz alta es secuencial: tienes que producir la frase siguiente, y en el momento en que llegas a un paso que solo conoces por instinto, la frase se detiene.</p>
+      <p>También cambia el público en tu cabeza. Una doc escrita para «quien la necesite» no está escrita para nadie; una doc explicada a una colega con nombre incluye justo las partes por las que esa colega preguntaría.</p>
+      <p>Y captura el conocimiento de fallos mientras sigue siendo concreto. El error que arreglaste en marzo es una historia de noventa segundos, y una historia es justo lo que la doc necesita antes de convertirse en «mira los logs».</p>
+
+      <h2>Un ejemplo</h2>
+      <p>Un ejemplo inventado. Un ingeniero explica un procedimiento de rollback y convierte la grabación en un runbook.</p>
+      <div class="example">
+        <p class="example-label"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg> Explicación hablada, tercera pasada</p>
+        <blockquote class="spoken"><p>«Vale, rollback. Solo lo haces si el despliegue está peor que lo que había antes, y eso es un juicio, y sinceramente ahí es donde me equivoqué en marzo. Primero compruebas si la migración ya se ejecutó, porque si se ejecutó, volver atrás la aplicación no revierte el esquema y te comes el fallo que tuvimos el diecisiete. Así que: mira la tabla de migraciones, si está la de hoy, para y llámame. Si no está, redespliegas el tag anterior desde CI. Tarda unos cuatro minutos y el health check se pone en verde dos veces antes de mover el tráfico, así que no te fíes del primer verde. Si el health check nunca se pone verde, la release anterior también está rota y estás en un incidente, no en un rollback.»</p></blockquote>
+        <p class="example-label"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 6l-5 6 5 6M16 6l5 6-5 6"/></svg> Tech Doc, con los detalles añadidos</p>
+        <div class="email-card">
+          <p><strong>Revertir un despliegue</strong><br><em>Para ingenieros de guardia. No es el procedimiento correcto si ya se ejecutó una migración de esquema.</em><br><br><strong>Antes de empezar</strong><br>Acceso al panel de producción y al pipeline de CI. Confirmar que el canal de incidentes está abierto.<br><br><strong>1. Comprobar si la migración se ejecutó</strong><br>Consultar la tabla <code>schema_migrations</code> en la base de producción. Si la migración de hoy está ahí, <strong>parar</strong> —revertir la aplicación no revierte el esquema— y escalar al equipo de plataforma.<br><br><strong>2. Redesplegar el tag anterior</strong><br>En CI, redesplegar el último tag verde del pipeline <code>releases</code>. Duración típica: 4 minutos.<br><br><strong>3. Esperar el segundo health check</strong><br>El tráfico solo cambia tras dos comprobaciones verdes seguidas. Una no basta.<br><br><strong>Si no se recupera</strong><br>Un health check fallido tras el rollback significa que la release anterior también está rota: es un incidente, no un rollback. Avisar al equipo de plataforma.</p>
+        </div>
+        <p class="example-note">Qué cambió: el juicio hablado se convirtió en una condición de parada, la anécdota en una comprobación concreta, y los cuatro minutos están escritos para que nadie entre en pánico en el minuto tres.</p>
+      </div>
+
+      <h2>Antes de publicar</h2>
+      <ul>
+        <li><strong>Sigue tu propia doc en un entorno limpio.</strong> Cada paso que te salta porque conoces el atajo es un paso que falta.</li>
+        <li><strong>Ejecuta cada comando tal como está escrito.</strong> Cópialos del documento, no del historial del shell.</li>
+        <li><strong>Féchala y di qué versiones cubre.</strong> Una documentación sin fecha es un rumor.</li>
+      </ul>
+
+      <h2>Errores que evitar</h2>
+      <ul>
+        <li><strong>Documentar lo que sabes en vez de lo que necesita el lector.</strong> La distancia entre ambos es la mayor parte del documento.</li>
+        <li><strong>Omitir la sección de fallos.</strong> La doc del camino feliz se usa una vez; la de fallos, a las tres de la mañana.</li>
+        <li><strong>Reescribir comandos de memoria.</strong> Un flag equivocado convierte un runbook en un peligro.</li>
+        <li><strong>Escribir con tu voz hablada.</strong> Quédate con la estructura del estilo y corta los «o sea, básicamente»: la doc debe sonar tranquila, no conversacional.</li>
+        <li><strong>Sin fecha, responsable ni alcance.</strong> Nadie puede saber si la doc está vigente o es la autoridad.</li>
+      </ul>
+
+      <h2>Preguntas frecuentes</h2>
+      <h3>¿Puede VoiceNote leer mi código o mi repositorio?</h3>
+      <p>No. Trabaja desde tu grabación, así que la exactitud depende de lo que expliques y de lo que añadas después. Trata el borrador como estructura, no como verificación.</p>
+      <h3>¿Cuánto puede durar una explicación?</h3>
+      <p>Dos minutos por nota con el plan gratuito, quince con Prime. Los procedimientos largos son más fáciles como una nota por sección —preparación, ejecución, comprobación, fallo— que como una toma larga.</p>
+      <h3>¿Puedo grabar mientras hago la tarea?</h3>
+      <p>Sí, y es una buena forma de capturar el orden real de las operaciones. Para antes de cualquier acción irreversible, y copia los comandos del terminal después, no de memoria.</p>
+      <h3>¿En qué se diferencia de <a href="voice-note-to-meeting-minutes.html">las actas de reunión</a>?</h3>
+      <p>Un acta recoge lo que un grupo decidió. Una doc técnica recoge cómo funciona un sistema o cómo se ejecuta un procedimiento: quien lee no estaba en la sala.</p>
+      <h3>¿Pego la salida directamente en nuestro sitio de documentación?</h3>
+      <p>Como borrador sí, y luego edítala ahí. El estilo produce estructura y redacción; la exactitud de comandos, versiones y avisos es responsabilidad tuya.</p>
+      <h3>¿Qué idiomas admite VoiceNote?</h3>
+      <p>VoiceNote transcribe 46 idiomas. Explica en el idioma en que tu equipo lee la documentación; los nombres de estilo dentro de la app siguen en inglés.</p>
+
+      <p>Cuando la doc exista, <a href="voice-note-to-professional-email.html">decirle al equipo dónde está</a> es el paso que hace que alguien la lea.</p>
+
+      <aside id="author" class="author-card">
+        <div class="author-avatar" aria-hidden="true">E</div>
+        <div class="author-body">
+          <p class="author-name">Elaine</p>
+          <p class="author-role">@elaine20230910 · VoiceNote</p>
+          <p class="author-bio">Elaine desarrolla VoiceNote, una app de voz a texto para iPhone, y escribe sobre los flujos que hacen que dictar sea más rápido que teclear.</p>
+          <a class="author-link" href="https://x.com/elaine20230910" target="_blank" rel="me noopener">Seguir en X</a>
+        </div>
+      </aside>
+      <div class="article-cta">
+        <p class="text-base font-semibold text-gray-900">Explica antes de documentar</p>
+        <p class="mt-1 text-sm text-gray-500">Descarga VoiceNote, explica el sistema como si escuchara alguien nuevo y conviértelo en documentación estructurada.</p>
+        <a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/voicenote-ai-voice-to-text/id6774268799" class="btn-gradient mt-5 inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold text-white shadow-sm">Descargar en App Store</a>
+      </div>
+
+    </div>
+  </article>
+</main>
+
+<!-- FOOTER -->
+<footer class="border-t border-gray-100 bg-white">
+  <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+    <div class="flex flex-col items-center justify-between gap-6 sm:flex-row">
+      <a href="../" class="flex items-center gap-2 text-xl font-bold">
+        <div class="flex h-8 w-8 items-center justify-center rounded-lg logo-gradient text-white"><svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></div>
+        <span class="tracking-tight">VoiceNote</span>
+      </a>
+      <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-gray-500">
+        <a href="../pricing.html" class="transition-colors hover:text-gray-900">Precios</a>
+        <a href="../download.html" class="transition-colors hover:text-gray-900">Descargar</a>
+        <a href="../contact.html" class="transition-colors hover:text-gray-900">Contacto</a>
+        <a href="./" class="transition-colors hover:text-gray-900">Blog</a>
+        <a href="../privacy.html" class="transition-colors hover:text-gray-900">Privacidad</a>
+        <a href="../terms.html" class="transition-colors hover:text-gray-900">Términos del servicio</a>
+        <a href="../cookies.html" class="transition-colors hover:text-gray-900">Política de cookies</a>
+      </div>
+    </div>
+    <p class="mt-8 text-center text-xs text-gray-400">&copy; 2026 VoiceNote. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<script>
+  window.BLOG_TRANSLATIONS = {
+    en: '/blog/voice-note-to-tech-doc.html',
+    fr: '/fr/blog/voice-note-to-tech-doc.html',
+    de: '/de/blog/voice-note-to-tech-doc.html',
+    es: '/es/blog/voice-note-to-tech-doc.html',
+    it: '/it/blog/voice-note-to-tech-doc.html',
+    zh: '/zh/blog/voice-note-to-tech-doc.html'
+  };
+</script>
+<script src="/blog/blog.js"></script>
+</body>
+</html>

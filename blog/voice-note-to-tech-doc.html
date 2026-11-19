@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Write a Tech Doc With a Voice Note — VoiceNote Blog</title>
+  <meta name="description" content="Explain the system out loud as if onboarding a teammate, let Tech Doc structure it, then add the exact commands, versions and failure modes.">
+  <meta name="author" content="Elaine">
+  <meta name="robots" content="index,follow">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="canonical" href="https://voicenote.uk/blog/voice-note-to-tech-doc.html">
+  <link rel="alternate" hreflang="en" href="https://voicenote.uk/blog/voice-note-to-tech-doc.html">
+  <link rel="alternate" hreflang="fr" href="https://voicenote.uk/fr/blog/voice-note-to-tech-doc.html">
+  <link rel="alternate" hreflang="de" href="https://voicenote.uk/de/blog/voice-note-to-tech-doc.html">
+  <link rel="alternate" hreflang="es" href="https://voicenote.uk/es/blog/voice-note-to-tech-doc.html">
+  <link rel="alternate" hreflang="it" href="https://voicenote.uk/it/blog/voice-note-to-tech-doc.html">
+  <link rel="alternate" hreflang="zh" href="https://voicenote.uk/zh/blog/voice-note-to-tech-doc.html">
+  <link rel="alternate" hreflang="x-default" href="https://voicenote.uk/blog/voice-note-to-tech-doc.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="How to Write a Tech Doc With a Voice Note">
+  <meta property="og:description" content="Explain the system out loud as if onboarding a teammate, let Tech Doc structure it, then add the exact commands, versions and failure modes.">
+  <meta property="og:url" content="https://voicenote.uk/blog/voice-note-to-tech-doc.html">
+  <meta property="og:image" content="https://voicenote.uk/blog/assets/og/voice-note-techdoc-en.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="How to Write a Tech Doc With a Voice Note">
+  <meta property="og:locale" content="en_US">
+  <meta property="article:published_time" content="2026-11-19">
+  <meta property="article:modified_time" content="2026-11-19">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How to Write a Tech Doc With a Voice Note">
+  <meta name="twitter:description" content="Explain the system out loud as if onboarding a teammate, let Tech Doc structure it, then add the exact commands, versions and failure modes.">
+  <meta name="twitter:image" content="https://voicenote.uk/blog/assets/og/voice-note-techdoc-en.png">
+  <meta name="twitter:image:alt" content="How to Write a Tech Doc With a Voice Note">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QNKGT9R5FB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-QNKGT9R5FB');
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { 50:'#eff6ff',100:'#dbeafe',200:'#bfdbfe',300:'#93c5fd',400:'#60a5fa',500:'#4f8af7',600:'#3b6ef5',700:'#2d5de0',800:'#2449c4',900:'#1e3a8a',950:'#172554' },
+            warm: { 50:'#fffbf5',100:'#fef7ed',200:'#fdefd6',300:'#fce3b6',400:'#f9cf8a',500:'#f5b85c',600:'#f09e34',700:'#e08816',800:'#bc7012',900:'#995813' }
+          },
+          fontFamily: { sans: ['Inter','system-ui','sans-serif'] },
+          borderRadius: { '4xl': '2rem' }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/blog/blog.css?v=6">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How to Write a Tech Doc With a Voice Note",
+  "description": "Explain the system out loud as if onboarding a teammate, let Tech Doc structure it, then add the exact commands, versions and failure modes.",
+  "datePublished": "2026-11-19",
+  "dateModified": "2026-11-19",
+  "mainEntityOfPage": "https://voicenote.uk/blog/voice-note-to-tech-doc.html",
+  "inLanguage": "en",
+  "image": [
+    "https://voicenote.uk/blog/assets/og/voice-note-techdoc-en.png",
+    "https://voicenote.uk/blog/assets/recording-voice-note.png",
+    "https://voicenote.uk/blog/assets/tech-doc-style.png"
+  ],
+  "author": {
+    "@type": "Person",
+    "name": "Elaine",
+    "url": "https://x.com/elaine20230910",
+    "sameAs": [
+      "https://x.com/elaine20230910"
+    ],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "VoiceNote",
+      "url": "https://voicenote.uk/"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "VoiceNote",
+    "url": "https://voicenote.uk/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://voicenote.uk/logo.png"
+    }
+  }
+}
+  </script>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+
+<!-- NAVBAR -->
+<nav id="navbar" class="blog-nav fixed top-0 z-50 w-full border-b border-gray-100/80 transition-shadow duration-300">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
+    <a href="/" class="flex items-center gap-2 text-xl font-bold">
+      <div class="flex h-9 w-9 items-center justify-center rounded-lg logo-gradient text-white"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></div>
+      <span class="tracking-tight">VoiceNote</span>
+    </a>
+    <div class="hidden items-center gap-7 md:flex">
+      <a href="/" class="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900">Home</a>
+      <a href="/pricing.html" class="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900">Pricing</a>
+      <a href="/blog/" class="text-sm font-semibold text-brand-600 transition-colors">Blog</a>
+      <a href="/download.html" class="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900">Download</a>
+      <a href="/contact.html" class="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900">Contact</a>
+      <a href="/download.html" class="rounded-full btn-gradient px-5 py-2.5 text-sm font-semibold text-white shadow-sm">Try Free</a>
+      <div class="relative ml-1 border-l border-gray-200 pl-4">
+        <button id="blogLangBtn" type="button" aria-haspopup="true" aria-controls="blogLangMenu" class="flex items-center gap-1 text-xs font-medium text-gray-500 transition-colors hover:text-gray-700">
+          EN <svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div id="blogLangMenu" class="lang-menu">
+          <a data-lang="en" href="/blog/">English</a>
+          <a data-lang="fr" href="/fr/blog/">Français</a>
+          <a data-lang="de" href="/de/blog/">Deutsch</a>
+          <a data-lang="es" href="/es/blog/">Español</a>
+          <a data-lang="it" href="/it/blog/">Italiano</a>
+          <a data-lang="zh" href="/zh/blog/">中文</a>
+        </div>
+      </div>
+    </div>
+    <button id="menuToggle" class="rounded-lg p-2 text-gray-600 hover:bg-gray-100 md:hidden" aria-label="Menu">
+      <svg id="menuIcon" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+  <div id="mobileMenu" class="max-h-0 overflow-hidden transition-all duration-300 md:hidden">
+    <div class="mx-4 flex flex-col gap-1 border-t border-gray-100 pb-4 pt-3">
+      <a href="/" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-50">Home</a>
+      <a href="/pricing.html" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-50">Pricing</a>
+      <a href="/blog/" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-semibold text-brand-600 hover:bg-gray-50">Blog</a>
+      <a href="/download.html" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-50">Download</a>
+      <a href="/contact.html" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-50">Contact</a>
+      <a href="/download.html" class="mobile-link mt-2 rounded-full btn-gradient px-5 py-2.5 text-center text-sm font-semibold text-white">Try Free</a>
+      <div class="mt-3 flex flex-wrap gap-x-4 gap-y-2 border-t border-gray-100 px-3 pt-3 text-xs font-medium text-gray-500">
+        <a href="/blog/" class="text-brand-600">English</a>
+        <a href="/fr/blog/" class="hover:text-gray-900">Français</a>
+        <a href="/de/blog/" class="hover:text-gray-900">Deutsch</a>
+        <a href="/es/blog/" class="hover:text-gray-900">Español</a>
+        <a href="/it/blog/" class="hover:text-gray-900">Italiano</a>
+        <a href="/zh/blog/" class="hover:text-gray-900">中文</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main class="pb-20">
+  <header class="article-header">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6">
+      <nav class="mb-6 flex items-center gap-2 text-xs font-medium text-gray-400" aria-label="Breadcrumb">
+        <a href="./" class="transition-colors hover:text-gray-700">Blog</a>
+        <span>/</span>
+        <span class="text-gray-500">Documentation</span>
+      </nav>
+      <span class="article-badge">Voice to text</span>
+      <h1 class="mt-5 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl lg:text-[2.75rem] lg:leading-[1.15]">How to Write a Tech Doc With a Voice Note</h1>
+      <p class="lead mt-5 text-lg leading-relaxed text-gray-500">Documentation fails because the person writing it already knows how it works. Explaining it out loud to a new teammate surfaces the gaps, and the Tech Doc style turns that explanation into structure you can then correct.</p>
+      <div class="article-meta mt-7 border-b border-gray-100 pb-7">
+        <span><time datetime="2026-11-19">November 19, 2026</time></span>
+        <span class="h-1 w-1 rounded-full bg-gray-300"></span>
+        <span>7 min read</span>
+        <span class="h-1 w-1 rounded-full bg-gray-300"></span>
+        <span><a href="https://x.com/elaine20230910" target="_blank" rel="me noopener">Elaine</a></span>
+      </div>
+      <div class="mt-8 text-center"><a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/voicenote-ai-voice-to-text/id6774268799" class="btn-gradient inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-white shadow-sm"><svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.46-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 2.95 2.58 3.93 2.61 3.94-.03.07-.41 1.39-1.3 2.73M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg> Download on the App Store</a></div>
+    </div>
+  </header>
+
+  <article class="mx-auto mt-10 max-w-3xl px-4 sm:px-6">
+    <div class="prose-article">
+      <div class="takeaways">
+        <p class="takeaways-label">Key takeaways</p>
+        <ul>
+          <li>The reason docs are thin is that the author already knows the answer; saying it out loud exposes the gaps.</li>
+          <li>Record the explanation in three passes: what it is, how to run it, how it fails.</li>
+          <li>Tech Doc gives the structure; the exact commands, versions and paths are still your job.</li>
+          <li>If you cannot follow your own doc on a clean machine, it is not finished.</li>
+        </ul>
+      </div>
+
+      <p>Every team has a document that says “run the migration script” without saying which directory, which environment, or what to do when it fails halfway. It was written by someone for whom none of that was a question.</p>
+      <p>Talking through the system out loud moves the author's assumptions into the open: you hear yourself skip the prerequisite, and you notice the step you only know because you did it last week.</p>
+
+      <h2>How to do it in VoiceNote</h2>
+      <h3>Step 1 — Explain it as if a new teammate were listening</h3>
+      <p>Open VoiceNote and tap the mic. Imagine one specific person — a competent engineer who has never seen this system — and explain it to them. Record in three short passes. The free plan takes up to two minutes per note, which suits one pass per note; with Prime a single recording runs to fifteen minutes if you prefer one take.</p>
+      <ul>
+        <li><strong>Pass one: what it is.</strong> What the component does, what it talks to, and what breaks if it stops.</li>
+        <li><strong>Pass two: how to run it.</strong> The order of operations, including the boring preparations you do automatically.</li>
+        <li><strong>Pass three: how it fails.</strong> The error messages you have actually seen, what caused them, and what you did. This pass is the one nobody writes, and the one on-call needs.</li>
+        <li><strong>Say what you assume the reader knows.</strong> “You'll need access to the staging cluster” sounds obvious to you and is the first thing a newcomer lacks.</li>
+      </ul>
+
+      <figure class="article-figure article-figure--phone">
+        <img src="/blog/assets/recording-voice-note.png" alt="VoiceNote recording screen with a seven-second timer and a live waveform." width="1242" height="2688" loading="lazy">
+        <figcaption>Three passes, one take each: what it is, how to run it, how it fails.</figcaption>
+      </figure>
+
+      <h3>Step 2 — Apply Tech Doc</h3>
+      <p>Open each note, tap AI Style Conversion and choose Tech Doc. The style organises the explanation into well-structured technical documentation: sections, steps in order, and a cleaner register than the way you actually talk.</p>
+
+      <figure class="article-figure article-figure--phone">
+        <img src="/blog/assets/tech-doc-style.png" alt="The AI Style Conversion screen in VoiceNote, with the Tech Doc style highlighted." width="1179" height="2556" loading="lazy">
+        <figcaption>Tech Doc sits in the Work &amp; Writing section. The ring marks the style used here.</figcaption>
+      </figure>
+
+      <p>The output is a document draft, not a verified procedure. It inherited your assumptions and it cannot know a command was mistyped or a version moved since you last ran it. Read it with the repository, the terminal and the config open.</p>
+
+      <h3>Step 3 — Add what speech leaves out</h3>
+      <p>Spoken explanations are strong on intent and weak on exact detail. Fill in these five things before the doc goes anywhere near a newcomer:</p>
+      <ul>
+        <li><strong>Exact commands, paths and versions.</strong> Copy them from your terminal — do not retype them from memory into a document that someone will trust.</li>
+        <li><strong>Prerequisites.</strong> Access, credentials, installed tools, environment variables, and what to do if you do not have them.</li>
+        <li><strong>The check that proves it worked.</strong> A specific output, log line or status — not “it should be fine”.</li>
+        <li><strong>The failure section.</strong> The three errors most likely to happen, in the reader's words, with what to do about each.</li>
+        <li><strong>Who this is for and when it does not apply.</strong> One line at the top saves the wrong reader twenty minutes.</li>
+      </ul>
+
+      <h2>Why talking finds the gaps</h2>
+      <p>Writing documentation is a silent activity, and silence lets you skip anything you already understand. Explaining aloud is sequential: you have to produce the next sentence, and the moment you reach a step you only know instinctively, the sentence stops.</p>
+      <p>It also changes the audience in your head. Documentation written for “whoever needs it” is written for nobody in particular; documentation spoken to a named colleague includes the parts that colleague would actually ask about.</p>
+      <p>And it captures failure knowledge while it is still specific. The error you fixed in March is a story you can tell in ninety seconds — and a story is exactly what the doc needs, before it fades into “check the logs”.</p>
+
+      <h2>A worked example</h2>
+      <p>A made-up example. An engineer explains a rollback procedure, then turns the recording into a runbook.</p>
+      <div class="example">
+        <p class="example-label"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg> Spoken explanation, pass three</p>
+        <blockquote class="spoken"><p>“Okay, rollback. You only do this if the deploy is worse than what was there before — which is a judgement call, and honestly the thing I got wrong in March. First you check whether the migration has already run, because if it has, rolling back the app does not roll back the schema and you get the crash we had on the seventeenth. So: check the migration table, if today's migration is in there, stop and call me. If it is not, you redeploy the previous tag from CI. It takes about four minutes and the health check goes green twice before the traffic shifts, so do not trust the first green. If the health check never goes green, the previous release is also broken and you are in an incident, not a rollback.”</p></blockquote>
+        <p class="example-label"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 6l-5 6 5 6M16 6l5 6-5 6"/></svg> Tech Doc, with the specifics added</p>
+        <div class="email-card">
+          <p><strong>Rolling back a deploy</strong><br><em>For on-call engineers. Not the right procedure if a schema migration has already run.</em><br><br><strong>Before you start</strong><br>Access to the production dashboard and the CI pipeline. Confirm the incident channel is open.<br><br><strong>1. Check whether the migration ran</strong><br>Query the <code>schema_migrations</code> table in the production database. If today's migration is present, <strong>stop</strong> — rolling back the application will not roll back the schema — and escalate to the platform team.<br><br><strong>2. Redeploy the previous image tag</strong><br>In CI, redeploy the last green tag from the <code>releases</code> pipeline. Typical duration: 4 minutes.<br><br><strong>3. Wait for the second health check</strong><br>Traffic shifts only after two consecutive green checks. One green is not enough.<br><br><strong>If it does not recover</strong><br>A failed health check after rollback means the previous release is also broken: treat it as an incident, not a rollback, and page the platform team.</p>
+        </div>
+        <p class="example-note">What changed: the spoken judgement call became a stop condition, the anecdote became a concrete check, and the four minutes is stated so nobody panics at minute three.</p>
+      </div>
+
+      <h2>Before you publish</h2>
+      <ul>
+        <li><strong>Follow your own doc on a clean environment.</strong> Every step you skip because you know the shortcut is a step the doc is missing.</li>
+        <li><strong>Run every command as written.</strong> Copy-paste them from the doc, not from your shell history.</li>
+        <li><strong>Date it and say which versions it covers.</strong> Documentation without a date is a rumour.</li>
+      </ul>
+
+      <h2>Mistakes to avoid</h2>
+      <ul>
+        <li><strong>Documenting what you know instead of what the reader needs.</strong> The gap between those is most of the document.</li>
+        <li><strong>Omitting the failure section.</strong> Happy-path docs are used once; failure docs are used at 3am.</li>
+        <li><strong>Retyping commands from memory.</strong> One wrong flag turns a runbook into a hazard.</li>
+        <li><strong>Writing in your speaking voice.</strong> Keep the structure from the style and cut the “so, basically” — the doc should sound calm, not conversational.</li>
+        <li><strong>Leaving no date, owner or scope.</strong> Nobody can tell whether the doc is current or authoritative.</li>
+      </ul>
+
+      <h2>Frequently asked questions</h2>
+      <h3>Can VoiceNote read my code or repository?</h3>
+      <p>No. It works from your recording, so the accuracy of the doc depends on what you explain and what you add afterwards. Treat the draft as structure, not verification.</p>
+      <h3>How long can one explanation be?</h3>
+      <p>Two minutes per note on the free plan, fifteen with Prime. Long procedures are easier as one note per section — setup, run, verify, fail — than as one long take.</p>
+      <h3>Can I record while doing the task?</h3>
+      <p>Yes, and it is a good way to capture the real order of operations. Stop recording before anything irreversible, and write the commands down afterwards from the terminal rather than from memory.</p>
+      <h3>How is this different from <a href="voice-note-to-meeting-minutes.html">meeting minutes</a>?</h3>
+      <p>Minutes record what a group decided. A tech doc records how a system works or how a procedure is run — the reader is a person who was not in the room.</p>
+      <h3>Should I paste the output straight into our docs site?</h3>
+      <p>Paste it as a draft, then edit it there. The style produces the structure and the wording; the correctness of commands, versions and warnings is your responsibility.</p>
+      <h3>Which languages does VoiceNote support?</h3>
+      <p>VoiceNote transcribes 46 languages. Explain in the language your team reads docs in; style names in the app stay in English.</p>
+
+      <p>Once the doc exists, <a href="voice-note-to-professional-email.html">telling the team where it lives</a> is the step that makes anyone read it.</p>
+
+      <aside id="author" class="author-card">
+        <div class="author-avatar" aria-hidden="true">E</div>
+        <div class="author-body">
+          <p class="author-name">Elaine</p>
+          <p class="author-role">@elaine20230910 · VoiceNote</p>
+          <p class="author-bio">Elaine builds VoiceNote, a voice-to-text app for iPhone, and writes about the workflows where speaking beats typing.</p>
+          <a class="author-link" href="https://x.com/elaine20230910" target="_blank" rel="me noopener">Follow on X</a>
+        </div>
+      </aside>
+      <div class="article-cta">
+        <p class="text-base font-semibold text-gray-900">Explain it before you document it</p>
+        <p class="mt-1 text-sm text-gray-500">Download VoiceNote, talk through the system as if a new teammate were listening, and turn the explanation into structured documentation.</p>
+        <a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/voicenote-ai-voice-to-text/id6774268799" class="btn-gradient mt-5 inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold text-white shadow-sm">Download on the App Store</a>
+      </div>
+
+    </div>
+  </article>
+</main>
+
+<!-- FOOTER -->
+<footer class="border-t border-gray-100 bg-white">
+  <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+    <div class="flex flex-col items-center justify-between gap-6 sm:flex-row">
+      <a href="/" class="flex items-center gap-2 text-xl font-bold">
+        <div class="flex h-8 w-8 items-center justify-center rounded-lg logo-gradient text-white"><svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></div>
+        <span class="tracking-tight">VoiceNote</span>
+      </a>
+      <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-gray-500">
+        <a href="/pricing.html" class="transition-colors hover:text-gray-900">Pricing</a>
+        <a href="/download.html" class="transition-colors hover:text-gray-900">Download</a>
+        <a href="/contact.html" class="transition-colors hover:text-gray-900">Contact</a>
+        <a href="./" class="transition-colors hover:text-gray-900">Blog</a>
+        <a href="../privacy.html" class="transition-colors hover:text-gray-900">Privacy Policy</a>
+        <a href="../terms.html" class="transition-colors hover:text-gray-900">Terms of Service</a>
+        <a href="../cookies.html" class="transition-colors hover:text-gray-900">Cookie Policy</a>
+      </div>
+    </div>
+    <p class="mt-8 text-center text-xs text-gray-400">&copy; 2026 VoiceNote. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  window.BLOG_TRANSLATIONS = {
+    en: '/blog/voice-note-to-tech-doc.html',
+    fr: '/fr/blog/voice-note-to-tech-doc.html',
+    de: '/de/blog/voice-note-to-tech-doc.html',
+    es: '/es/blog/voice-note-to-tech-doc.html',
+    it: '/it/blog/voice-note-to-tech-doc.html',
+    zh: '/zh/blog/voice-note-to-tech-doc.html'
+  };
+</script>
+<script src="/blog/blog.js"></script>
+</body>
+</html>
