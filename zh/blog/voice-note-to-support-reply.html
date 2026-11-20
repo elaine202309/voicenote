@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>如何用语音笔记写客服回复 — VoiceNote Blog</title>
+  <meta name="description" content="先把工单讲一遍，包括那句你绝不会发出去的话，再用 Support Script 生成一封冷静、只承诺已核实事实的回复。">
+  <meta name="author" content="Elaine">
+  <meta name="robots" content="index,follow">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="canonical" href="https://voicenote.uk/zh/blog/voice-note-to-support-reply.html">
+  <link rel="alternate" hreflang="en" href="https://voicenote.uk/blog/voice-note-to-support-reply.html">
+  <link rel="alternate" hreflang="fr" href="https://voicenote.uk/fr/blog/voice-note-to-support-reply.html">
+  <link rel="alternate" hreflang="de" href="https://voicenote.uk/de/blog/voice-note-to-support-reply.html">
+  <link rel="alternate" hreflang="es" href="https://voicenote.uk/es/blog/voice-note-to-support-reply.html">
+  <link rel="alternate" hreflang="it" href="https://voicenote.uk/it/blog/voice-note-to-support-reply.html">
+  <link rel="alternate" hreflang="zh" href="https://voicenote.uk/zh/blog/voice-note-to-support-reply.html">
+  <link rel="alternate" hreflang="x-default" href="https://voicenote.uk/blog/voice-note-to-support-reply.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="如何用语音笔记写客服回复">
+  <meta property="og:description" content="先把工单讲一遍，包括那句你绝不会发出去的话，再用 Support Script 生成一封冷静、只承诺已核实事实的回复。">
+  <meta property="og:url" content="https://voicenote.uk/zh/blog/voice-note-to-support-reply.html">
+  <meta property="og:image" content="https://voicenote.uk/blog/assets/og/voice-note-support-zh.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="如何用语音笔记写客服回复">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="article:published_time" content="2026-11-20">
+  <meta property="article:modified_time" content="2026-11-20">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="如何用语音笔记写客服回复">
+  <meta name="twitter:description" content="先把工单讲一遍，包括那句你绝不会发出去的话，再用 Support Script 生成一封冷静、只承诺已核实事实的回复。">
+  <meta name="twitter:image" content="https://voicenote.uk/blog/assets/og/voice-note-support-zh.png">
+  <meta name="twitter:image:alt" content="如何用语音笔记写客服回复">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QNKGT9R5FB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-QNKGT9R5FB');
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { 50:'#eff6ff',100:'#dbeafe',200:'#bfdbfe',300:'#93c5fd',400:'#60a5fa',500:'#4f8af7',600:'#3b6ef5',700:'#2d5de0',800:'#2449c4',900:'#1e3a8a',950:'#172554' },
+            warm: { 50:'#fffbf5',100:'#fef7ed',200:'#fdefd6',300:'#fce3b6',400:'#f9cf8a',500:'#f5b85c',600:'#f09e34',700:'#e08816',800:'#bc7012',900:'#995813' }
+          },
+          fontFamily: { sans: ['Inter','system-ui','sans-serif'] },
+          borderRadius: { '4xl': '2rem' }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/blog/blog.css?v=6">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "如何用语音笔记写客服回复",
+  "description": "先把工单讲一遍，包括那句你绝不会发出去的话，再用 Support Script 生成一封冷静、只承诺已核实事实的回复。",
+  "datePublished": "2026-11-20",
+  "dateModified": "2026-11-20",
+  "mainEntityOfPage": "https://voicenote.uk/zh/blog/voice-note-to-support-reply.html",
+  "inLanguage": "zh",
+  "image": [
+    "https://voicenote.uk/blog/assets/og/voice-note-support-zh.png",
+    "https://voicenote.uk/blog/assets/recording-voice-note.png",
+    "https://voicenote.uk/blog/assets/support-script-style.png"
+  ],
+  "author": {
+    "@type": "Person",
+    "name": "Elaine",
+    "url": "https://x.com/elaine20230910",
+    "sameAs": [
+      "https://x.com/elaine20230910"
+    ],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "VoiceNote",
+      "url": "https://voicenote.uk/"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "VoiceNote",
+    "url": "https://voicenote.uk/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://voicenote.uk/logo.png"
+    }
+  }
+}
+  </script>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+
+<!-- NAVBAR -->
+<nav id="navbar" class="blog-nav fixed top-0 z-50 w-full border-b border-gray-100/80 transition-shadow duration-300">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
+    <a href="../" class="flex items-center gap-2 text-xl font-bold">
+      <div class="flex h-9 w-9 items-center justify-center rounded-lg logo-gradient text-white"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></div>
+      <span class="tracking-tight">VoiceNote</span>
+    </a>
+    <div class="hidden items-center gap-7 md:flex">
+      <a href="../" class="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900">首页</a>
+      <a href="../pricing.html" class="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900">定价</a>
+      <a href="./" class="text-sm font-semibold text-brand-600 transition-colors">博客</a>
+      <a href="../download.html" class="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900">下载</a>
+      <a href="../contact.html" class="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900">联系</a>
+      <a href="../download.html" class="rounded-full btn-gradient px-5 py-2.5 text-sm font-semibold text-white shadow-sm">免费试用</a>
+      <div class="relative ml-1 border-l border-gray-200 pl-4">
+        <button id="blogLangBtn" type="button" aria-haspopup="true" aria-controls="blogLangMenu" class="flex items-center gap-1 text-xs font-medium text-gray-500 transition-colors hover:text-gray-700">
+          中文 <svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div id="blogLangMenu" class="lang-menu">
+          <a data-lang="en" href="/blog/">English</a>
+          <a data-lang="fr" href="/fr/blog/">Français</a>
+          <a data-lang="de" href="/de/blog/">Deutsch</a>
+          <a data-lang="es" href="/es/blog/">Español</a>
+          <a data-lang="it" href="/it/blog/">Italiano</a>
+          <a data-lang="zh" href="/zh/blog/">中文</a>
+        </div>
+      </div>
+    </div>
+    <button id="menuToggle" class="rounded-lg p-2 text-gray-600 hover:bg-gray-100 md:hidden" aria-label="菜单">
+      <svg id="menuIcon" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+  <div id="mobileMenu" class="max-h-0 overflow-hidden transition-all duration-300 md:hidden">
+    <div class="mx-4 flex flex-col gap-1 border-t border-gray-100 pb-4 pt-3">
+      <a href="../" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-50">首页</a>
+      <a href="../pricing.html" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-50">定价</a>
+      <a href="./" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-semibold text-brand-600 hover:bg-gray-50">博客</a>
+      <a href="../download.html" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-50">下载</a>
+      <a href="../contact.html" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-50">联系</a>
+      <a href="../download.html" class="mobile-link mt-2 rounded-full btn-gradient px-5 py-2.5 text-center text-sm font-semibold text-white">免费试用</a>
+      <div class="mt-3 flex flex-wrap gap-x-4 gap-y-2 border-t border-gray-100 px-3 pt-3 text-xs font-medium text-gray-500">
+        <a href="/blog/" class="hover:text-gray-900">English</a>
+        <a href="/fr/blog/" class="hover:text-gray-900">Français</a>
+        <a href="/de/blog/" class="hover:text-gray-900">Deutsch</a>
+        <a href="/es/blog/" class="hover:text-gray-900">Español</a>
+        <a href="/it/blog/" class="hover:text-gray-900">Italiano</a>
+        <a href="/zh/blog/" class="text-brand-600">中文</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main class="pb-20">
+  <header class="article-header">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6">
+      <nav class="mb-6 flex items-center gap-2 text-xs font-medium text-gray-400" aria-label="Breadcrumb">
+        <a href="./" class="transition-colors hover:text-gray-700">Blog</a>
+        <span>/</span>
+        <span class="text-gray-500">客服支持</span>
+      </nav>
+      <span class="article-badge">语音转文字</span>
+      <h1 class="mt-5 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl lg:text-[2.75rem] lg:leading-[1.15]">如何用语音笔记写客服回复</h1>
+      <p class="lead mt-5 text-lg leading-relaxed text-gray-500">糟糕的客服回复，大多是在气头上写的。先把真正发生的事录下来，再让 Support Script 起草回复，你的情绪和客户需要的内容就分开了。</p>
+      <div class="article-meta mt-7 border-b border-gray-100 pb-7">
+        <span><time datetime="2026-11-20">2026 年 11 月 20 日</time></span>
+        <span class="h-1 w-1 rounded-full bg-gray-300"></span>
+        <span>7 分钟阅读</span>
+        <span class="h-1 w-1 rounded-full bg-gray-300"></span>
+        <span><a href="https://x.com/elaine20230910" target="_blank" rel="me noopener">Elaine</a></span>
+      </div>
+      <div class="mt-8 text-center"><a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/voicenote-ai-voice-to-text/id6774268799" class="btn-gradient inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-white shadow-sm"><svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.46-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 2.95 2.58 3.93 2.61 3.94-.03.07-.41 1.39-1.3 2.73M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg> 在 App Store 下载</a></div>
+    </div>
+  </header>
+
+  <article class="mx-auto mt-10 max-w-3xl px-4 sm:px-6">
+    <div class="prose-article">
+      <div class="takeaways">
+        <p class="takeaways-label">要点</p>
+        <ul>
+          <li>带情绪写出来的回复，哪怕事实全对，读起来也是在辩解。</li>
+          <li>先把事情录下来，包括那句你绝不会发出去的话。</li>
+          <li>Support Script 给的是标准外形；具体事实和政策要你自己填。</li>
+          <li>一封回复只该包含：你核实了什么、接下来做什么、什么时候。</li>
+        </ul>
+      </div>
+
+      <p>客服回复会从两个方向出问题。模板式的，回答了一个客户没问的问题；情绪式的，讲了你的一天、替产品辩护，把答案埋到第三段。</p>
+      <p>两者都可以靠“先开口”避免。两分钟把话说出来，气就出去了，同时也逼你说出自己真正知道的部分——那才是客户能用的东西。</p>
+
+      <h2>在 VoiceNote 里怎么做</h2>
+      <h3>第 1 步——把工单讲一遍，不加过滤</h3>
+      <p>打开 VoiceNote 点麦克风。用自己的话复述工单，然后说你查了什么、发现了什么。免费版每条最长两分钟；Prime 单次可到十五分钟，复杂工单足够用。</p>
+      <ul>
+        <li><strong>先讲带情绪的那版。</strong>“这周第三次了，帮助中心还说我们从不重复扣款”——这句不会发给客户，但它告诉你回复需要在哪儿保持耐心。</li>
+        <li><strong>说清你到底查了什么。</strong>哪个后台、哪个字段、显示什么。这些事实是回复唯一被允许做出的陈述。</li>
+        <li><strong>说出你不确定的地方。</strong>“退款大概是三到五个工作日，但我得再确认一下”——这是回复和风险的分界线。</li>
+        <li><strong>说出客户真正想要什么。</strong>往往不是工单第一行问的那个东西。</li>
+      </ul>
+
+      <figure class="article-figure article-figure--phone">
+        <img src="/blog/assets/recording-voice-note.png" alt="VoiceNote 录音界面，显示七秒计时和实时波形。" width="1242" height="2688" loading="lazy">
+        <figcaption>不加过滤的版本留在这里，回复就不必背着它走。</figcaption>
+      </figure>
+
+      <h3>第 2 步——应用 Support Script</h3>
+      <p>打开这条笔记，点 AI Style Conversion，选择 Support Script。这个风格会生成一封标准的客服回复：语气平稳、直给，客户熟悉的那种结构。</p>
+
+      <figure class="article-figure article-figure--phone">
+        <img src="/blog/assets/support-script-style.png" alt="VoiceNote 的 AI Style Conversion 界面，Support Script 风格被圈出。" width="1179" height="2556" loading="lazy">
+        <figcaption>Support Script 位于 Work &amp; Writing 分组，圆圈标出的是本文用到的风格。</figcaption>
+      </figure>
+
+      <p>草稿只是外形，不是决定。它不知道你的退款政策、你的响应时限，也不知道你在电话里已经答应过什么，更看不到账户。凡是涉及产品事实的句子，发出前都得核。</p>
+
+      <h3>第 3 步——压成三行加一个具体</h3>
+      <p>改到只剩这几块，并且按这个顺序：</p>
+      <ul>
+        <li><strong>发生了什么，一句话。</strong>是确认，不是叙述——“您的卡在 14 号被扣了两次”胜过一段介绍系统平时怎么工作。</li>
+        <li><strong>你做了什么或会做什么。</strong>具体动作，不是安抚：“我已经把重复那笔退款”比“我会让人跟进”有用。</li>
+        <li><strong>对方什么时候能看到结果。</strong>一个你守得住的时限，或者诚实地说“我周四之前回你”。</li>
+        <li><strong>一句人话。</strong>只有你写得出的一句——也是这封回复不像自动回复的唯一理由。</li>
+      </ul>
+      <p>然后删掉所有守不住的承诺、客户不会用的内部术语，以及每一句“根据我们的政策”。如果答案是“不行”，就在前两行说不，再解释原因。</p>
+
+      <h2>为什么先开口对工单有用</h2>
+      <p>带着火气打字很贵。人在烦躁时写出来的回复，措辞客气、结构防御：先解释再回答，把字数花在替公司辩护上。</p>
+      <p>先说出来，这份能量就花在不花钱的地方。录音听见的是你不会发出去的那一版；回复可以用事实单独写。</p>
+      <p>它也治第二个毛病：你其实没自己以为的那么了解情况。开口会逼你点出查过的东西，缺口就听得见——你会听见自己说“我猜”，然后知道该去查。</p>
+      <p>它还留下记录。客服团队同一个问题答到第六遍，是因为没人把答案存下来；一分钟录音加一封回复，正好是帮助中心文章需要的素材。</p>
+
+      <h2>一个示例</h2>
+      <p>以下为虚构示例。一位客服在处理重复扣款工单之前，先录了一段。</p>
+      <div class="example">
+        <p class="example-label"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg> 口述的工单记录</p>
+        <blockquote class="spoken"><p>“客户说被扣了两次。老实说这周第三个了，帮助中心还写着我们从不重复扣款，所以我很烦。好。我在支付后台查了：14 号有两笔授权，09:12 一笔、09:14 一笔，都是 24 英镑，第二笔已经入账。所以是真的重复扣款，不是待处理的预授权——我 10:05 已经退款，交易号尾号 44。退款一般三到五个工作日到账，但没核实我不想承诺，所以写最多五个工作日。她还问为什么会发生。我不知道。大概是支付超时后重试了，但这不能当事实写，所以只写我确认的。她真正想要的是钱回来，不是解释。”</p></blockquote>
+        <p class="example-label"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/></svg> 删减后的 Support Script 回复</p>
+        <div class="email-card">
+          <p>您好 Mia：<br><br>您在 14 号被扣了两次款：09:12 一笔 24 英镑，09:14 又一笔。第二笔已经入账，所以这是重复扣款，不是待处理的预授权。<br><br>今天早上我已经把第二笔退回，参考号尾号 44，通常五个工作日内到账。<br><br>我看到支付被重试了一次，但暂时说不清具体原因，也不想凭空猜。我已经把情况报给支付团队，避免再发生在您身上。<br><br>抱歉让您还要来追问。<br><br>Sam</p>
+        </div>
+        <p class="example-note">变了什么：情绪留在录音里，回复从“发生了什么”开始，时限守得住，唯一不确定的那个问题选择承认而不是编。</p>
+      </div>
+
+      <h2>发送之前</h2>
+      <ul>
+        <li><strong>核对每个数字、参考号和日期。</strong>一个错的交易号会换来第二张工单。</li>
+        <li><strong>以客户的身份读一遍。</strong>如果前两行没说清问题解没解决，重写。</li>
+        <li><strong>去掉内部词汇。</strong>“授权”“入账”和工单号属于你的笔记，不属于回复。</li>
+      </ul>
+
+      <h2>常见错误</h2>
+      <ul>
+        <li><strong>把录音的情绪带进回复。</strong>口述那版的用处，就是把它留在身后。</li>
+        <li><strong>承诺没核实过的时限。</strong>“应该没问题”是超时违约的开头。</li>
+        <li><strong>先解释再回答。</strong>结论放在前两行，背景放在后面。</li>
+        <li><strong>草稿原样发出。</strong>它不认识你的政策和账户，没核过的说法就是猜。</li>
+        <li><strong>把“不行”藏起来。</strong>埋在第四段的拒绝，读起来像套路。</li>
+      </ul>
+
+      <h2>常见问题</h2>
+      <h3>VoiceNote 能查客户的账户吗？</h3>
+      <p>不能。草稿基于你的录音，所以关于账户、政策和时限的一切，都必须来自你和你的系统。</p>
+      <h3>能把一封回复做成团队模板吗？</h3>
+      <p>可以——把客户相关信息换成占位符，保留结构，再加一行说明什么时候不适用。这一行才是防止模板变成错误答案的关键。</p>
+      <h3>工单记录能录多长？</h3>
+      <p>免费版每条两分钟，Prime 十五分钟。复杂情况可以一条录事实、一条录不确定的部分，很好用。</p>
+      <h3>这跟<a href="voice-note-to-professional-email.html">工作邮件</a>有什么区别？</h3>
+      <p>工作邮件写给同事或合作方，可以带背景和推理；客服回复写给一个正在不顺的人的，先给结果，只留有用的部分。</p>
+      <h3>同一个问题总是重复出现怎么办？</h3>
+      <p>那是文档问题，不是回复问题——<a href="voice-note-to-tech-doc.html">把答案写一次</a>，然后在回复里给出链接。</p>
+      <h3>VoiceNote 支持哪些语言？</h3>
+      <p>VoiceNote 支持 46 种语言转写。尽量用客户的语言回复；App 里的风格名称保持英文。</p>
+
+      <p>如果你希望这封回复听起来像你们团队而不是随便哪个团队，发之前读一遍——<a href="voice-note-to-essay-polish.html">同一个耳朵测试</a>在客服用得上。</p>
+
+      <aside id="author" class="author-card">
+        <div class="author-avatar" aria-hidden="true">E</div>
+        <div class="author-body">
+          <p class="author-name">Elaine</p>
+          <p class="author-role">@elaine20230910 · VoiceNote</p>
+          <p class="author-bio">Elaine 是 VoiceNote 的开发者。这是一款 iPhone 语音转文字 App，这个博客记录真正省时间的口述工作流。</p>
+          <a class="author-link" href="https://x.com/elaine20230910" target="_blank" rel="me noopener">在 X 上关注</a>
+        </div>
+      </aside>
+      <div class="article-cta">
+        <p class="text-base font-semibold text-gray-900">先说一遍，再写给客户</p>
+        <p class="mt-1 text-sm text-gray-500">下载 VoiceNote，把工单讲清楚，再把录下来的事实变成一封你自己也愿意收到的回复。</p>
+        <a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/voicenote-ai-voice-to-text/id6774268799" class="btn-gradient mt-5 inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold text-white shadow-sm">在 App Store 下载</a>
+      </div>
+
+    </div>
+  </article>
+</main>
+
+<!-- FOOTER -->
+<footer class="border-t border-gray-100 bg-white">
+  <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+    <div class="flex flex-col items-center justify-between gap-6 sm:flex-row">
+      <a href="../" class="flex items-center gap-2 text-xl font-bold">
+        <div class="flex h-8 w-8 items-center justify-center rounded-lg logo-gradient text-white"><svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></div>
+        <span class="tracking-tight">VoiceNote</span>
+      </a>
+      <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-gray-500">
+        <a href="../pricing.html" class="transition-colors hover:text-gray-900">定价</a>
+        <a href="../download.html" class="transition-colors hover:text-gray-900">下载</a>
+        <a href="../contact.html" class="transition-colors hover:text-gray-900">联系</a>
+        <a href="./" class="transition-colors hover:text-gray-900">博客</a>
+        <a href="../privacy.html" class="transition-colors hover:text-gray-900">隐私政策</a>
+        <a href="../terms.html" class="transition-colors hover:text-gray-900">服务条款</a>
+        <a href="../cookies.html" class="transition-colors hover:text-gray-900">Cookie 政策</a>
+      </div>
+    </div>
+    <p class="mt-8 text-center text-xs text-gray-400">&copy; 2026 VoiceNote. 保留所有权利。</p>
+  </div>
+</footer>
+
+<script>
+  window.BLOG_TRANSLATIONS = {
+    en: '/blog/voice-note-to-support-reply.html',
+    fr: '/fr/blog/voice-note-to-support-reply.html',
+    de: '/de/blog/voice-note-to-support-reply.html',
+    es: '/es/blog/voice-note-to-support-reply.html',
+    it: '/it/blog/voice-note-to-support-reply.html',
+    zh: '/zh/blog/voice-note-to-support-reply.html'
+  };
+</script>
+<script src="/blog/blog.js"></script>
+</body>
+</html>
