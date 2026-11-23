@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>如何用语音笔记做播客笔记 — VoiceNote Blog</title>
+  <meta name="description" content="听到戳中的地方就暂停，带时间点说出来，再用 Content Summary 把这些停顿整理成能查、能用的笔记。">
+  <meta name="author" content="Elaine">
+  <meta name="robots" content="index,follow">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="canonical" href="https://voicenote.uk/zh/blog/voice-note-podcast-notes.html">
+  <link rel="alternate" hreflang="en" href="https://voicenote.uk/blog/voice-note-podcast-notes.html">
+  <link rel="alternate" hreflang="fr" href="https://voicenote.uk/fr/blog/voice-note-podcast-notes.html">
+  <link rel="alternate" hreflang="de" href="https://voicenote.uk/de/blog/voice-note-podcast-notes.html">
+  <link rel="alternate" hreflang="es" href="https://voicenote.uk/es/blog/voice-note-podcast-notes.html">
+  <link rel="alternate" hreflang="it" href="https://voicenote.uk/it/blog/voice-note-podcast-notes.html">
+  <link rel="alternate" hreflang="zh" href="https://voicenote.uk/zh/blog/voice-note-podcast-notes.html">
+  <link rel="alternate" hreflang="x-default" href="https://voicenote.uk/blog/voice-note-podcast-notes.html">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="如何用语音笔记做播客笔记">
+  <meta property="og:description" content="听到戳中的地方就暂停，带时间点说出来，再用 Content Summary 把这些停顿整理成能查、能用的笔记。">
+  <meta property="og:url" content="https://voicenote.uk/zh/blog/voice-note-podcast-notes.html">
+  <meta property="og:image" content="https://voicenote.uk/blog/assets/og/voice-note-podcast-zh.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="如何用语音笔记做播客笔记">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="article:published_time" content="2026-11-23">
+  <meta property="article:modified_time" content="2026-11-23">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="如何用语音笔记做播客笔记">
+  <meta name="twitter:description" content="听到戳中的地方就暂停，带时间点说出来，再用 Content Summary 把这些停顿整理成能查、能用的笔记。">
+  <meta name="twitter:image" content="https://voicenote.uk/blog/assets/og/voice-note-podcast-zh.png">
+  <meta name="twitter:image:alt" content="如何用语音笔记做播客笔记">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QNKGT9R5FB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-QNKGT9R5FB');
+  </script>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { 50:'#eff6ff',100:'#dbeafe',200:'#bfdbfe',300:'#93c5fd',400:'#60a5fa',500:'#4f8af7',600:'#3b6ef5',700:'#2d5de0',800:'#2449c4',900:'#1e3a8a',950:'#172554' },
+            warm: { 50:'#fffbf5',100:'#fef7ed',200:'#fdefd6',300:'#fce3b6',400:'#f9cf8a',500:'#f5b85c',600:'#f09e34',700:'#e08816',800:'#bc7012',900:'#995813' }
+          },
+          fontFamily: { sans: ['Inter','system-ui','sans-serif'] },
+          borderRadius: { '4xl': '2rem' }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/blog/blog.css?v=6">
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "如何用语音笔记做播客笔记",
+  "description": "听到戳中的地方就暂停，带时间点说出来，再用 Content Summary 把这些停顿整理成能查、能用的笔记。",
+  "datePublished": "2026-11-23",
+  "dateModified": "2026-11-23",
+  "mainEntityOfPage": "https://voicenote.uk/zh/blog/voice-note-podcast-notes.html",
+  "inLanguage": "zh",
+  "image": [
+    "https://voicenote.uk/blog/assets/og/voice-note-podcast-zh.png",
+    "https://voicenote.uk/blog/assets/recording-voice-note.png",
+    "https://voicenote.uk/blog/assets/content-summary-style.png"
+  ],
+  "author": {
+    "@type": "Person",
+    "name": "Elaine",
+    "url": "https://x.com/elaine20230910",
+    "sameAs": [
+      "https://x.com/elaine20230910"
+    ],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "VoiceNote",
+      "url": "https://voicenote.uk/"
+    }
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "VoiceNote",
+    "url": "https://voicenote.uk/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://voicenote.uk/logo.png"
+    }
+  }
+}
+  </script>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+
+<!-- NAVBAR -->
+<nav id="navbar" class="blog-nav fixed top-0 z-50 w-full border-b border-gray-100/80 transition-shadow duration-300">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6">
+    <a href="../" class="flex items-center gap-2 text-xl font-bold">
+      <div class="flex h-9 w-9 items-center justify-center rounded-lg logo-gradient text-white"><svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></div>
+      <span class="tracking-tight">VoiceNote</span>
+    </a>
+    <div class="hidden items-center gap-7 md:flex">
+      <a href="../" class="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900">首页</a>
+      <a href="../pricing.html" class="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900">定价</a>
+      <a href="./" class="text-sm font-semibold text-brand-600 transition-colors">博客</a>
+      <a href="../download.html" class="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900">下载</a>
+      <a href="../contact.html" class="text-sm font-medium text-gray-600 transition-colors hover:text-gray-900">联系</a>
+      <a href="../download.html" class="rounded-full btn-gradient px-5 py-2.5 text-sm font-semibold text-white shadow-sm">免费试用</a>
+      <div class="relative ml-1 border-l border-gray-200 pl-4">
+        <button id="blogLangBtn" type="button" aria-haspopup="true" aria-controls="blogLangMenu" class="flex items-center gap-1 text-xs font-medium text-gray-500 transition-colors hover:text-gray-700">
+          中文 <svg class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div id="blogLangMenu" class="lang-menu">
+          <a data-lang="en" href="/blog/">English</a>
+          <a data-lang="fr" href="/fr/blog/">Français</a>
+          <a data-lang="de" href="/de/blog/">Deutsch</a>
+          <a data-lang="es" href="/es/blog/">Español</a>
+          <a data-lang="it" href="/it/blog/">Italiano</a>
+          <a data-lang="zh" href="/zh/blog/">中文</a>
+        </div>
+      </div>
+    </div>
+    <button id="menuToggle" class="rounded-lg p-2 text-gray-600 hover:bg-gray-100 md:hidden" aria-label="菜单">
+      <svg id="menuIcon" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+  <div id="mobileMenu" class="max-h-0 overflow-hidden transition-all duration-300 md:hidden">
+    <div class="mx-4 flex flex-col gap-1 border-t border-gray-100 pb-4 pt-3">
+      <a href="../" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-50">首页</a>
+      <a href="../pricing.html" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-50">定价</a>
+      <a href="./" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-semibold text-brand-600 hover:bg-gray-50">博客</a>
+      <a href="../download.html" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-50">下载</a>
+      <a href="../contact.html" class="mobile-link rounded-lg px-3 py-2.5 text-sm font-medium text-gray-600 hover:bg-gray-50">联系</a>
+      <a href="../download.html" class="mobile-link mt-2 rounded-full btn-gradient px-5 py-2.5 text-center text-sm font-semibold text-white">免费试用</a>
+      <div class="mt-3 flex flex-wrap gap-x-4 gap-y-2 border-t border-gray-100 px-3 pt-3 text-xs font-medium text-gray-500">
+        <a href="/blog/" class="hover:text-gray-900">English</a>
+        <a href="/fr/blog/" class="hover:text-gray-900">Français</a>
+        <a href="/de/blog/" class="hover:text-gray-900">Deutsch</a>
+        <a href="/es/blog/" class="hover:text-gray-900">Español</a>
+        <a href="/it/blog/" class="hover:text-gray-900">Italiano</a>
+        <a href="/zh/blog/" class="text-brand-600">中文</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<main class="pb-20">
+  <header class="article-header">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6">
+      <nav class="mb-6 flex items-center gap-2 text-xs font-medium text-gray-400" aria-label="Breadcrumb">
+        <a href="./" class="transition-colors hover:text-gray-700">Blog</a>
+        <span>/</span>
+        <span class="text-gray-500">播客笔记</span>
+      </nav>
+      <span class="article-badge">语音转文字</span>
+      <h1 class="mt-5 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl lg:text-[2.75rem] lg:leading-[1.15]">如何用语音笔记做播客笔记</h1>
+      <p class="lead mt-5 text-lg leading-relaxed text-gray-500">音频没法跳读。没有时间点的播客笔记，你永远不会回去核对；而三个小时的收听，如果不当场抓住那几个瞬间，最后只剩一个模糊印象。</p>
+      <div class="article-meta mt-7 border-b border-gray-100 pb-7">
+        <span><time datetime="2026-11-23">2026 年 11 月 23 日</time></span>
+        <span class="h-1 w-1 rounded-full bg-gray-300"></span>
+        <span>7 分钟阅读</span>
+        <span class="h-1 w-1 rounded-full bg-gray-300"></span>
+        <span><a href="https://x.com/elaine20230910" target="_blank" rel="me noopener">Elaine</a></span>
+      </div>
+      <div class="mt-8 text-center"><a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/voicenote-ai-voice-to-text/id6774268799" class="btn-gradient inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold text-white shadow-sm"><svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.46-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 2.95 2.58 3.93 2.61 3.94-.03.07-.41 1.39-1.3 2.73M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg> 在 App Store 下载</a></div>
+    </div>
+  </header>
+
+  <article class="mx-auto mt-10 max-w-3xl px-4 sm:px-6">
+    <div class="prose-article">
+      <div class="takeaways">
+        <p class="takeaways-label">要点</p>
+        <ul>
+          <li>音频没法跳读，笔记要在听的过程中做，而不是听完再补。</li>
+          <li>听到戳中的地方就暂停；三十秒的录音胜过一句“我回头记一下”。</li>
+          <li>把时间点说出来——这是唯一能让你回到那一刻的办法。</li>
+          <li>一期节目只有落在一件要改的事上，才值得记。</li>
+        </ul>
+      </div>
+
+      <p>听播客感觉像在学习，实际上更像在遗忘。九十分钟听完，你确信自己拿到了重要的东西；到了周四，只说得出一句“讲的是增长”。</p>
+      <p>解决办法不是换个更好的播客 App，而是打断音频。节目进行中记下的一条——一次暂停、一句话、一个时间点——会留下来；听完再补的，只是你当时心情的摘要。</p>
+
+      <h2>在 VoiceNote 里怎么做</h2>
+      <h3>第 1 步——听到戳中的地方就暂停</h3>
+      <p>听的时候让 VoiceNote 就在手边。某句话改变了你对某件事的看法，就暂停节目，录三十秒到一分钟。免费版每条最长两分钟，一次暂停完全够用；想在一期结束时做整期回顾，用 Prime 的十五分钟。</p>
+      <ul>
+        <li><strong>先说时间点。</strong>“二十三分钟左右，嘉宾说……”——正是这个具体时间，让你能回去、能引用、能发给别人。</li>
+        <li><strong>说清为什么戳中。</strong>不只是那句话：“这跟我们关于定价的假设相反”才是笔记，光抄一句只是书签。</li>
+        <li><strong>短到能一直做下去。</strong>如果一次暂停要花四分钟，你到第三期就不停了。</li>
+        <li><strong>反对的也记下来。</strong>“她说问题在 onboarding，但我们的数据指向留存”比赞同的部分更值钱。</li>
+      </ul>
+
+      <figure class="article-figure article-figure--phone">
+        <img src="/blog/assets/recording-voice-note.png" alt="VoiceNote 录音界面，显示七秒计时和实时波形。" width="1242" height="2688" loading="lazy">
+        <figcaption>一次暂停、一句话、一个时间点——每期三到四次就够。</figcaption>
+      </figure>
+
+      <h3>第 2 步——用 Content Summary 处理这些停顿</h3>
+      <p>节目结束后打开笔记，点 AI Style Conversion，选择 Content Summary。这个风格把你口述的停顿整理成精简要点，按你录的顺序排。</p>
+
+      <figure class="article-figure article-figure--phone">
+        <img src="/blog/assets/content-summary-style.png" alt="VoiceNote 的 AI Style Conversion 界面，Content Summary 风格被圈出。" width="1179" height="2556" loading="lazy">
+        <figcaption>Content Summary 位于 Work &amp; Writing 分组，圆圈标出的是本文用到的风格。</figcaption>
+      </figure>
+
+      <p>如果几次停顿分别录成了不同笔记，就逐条处理，并把时间点保留在文字里。风格只压缩你说的话；它不知道你在听哪一期，所以抬头那行——节目、期数、日期——还是你的事。</p>
+
+      <h3>第 3 步——收尾成一份带时间点的清单和一件事</h3>
+      <p>把笔记拼成你真的会再打开的东西：</p>
+      <ul>
+        <li><strong>抬头：</strong>节目、这期的标题、收听日期。</li>
+        <li><strong>三到五个要点</strong>，每条带时间点，用你的话而不是嘉宾的话。</li>
+        <li><strong>一句引语</strong>，你会发给同事的那种——如果真要引用，就照原样抄准。</li>
+        <li><strong>一件事：</strong>你打算改的那一处，带上日期。这一行决定了这是“听过的播客”还是“用过的播客”。</li>
+      </ul>
+
+      <h2>为什么时间点不能省</h2>
+      <p>文字能跳读、能搜索；音频不能。想找回你只记得一半的那句话，只能重新在节目里拖来拖去，靠猜对话的形状。没有时间，笔记就是一句你没法核实的说法。</p>
+      <p>时间点也让笔记能分享。“从二十三分钟开始听”是有用的消息；“中间某处讲了定价”不是。</p>
+      <p>它还挡住播客笔记最常见的两种失败：结尾凭记忆写出的模糊总结，和没人会看第二遍的自动转写文本墙。一次暂停加一个时间，正好夹在两者之间，而且短到可以边听边做。</p>
+
+      <h2>一个示例</h2>
+      <p>以下为虚构示例。一位市场负责人边走路边听一期七十分钟的定价节目，停了三次。</p>
+      <div class="example">
+        <p class="example-label"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg> 口述的几次停顿</p>
+        <blockquote class="spoken"><p>“十一分钟：他说大多数公司打折，是因为竞争对手打了，不是因为账算变了。六月就是我们。二十三分钟：涨价比取消折扣好卖那段——客户会把涨价读成自信，把取消折扣读成套路。三十八分钟：这里我不同意。他说包装是杠杆，但我们上次改套餐之后客服量涨了，包装不是免费的。我想试的：在谈折扣之前先给年付方案，而不是谈完之后。”</p></blockquote>
+        <p class="example-label"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg> 整理后的 Content Summary</p>
+        <div class="email-card">
+          <p><strong>The Pricing Show · 第 112 期“Discounts are a habit” · 11 月 23 日听</strong><br><br>· 11:00 — 公司打折是因为对手打了，不是因为账算变了。那就是我们六月的决定。<br>· 23:00 — 涨价被读成自信，取消折扣被读成套路。<br>· 38:00 — 他把包装当免费杠杆。我们上次改套餐后客服量上升，所以并不免费。<br><br><strong>一件事：</strong>下次续约电话里，在谈折扣之前先给年付方案。<br><strong>可以转发的引语：</strong>“取消折扣会被读成套路”。</p>
+        </div>
+        <p class="example-note">变了什么：三个本来会蒸发掉的瞬间变成了三条可核实的说法，节目最后落在一件带日期的事上。</p>
+      </div>
+
+      <h2>关掉 App 之前</h2>
+      <ul>
+        <li><strong>核对时间点。</strong>如果是估的，趁着节目还开着拖回去一次，改准。</li>
+        <li><strong>标清哪些是他的、哪些是你的。</strong>“他说”对“我认为”——边听边想的全部意义就在这里。</li>
+        <li><strong>不值得记的就别记。</strong>有些播客是陪伴，不是输入。主动这样决定是本事，不是偷懒。</li>
+      </ul>
+
+      <h2>常见错误</h2>
+      <ul>
+        <li><strong>听完再记。</strong>你写下的会是印象的摘要。</li>
+        <li><strong>不写时间点。</strong>一按停止，这条笔记就没法核实了。</li>
+        <li><strong>转写代替记录。</strong>完整转写不是笔记，是又一个会弄丢重点的地方。</li>
+        <li><strong>什么都记。</strong>每小时三到四次停顿是能持续的节奏，二十次就是录入工作。</li>
+        <li><strong>结尾没有动作。</strong>如果什么都没变，那期就是娱乐——这没问题，只要你意识到了。</li>
+      </ul>
+
+      <h2>常见问题</h2>
+      <h3>边听边记还是听完再记？</h3>
+      <p>边听边记，在暂停的时候。事后补的笔记会丢掉时间点，而时间点正是让笔记有用的东西。</p>
+      <h3>每次停顿该多长？</h3>
+      <p>三十秒到一分钟。免费版每条两分钟，所以一次停顿永远碰不到上限；只有整期回顾才需要 Prime 的十五分钟。</p>
+      <h3>这跟<a href="voice-note-to-content-summary.html">总结一篇文章</a>有什么区别？</h3>
+      <p>文章能跳读、能搜索，所以读完再总结可行；音频不行，捕捉必须发生在节目途中并带上时间点。同一个风格，不同的活。</p>
+      <h3>VoiceNote 能录下播客本身吗？</h3>
+      <p>它录的是你的声音，不是正在播放的音频。请在暂停时、节目停住的情况下来录。</p>
+      <h3>播客 App 自带的转写呢？</h3>
+      <p>转写记录的是“说了什么”，不是“什么对你重要”。它可以用来核对已经记下的引语，但不能代替笔记。</p>
+      <h3>VoiceNote 支持哪些语言？</h3>
+      <p>VoiceNote 支持 46 种语言转写。用你思考的语言记，哪怕听的是另一种语言；App 里的风格名称保持英文。</p>
+
+      <p>如果那段音频是讲座而不是对话，<a href="voice-note-to-study-notes.html">结构化的学习笔记</a>会比摘要更撑得住。</p>
+
+      <aside id="author" class="author-card">
+        <div class="author-avatar" aria-hidden="true">E</div>
+        <div class="author-body">
+          <p class="author-name">Elaine</p>
+          <p class="author-role">@elaine20230910 · VoiceNote</p>
+          <p class="author-bio">Elaine 是 VoiceNote 的开发者。这是一款 iPhone 语音转文字 App，这个博客记录真正省时间的口述工作流。</p>
+          <a class="author-link" href="https://x.com/elaine20230910" target="_blank" rel="me noopener">在 X 上关注</a>
+        </div>
+      </aside>
+      <div class="article-cta">
+        <p class="text-base font-semibold text-gray-900">在它播着的时候抓住它</p>
+        <p class="mt-1 text-sm text-gray-500">下载 VoiceNote，听到戳中的地方就暂停，带时间点说出来，把那些停顿变成真的用得上的笔记。</p>
+        <a target="_blank" rel="noopener" href="https://apps.apple.com/us/app/voicenote-ai-voice-to-text/id6774268799" class="btn-gradient mt-5 inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold text-white shadow-sm">在 App Store 下载</a>
+      </div>
+
+    </div>
+  </article>
+</main>
+
+<!-- FOOTER -->
+<footer class="border-t border-gray-100 bg-white">
+  <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+    <div class="flex flex-col items-center justify-between gap-6 sm:flex-row">
+      <a href="../" class="flex items-center gap-2 text-xl font-bold">
+        <div class="flex h-8 w-8 items-center justify-center rounded-lg logo-gradient text-white"><svg class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></div>
+        <span class="tracking-tight">VoiceNote</span>
+      </a>
+      <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-gray-500">
+        <a href="../pricing.html" class="transition-colors hover:text-gray-900">定价</a>
+        <a href="../download.html" class="transition-colors hover:text-gray-900">下载</a>
+        <a href="../contact.html" class="transition-colors hover:text-gray-900">联系</a>
+        <a href="./" class="transition-colors hover:text-gray-900">博客</a>
+        <a href="../privacy.html" class="transition-colors hover:text-gray-900">隐私政策</a>
+        <a href="../terms.html" class="transition-colors hover:text-gray-900">服务条款</a>
+        <a href="../cookies.html" class="transition-colors hover:text-gray-900">Cookie 政策</a>
+      </div>
+    </div>
+    <p class="mt-8 text-center text-xs text-gray-400">&copy; 2026 VoiceNote. 保留所有权利。</p>
+  </div>
+</footer>
+
+<script>
+  window.BLOG_TRANSLATIONS = {
+    en: '/blog/voice-note-podcast-notes.html',
+    fr: '/fr/blog/voice-note-podcast-notes.html',
+    de: '/de/blog/voice-note-podcast-notes.html',
+    es: '/es/blog/voice-note-podcast-notes.html',
+    it: '/it/blog/voice-note-podcast-notes.html',
+    zh: '/zh/blog/voice-note-podcast-notes.html'
+  };
+</script>
+<script src="/blog/blog.js"></script>
+</body>
+</html>
